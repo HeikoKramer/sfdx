@@ -36,3 +36,7 @@ tar xJf sfdx-cli-linux-$SYS.tar.xz -C sfdx --strip-components 1
 
 #update sfdx
 sfdx update
+
+#remove installer
+rm sfdx-cli-linux-$SYS.tar.xz
+rm sfdx_linux_installer
