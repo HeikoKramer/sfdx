@@ -1,0 +1,38 @@
+#!/bin/sh
+#script to install sfdx on linux x64 or arm system.
+
+echo 'This script will install sfdx on your linux system'
+
+#ask for user input to set system variable
+while true; do
+  read -p 'Installation for x64 or arm? ' SYS 
+  case "$SYS" in
+    [xX][6][4])
+      echo "x64 version will be installed"
+      SYS=x64
+      break
+      ;;  
+    [aA][rR][mM])
+      echo "arm version will be installed"
+      SYS=arm
+      break
+      ;;  
+    *)  
+      echo "Please enter x64 or arm"
+  esac
+done
+
+cd #changes into home directory if not already there
+mkdir sfdx #create sfdx directory
+
+#get installer
+wget https://developer.salesforce.com/media/salesforce-cli/sfdx-cli/channels/stable/sfdx-cli-linux-$SYS.tar.xz
+
+#unpack file into sfdx directory
+tar xJf sfdx-cli-linux-$SYS.tar.xz -C sfdx --strip-components 1
+
+#run installer
+./sfdx/install
+
+#update sfdx
+sfdx update

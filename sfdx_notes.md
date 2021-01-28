@@ -18,6 +18,7 @@ tar xJf sfdx-cli-linux-x64.tar.xz -C sfdx --strip-components 1
 ```
 The installer will istall the Salesforce CLI in */usr/local/bin/sfdx*. <br>
 Update to newest version with `sfdx update`. <br>
+**script:** sfdx/sfdx_scripts/sfdx_linux_installer automates this process on linux systems <br>
 
 ## oclif
 *– the open cli framework* <br>
