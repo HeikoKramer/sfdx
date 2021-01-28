@@ -3,7 +3,6 @@ Repo to take notes on *sfdx / Salesforce CLI* related topics: **/sfdx_notes.md**
 
 ----
 
-<br>
 ## /sfdx_scripts
 ### /sfdx_linux_installer
 *installs and updates sfdx on linux arm or x64 system <br>
