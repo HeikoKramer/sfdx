@@ -23,4 +23,12 @@ Update to newest version with `sfdx update`. <br>
 ## oclif
 *– the open cli framework* <br>
 
-`sfdx plugins --core`
+## api versin / runtime config
+[CLI Runtime Configuration Values](https://developer.salesforce.com/docs/atlas.en-us.222.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_cli_config_values.htm?search_text=runtime) <br>
+`sfdx force:config:set apiVersion=42.0 --global` will set the used api version to 42. <br>
+`sfdx force:config:set apiVersion= --global` will set it back to current version. <br>
+`sfdx force:config:list` will show a list of overridden configs. Default config doesn't show. <br> 
+
+## environment variables
+[Environment Variables](https://developer.salesforce.com/docs/atlas.en-us.222.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_cli_env_variables.htm?search_text=runtime) <br>
+
