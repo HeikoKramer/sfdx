@@ -1,5 +1,6 @@
 # sfdx
 Repo to take notes on *sfdx / Salesforce CLI* related topics: **/sfdx_notes.md** <br>
+All my sfdx related **.bashrc** sourced **aliases** and **functions** are stored in my **linux** repo *linux/dotfiles/sfdx.conf*. <br>
 
 ----
 
