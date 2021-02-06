@@ -17,6 +17,7 @@ tar xJf sfdx-cli-linux-x64.tar.xz -C sfdx --strip-components 1
 # run installer
 ./sfdx/install
 ```
+
 The installer will istall the Salesforce CLI in */usr/local/bin/sfdx*. <br>
 Update to newest version with `sfdx update`. <br>
 **script:** sfdx/sfdx_scripts/sfdx_linux_installer automates this process on linux systems <br>
@@ -35,7 +36,8 @@ Update to newest version with `sfdx update`. <br>
 
 ## creating a new project
 `sfdx force:project:create -n Demo1` will create new project **Demo1** as a sub-directory of the working directory. <br>
-Open project folder in *VS Code* (<kbd>CTRL</kbd> + <kbd>o</kbd>). <br>
+Open project folder in *VS Code* by entering `code Demo1/` in the terminal … <br>
+… or by pressing <kbd>CTRL</kbd> + <kbd>o</kbd> in *VS Code* and selecting Demo1 folder manually. <br>
 The **sfdx-project.json** was created with the global set **api version**. The **login url** can be edited here. <br>
 ## org authentication
 `sfdx force:auth:web:login -a Demo1` will open production org web-login to authenticate the cli. <br>
@@ -54,3 +56,14 @@ ALIAS  USERNAME          ORG ID              INSTANCE URL                       
 Demo1  0221@myforce.net  00D09000007FkECEA0  https://myforcenet-dev-ed.my.salesforce.com  web
 ```
 
+## retreive change set from org
+`sfdx force:mdapi:retrieve -r ./mdapi -u 0221@myforce.net -p SFDX_Test` will receive **SFDX_Test change set** from org associated with **user 0221@myforce.net**. <br>
+**./mdapi** is the **target directory** for the extract. I've created it within the project directory. <br>
+A file **unpackage.zip** will be created. We can use `unzip mdapi/unpackaged.zip` to extract all files. <br>
+```sh
+Archive:  mdapi/unpackaged.zip
+  inflating: SFDX_Test/objects/Test_Object__c.object  
+  inflating: SFDX_Test/layouts/Test_Object__c-Test Object Layout.layout  
+  inflating: SFDX_Test/package.xml 
+```
+The directory **SFDX_Test** will contain all these extract elements. <br>
