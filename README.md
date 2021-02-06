@@ -1,5 +1,5 @@
 # sfdx
-Repo to take notes on *sfdx / Salesforce CLI* related topics: **/sfdx_notes.md** <br>
+Repo to take notes on all **sfdx** related topics (in this file: [sfdx_notes.md](https://github.com/HeikoKramer/sfdx/blob/main/sfdx_notes.md)) <br>
 For my sfdx related **aliases** and **functions** see the **sfdx.conf** file in my [**linux** repo](https://github.com/HeikoKramer/linux/blob/main/dotfiles/sfdx.conf).
 
 ----
