@@ -67,3 +67,11 @@ Archive:  mdapi/unpackaged.zip
   inflating: SFDX_Test/package.xml 
 ```
 The directory **SFDX_Test** will contain all these extract elements. <br>
+
+## package.xml to sfdx project
+`sfdx force:mdapi:retrieve -r ./mdapi -u Demo1 -k mdapi/package.xml` if a package.xml exists. <br>
+**-r ./mdapi**           = **target location** <br>
+**-u Demo1**             = **org alias or username** <br>
+**-k mdapi/package.xml** = **package.xml location** <br>
+This command will again result in an **unpackaged.zip** file in the targer directory. <br>
+
