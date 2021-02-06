@@ -1,6 +1,6 @@
 # sfdx
 *– Notes on https://www.udemy.com/course/salesforcedx* <br>
-For my sfdx related **aliases** and **functions** see the **sfdx.conf** file in the **linux** repo *linux/dotfiles/sfdx.conf*. <br>
+For my sfdx related **aliases** and **functions** see the **sfdx.conf** file in my [**linux** repo](https://github.com/HeikoKramer/linux/blob/main/dotfiles/sfdx.conf). <br>
 
 ## installation process (x64 linux)
 
