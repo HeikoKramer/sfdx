@@ -75,3 +75,12 @@ The directory **SFDX_Test** will contain all these extract elements. <br>
 **-k mdapi/package.xml** = **package.xml location** <br>
 This command will again result in an **unpackaged.zip** file in the targer directory. <br>
 
+## convert metadata to source format
+metadata structure – everything is in the same place. <br>
+source format – own xml for each field, object, etc. <br>
+`sfdx force:mdapi:convert -r mdapi -d force-app` to convert with metadata api. <br>
+*I didn't manage to get this method to work with my sfdx version on linux* <br>
+
+## metadata to source without conversion step
+`sfdx force:source:retrieve --manifest mdapi/package.xml -u isv` uses an existing **package.xml** (manifest) to retrieve the specified content directly in source format. <br>
+
