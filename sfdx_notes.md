@@ -100,3 +100,35 @@ MyApexClass  ApexClass  force-app/main/default/classes/MyApexClass.cls
 MyApexClass  ApexClass  force-app/main/default/classes/MyApexClass.cls-meta.xml
 ```
 
+## retrieve elswhere updated class
+`sfdx force:source:retrieve --sourcepath force-app/main/default/classes -u Demo1` **sourcepath** can be used to specify a directory from the source org and retrieve all updates from there. <br>
+**NOTE:** This will only retrieve classes already existend in the local project. New classes won't be synced down automatically. <br>
+<br>
+`sfdx force:source:retrieve --manifest mdapi/classes.xml -u isv` use a **manifest** to receive all or specific apex classes. <br>
+The following manifest will retrieve all clases due to the **star** wildcard: <br>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apex_Classes</fullName>
+    <description>Let's see if I can retrieve classes only.</description>
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <version>50.0</version>
+</Package>
+```
+
+To retrive only specific classes those individual **members** have to be specified: <br>
+
+```xml
+    <types>
+        <members>MyApexClass</members>
+        <members>MyApexClass2</members>
+        <name>ApexClass</name>
+    </types>
+``` 
+
+The **manifest** dosn't have to be named **package.xml**. I've named the above file **classes.xml**. <br>
+
