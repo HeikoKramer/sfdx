@@ -84,3 +84,19 @@ source format – own xml for each field, object, etc. <br>
 ## metadata to source without conversion step
 `sfdx force:source:retrieve --manifest mdapi/package.xml -u isv` uses an existing **package.xml** (manifest) to retrieve the specified content directly in source format. <br>
 
+## create and deploy apex class via cli
+`sfdx force:apex:class:create --classname MyApexClass --template DefaultApexClass --outputdir force-app/main/default/classes/` <br>
+This command creates apex class **MyApexClass** in the specified directory. <br>
+The apex class can be edited with your editor of chice and deploeyed as following: <br>
+```sh
+$ sfdx force:source:deploy --sourcepath force-app/main/default/classes/MyApexClass.cls -u Demo1
+WARNING: apiVersion configuration overridden at "47.0"
+Job ID | 0Ah7R9800NSjLHFGDA3
+SOURCE PROGRESS | ████████████████████████████████████████ | 1/1 Components
+=== Deployed Source
+FULL NAME    TYPE       PROJECT PATH
+───────────  ─────────  ───────────────────────────────────────────────────────
+MyApexClass  ApexClass  force-app/main/default/classes/MyApexClass.cls
+MyApexClass  ApexClass  force-app/main/default/classes/MyApexClass.cls-meta.xml
+```
+
