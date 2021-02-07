@@ -195,7 +195,7 @@ The short form of **--help** is **-h**. <br>
 will create an **account** with the **name** field filled. Enter multiple fields separated by **space**: <br>
 `sfdx force:data:record:create -s Account -u Demo1 -v "name='CFC2' Industry='Energgy'"` <br>
 The command creates an account named **CFC2** and industry **Energgy**. <br>
-To correct that spelling mistake we can **update** the recorg: <br>
+**Update a record** to correct that spelling mistake we can use the following command: <br>
 `sfdx force:data:record:update -s Account -u Demo1 -v "Industry='Energy'" -i 0017R00002TF7zQQAT` <br>
 
 
