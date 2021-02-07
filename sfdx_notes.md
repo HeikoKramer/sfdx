@@ -101,9 +101,10 @@ MyApexClass  ApexClass  force-app/main/default/classes/MyApexClass.cls-meta.xml
 ```
 
 ## retrieve elswhere updated class
+### update already retrieved elements
 `sfdx force:source:retrieve --sourcepath force-app/main/default/classes -u Demo1` **sourcepath** can be used to specify a directory from the source org and retrieve all updates from there. <br>
 **NOTE:** This will only retrieve classes already existend in the local project. New classes won't be synced down automatically. <br>
-### sync down all or specific classes
+### retrieve all or specific elements
 `sfdx force:source:retrieve --manifest mdapi/classes.xml -u isv` use a **manifest** to receive all or specific apex classes. <br>
 The following manifest will retrieve all clases due to the **star** wildcard: <br>
 
