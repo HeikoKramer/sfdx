@@ -133,3 +133,54 @@ To retrive only specific classes those individual **members** have to be specifi
 
 The **manifest** dosn't have to be named **package.xml**. I've named the above file **classes.xml**. <br>
 
+## the help command
+As it it is impossible to remember all terminal commands, most terminal applications come with am manual. <br> 
+
+```sh
+$ man sfdx
+No manual entry for sfdx
+``` 
+
+sfdx apparently has no manual, but it makes very good use of the **--help** command. <br>
+
+```sh
+$ sfdx --help
+Salesforce CLI
+
+VERSION
+  sfdx-cli/7.85.1-2fb9e41053 linux-x64 node-v12.18.3
+
+USAGE
+  $ sfdx [COMMAND]
+
+TOPICS
+  alias    manage username aliases
+  auth     authorize an org for use with the Salesforce CLI
+  config   configure the Salesforce CLI
+  force    tools for the Salesforce developer
+  plugins  add/remove/create CLI plug-ins
+  schema   List metadata types in your Salesforce org using the CLI
+
+COMMANDS
+  autocomplete  display autocomplete installation instructions
+  commands      list all the commands
+  help          display help for sfdx
+  plugins       list installed plugins
+  update        update the sfdx CLI
+  which         show which plugin a command is in
+```
+
+To see the help page of **source:retrieve** and all its available parameters the command would be: <br>
+`sfdx force:source:retrieve --help` there are also their short forms specified: <br>
+
+```sh
+  -p, --sourcepath=sourcepath
+      comma-separated list of source file paths to retrieve
+
+  -x, --manifest=manifest
+      file path for manifest (package.xml) of components to retrieve
+```
+
+The prior used **--sourcepath** is short **-p**, the **--manifes** is **-x**. <br>
+The short form of **--help** is **-h**. <br>
+
