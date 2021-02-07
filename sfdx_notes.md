@@ -184,3 +184,19 @@ To see the help page of **source:retrieve** and all its available parameters the
 The prior used **--sourcepath** is short **-p**, the **--manifes** is **-x**. <br>
 The short form of **--help** is **-h**. <br>
 
+## running test classes via sfdx
+`sfdx force:apex:test:run -h` will provide all options for an **apex test run**. <br>
+
+----
+
+## working with data
+**Create a record** `sfdx force:data:record:create -h` <br>
+`sfdx force:data:record:create -s Account -u Demo1 -v "name='CFC – created from cli'"` <br>
+will create an **account** with the **name** field filled. Enter multiple fields separated by **space**: <br>
+`sfdx force:data:record:create -s Account -u Demo1 -v "name='CFC2' Industry='Energgy'"` <br>
+The command creates an account named **CFC2** and industry **Energgy**. <br>
+To correct that spelling mistake we can **update** the recorg: <br>
+`sfdx force:data:record:update -s Account -u Demo1 -v "Industry='Energy'" -i 0017R00002TF7zQQAT` <br>
+
+
+
