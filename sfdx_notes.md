@@ -195,8 +195,16 @@ The short form of **--help** is **-h**. <br>
 will create an **account** with the **name** field filled. Enter multiple fields separated by **space**: <br>
 `sfdx force:data:record:create -s Account -u Demo1 -v "name='CFC2' Industry='Energgy'"` <br>
 The command creates an account named **CFC2** and industry **Energgy**. <br>
+<br>
 **Update a record** to correct that spelling mistake we can use the following command: <br>
 `sfdx force:data:record:update -s Account -u Demo1 -v "Industry='Energy'" -i 0017R00002TF7zQQAT` <br>
+<br>
+**Retrive information** with **get** – in the case of the following command all fields and values from the **CFC2** account: <br>
+`sfdx force:data:record:get -s Account -u Demo1 -w "Name='CFC2'"` to receive the outcome in **json** format use: <br>
+`sfdx force:data:record:get -s Account -u isv -w "Name='CFC2'" --json` <br>
+<br>
+**Delete a record** with command: `sfdx force:data:record:delete -s Account -u Demo1 -w "Name='CFC2'"` <br>
+Like the others delete would accept **-i, --id** or other options `sfdx force:data:record:delete -h` for more. <br>
 
 
 
