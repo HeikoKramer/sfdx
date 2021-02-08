@@ -82,7 +82,7 @@ source format – own xml for each field, object, etc. <br>
 *I didn't manage to get this method to work with my sfdx version on linux* <br>
 
 ## metadata to source without conversion step
-`sfdx force:source:retrieve --manifest mdapi/package.xml -u isv` uses an existing **package.xml** (manifest) to retrieve the specified content directly in source format. <br>
+`sfdx force:source:retrieve --manifest mdapi/package.xml -u Demo1` uses an existing **package.xml** (manifest) to retrieve the specified content directly in source format. <br>
 
 ## create and deploy apex class via cli
 `sfdx force:apex:class:create --classname MyApexClass --template DefaultApexClass --outputdir force-app/main/default/classes/` <br>
@@ -105,7 +105,7 @@ MyApexClass  ApexClass  force-app/main/default/classes/MyApexClass.cls-meta.xml
 `sfdx force:source:retrieve --sourcepath force-app/main/default/classes -u Demo1` **sourcepath** can be used to specify a directory from the source org and retrieve all updates from there. <br>
 **NOTE:** This will only retrieve classes already existend in the local project. New classes won't be synced down automatically. <br>
 ### retrieve all or specific elements
-`sfdx force:source:retrieve --manifest mdapi/classes.xml -u isv` use a **manifest** to receive all or specific apex classes. <br>
+`sfdx force:source:retrieve --manifest mdapi/classes.xml -u Demo1 **manifest** to receive all or specific apex classes. <br>
 The following manifest will retrieve all clases due to the **star** wildcard: <br>
 
 ```xml
@@ -205,6 +205,5 @@ The command creates an account named **CFC2** and industry **Energgy**. <br>
 <br>
 **Delete a record** with command: `sfdx force:data:record:delete -s Account -u Demo1 -w "Name='CFC2'"` <br>
 Like the others delete would accept **-i, --id** or other options `sfdx force:data:record:delete -h` for more. <br>
-
-
-
+<br>
+**soql in sfdx** example: `sfdx force:data:soql:query -u Demo1 -q "SELECT Id, Name, Email FROM User"` <br>
