@@ -207,3 +207,96 @@ The command creates an account named **CFC2** and industry **Energgy**. <br>
 Like the others delete would accept **-i, --id** or other options `sfdx force:data:record:delete -h` for more. <br>
 <br>
 **soql in sfdx** example: `sfdx force:data:soql:query -u Demo1 -q "SELECT Id, Name, Email FROM User"` <br>
+<br>
+**Export relational data:** To receive relational data, like **contacts** of **accounts** use such an command: <br>
+`sfdx force:data:tree:export -q "SELECT Id, Name, (SELECT FirstName, LastName FROM Contacts) FROM Account" -d /home/heiko/test -p -u Demo1`. <br>
+**-d** specifies the directory where the results should be saved (in json format). <br>
+**-p** generates mulitple sobject tree files and a plan definition file for aggregated import. <br>
+The output of this command looks like this: <br>
+```sh
+Wrote 13 records to /home/heiko/test/Accounts.json
+Wrote 20 records to /home/heiko/test/Contacts.json
+Wrote 0 records to /home/heiko/test/Account-Contact-plan.json
+```
+**Accounts.json** (two example records): <br>
+```json
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "Name": "Edge Communications"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef2"
+            },
+            "Name": "Burlington Textiles Corp of America"
+        }
+    ]
+}
+```
+
+**Contacts.json** (three example records from two accounts): <br>
+```json
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef1"
+            },
+            "FirstName": "Rose",
+            "LastName": "Gonzalez",
+            "AccountId": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef2"
+            },
+            "FirstName": "Sean",
+            "LastName": "Forbes",
+            "AccountId": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef3"
+            },
+            "FirstName": "Jack",
+            "LastName": "Rogers",
+            "AccountId": "@AccountRef2"
+        }
+    ]
+}
+```
+**Account-Contact-plan.json** (complete): <br>
+```json
+[
+    {
+        "sobject": "Account",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Accounts.json"
+        ]
+    },
+    {
+        "sobject": "Contact",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "Contacts.json"
+        ]
+    }
+]
+```
+The entry **"referenceId": "AccountRef1"** on the account object corresponds to the **"AccountId": "@AccountRef1** entry on the contact. <br>
+This referential mapping together with **Account-Contact-plan.json** is required to import those records with their **relations** into an other org. <br>
+The Salesforce 18-digit id can't be used in this case as those ids would conflict with the target org. <br>
+
+
