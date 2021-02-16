@@ -259,9 +259,7 @@ Wrote 0 records to /home/heiko/test/Account-Contact-plan.json
                 "referenceId": "ContactRef2"
             },
             "FirstName": "Sean",
-            "LastName": "Forbes",
-            "AccountId": "@AccountRef1"
-        },
+        
         {
             "attributes": {
                 "type": "Contact",
@@ -295,8 +293,38 @@ Wrote 0 records to /home/heiko/test/Account-Contact-plan.json
     }
 ]
 ```
+
 The entry **"referenceId": "AccountRef1"** on the account object corresponds to the **"AccountId": "@AccountRef1** entry on the contact. <br>
 This referential mapping together with **Account-Contact-plan.json** is required to import those records with their **relations** into an other org. <br>
 The Salesforce 18-digit id can't be used in this case as those ids would conflict with the target org. <br>
+<br>
+To **import** those records into an other org use the **plan** file: <br>
+```sh
+$ sfdx force:data:tree:import -p Account-Contact-plan.json -u Demo2
+=== Import Results
+Reference ID  Type     ID
+────────────  ───────  ──────────────────
+AccountRef1   Account  0017R00002TFgEgQAL
+AccountRef2   Account  0017R00002TFgEhQAL
+ContactRef1   Contact  0037R00002pcMTJQA2
+ContactRef2   Contact  0037R00002pcMTKQA2
+ContactRef3   Contact  0037R00002pcMTLQA2
+```
+
+Use simplified commands to **export/import** records individual without keeping their relations: <br> 
+
+```sh
+$ sfdx force:data:tree:export -q "SELECT Id, Name FROM Account" -u Demo1
+$ sfdx force:data:tree:export -q "SELECT Id, LastName, FirstName FROM Contact" -u Demo1
+# Then run the import command:
+$ sfdx force:data:tree:import -f Contact.json,Account.json -u Demo2
+```
+
+**sObject tree** import requests can contain
+* Up to a total of 200 records across all trees
+* Up to five records of different types
+* sObject trees up to five levels deep
+
+Check out the [Salesforce documentation](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobject_tree.htm) for more information. <br>
 
 
