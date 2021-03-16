@@ -43,6 +43,8 @@ The **sfdx-project.json** was created with the global set **api version**. The *
 `sfdx force:auth:web:login -a Demo1` will open production org web-login to authenticate the cli. <br>
 To authenticate a **Sandbox** or **Custom Domain** use `sfdx force:auth:web:login -a Demo1 --instanceurl https://test.salesforce.com` <br>
 If the authentication via web login doesn't work, try `sfdx force:auth:device:login -a Demo1` <br>
+## org logout
+`sfdx force:auth:logout -u Demo1` will disconnect the prior authenticated *Demo1* org from sfdx. <br>
 ## open org
 To open an authenticated org type `sfdx force:org:open -u Demo1` or `sfdx force:org:open -u 0221@myforce.net` <br>
 **Demo1** is the org **alias**, *0221@myforce.net* is the *user name* – both work fine. <br>
