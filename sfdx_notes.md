@@ -76,6 +76,10 @@ The directory **SFDX_Test** will contain all these extract elements. <br>
 **-u Demo1**             = **org alias or username** <br>
 **-k mdapi/package.xml** = **package.xml location** <br>
 This command will again result in an **unpackaged.zip** file in the targer directory. <br>
+<br>
+Another way to retrieve metadata via package.xml is `sfdx force:source:retrieve -u Demo1 -x ./package.xml`. <br>
+It is described in the Trailhead [Package.xml Metadata Management](https://trailhead.salesforce.com/content/learn/modules/package-xml) module. <br>
+This method doesn't require to unzip the retrieved metadata, it will be placed in the force-app/main/default directory of the project. <br> 
 
 ## convert metadata to source format
 metadata structure – everything is in the same place. <br>
