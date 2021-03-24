@@ -1,6 +1,6 @@
 # sfdx
 Repo to take notes on all **sfdx** related topics (in this file: [sfdx_notes.md](https://github.com/HeikoKramer/sfdx/blob/main/sfdx_notes.md)). <br>
-For my sfdx related **aliases** and **functions** see the **sfdx.conf** file in my [**linux** repo](https://github.com/HeikoKramer/linux/blob/main/dotfiles/sfdx.conf).
+For my sfdx related **aliases** and **functions** see the [sfdx.conf](https://raw.githubusercontent.com/HeikoKramer/sfdx/main/sfdx.conf) file. <br>
 
 ----
 
