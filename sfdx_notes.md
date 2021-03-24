@@ -90,6 +90,10 @@ source format – own xml for each field, object, etc. <br>
 ## metadata to source without conversion step
 `sfdx force:source:retrieve --manifest mdapi/package.xml -u Demo1` uses an existing **package.xml** (manifest) to retrieve the specified content directly in source format. <br>
 
+## Retrieving data without package.xml
+`sfdx force:source:retrieve -m ApexClass -u Demo1` would retrieve all Apex classes from the Demo1 org. <br>
+The [Metadata Coverage Report](https://developer.salesforce.com/docs/metadata-coverage/51) shows what data can be queried via the metadata api. <br>
+
 ## create and deploy apex class via cli
 `sfdx force:apex:class:create --classname MyApexClass --template DefaultApexClass --outputdir force-app/main/default/classes/` <br>
 This command creates apex class **MyApexClass** in the specified directory. <br>
