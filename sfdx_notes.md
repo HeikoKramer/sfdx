@@ -332,3 +332,17 @@ Check out the [Salesforce documentation](https://developer.salesforce.com/docs/a
 ## Scratch orgs
 `sfdx force:org:create -f config/project-scratch-def.json` **executed in the main sfdx project folder** will create a scratch org as defined in project-scratch-def.json. <br>
 If yo forget to set the **alias** with **-a** you can set it anytime later with `sfdx alias:set scratch=test-wkuerukfcxub@example.com`.<br>
+
+## Limits
+You can display an ors limits (remaining, mx) with `sfdx force:limits:api:display -u Demo1`. <br>
+
+````sh
+$ sfdx force:limits:api:display -u Demo1
+Name                                         Remaining  Max
+───────────────────────────────────────────  ─────────  ─────────
+ActiveScratchOrgs                            4          5
+AnalyticsExternalDataSizeMB                  40960      40960
+BOZosCalloutHourlyLimit                      20000      20000
+ConcurrentAsyncGetReportInstances            200        200
+ConcurrentEinsteinDataInsightsStoryCreation  5          5
+```
