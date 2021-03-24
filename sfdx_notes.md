@@ -329,4 +329,6 @@ $ sfdx force:data:tree:import -f Contact.json,Account.json -u Demo2
 
 Check out the [Salesforce documentation](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobject_tree.htm) for more information. <br>
 
-
+## Scratch orgs
+`sfdx force:org:create -f config/project-scratch-def.json` **executed in the main sfdx project folder** will create a scratch org as defined in project-scratch-def.json. <br>
+If yo forget to set the **alias** with **-a** you can set it anytime later with `sfdx alias:set scratch=test-wkuerukfcxub@example.com`.<br>
