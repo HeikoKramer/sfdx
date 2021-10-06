@@ -8,8 +8,8 @@ Note file to store useful Apex scripts <br>
 // The license assignment is handeled in the UserPackageLicense object
  
 List<User> listOfUsers = [SELECT Id 
-                               FROM User
-                              WHERE Username ='user@name.here']; // <-- place username here
+                            FROM User
+                           WHERE Username = 'user@name.here']; // <-- place username here
  
 List<UserPackageLicense> listOfLicensesToInsert = new List<UserPackageLicense>();
  
@@ -29,8 +29,8 @@ insert listOfLicensesToInsert;
 // Example how to assign feature licenses and call center via Apex
  
 List<User> listOfUsers = [SELECT Id, UserPermissionsMarketingUser, UserPermissionsKnowledgeUser, UserPermissionsInteractionUser, UserPermissionsSupportUser, CallCenterId
-                               FROM User
-                              WHERE Username ='some@user.name']; // <-- place username here
+                            FROM User
+                           WHERE Username = 'some@user.name']; // <-- place username here
  
 for (User u : listOfUsers) {
     u.UserPermissionsMarketingUser   = true; // Checks "Marketing User"
@@ -48,8 +48,8 @@ update listOfUsers;
 
 ```java
 List<User> listOfUsers = [SELECT Id 
-                               FROM User
-                              WHERE Username ='user@name.here']; // <-- place username here
+                            FROM User
+                           WHERE Username = 'user@name.here']; // <-- place username here
 
 List<PermissionSetAssignment> newAssignments = new List<PermissionSetAssignment>();
 
