@@ -38,7 +38,6 @@ for (User u : listOfUsers) {
     u.UserPermissionsInteractionUser = true; // Checks "Flow User"
     u.UserPermissionsSupportUser     = true; // Checks "Service Cloud User"
     u.CallCenterId                   = 'someId'; // <-- place CallCenterId here
-    listOfUserToUpdate.add(u);
 }
  
 update listOfUsers;
