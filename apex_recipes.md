@@ -62,3 +62,15 @@ for (User u : listOfUsers) {
 insert newAssignments;
 ```
 
+## QuickTexts Comma Replacement
+When uploading QuickTexts (or any other Long-Text Templates) and you have to replace commas to get the CSV right, just change the replacement string (**###** in this exampls) back to commas with this script. <br>
+
+```java
+List<QuickText> quickTextsToUpdate = [SELECT Id,Message FROM QuickText WHERE CreatedDate = today];
+
+for (QuickText q : quickTextsToUpdate) {
+    q.Message = q.Message.replaceAll('###', ',');
+    System.debug(q.Message);
+}
+update quickTextsToUpdate;
+```
