@@ -66,3 +66,8 @@ SELECT PermissionSet.Name, count(AssigneeId) FROM PermissionSetAssignment GROUP 
 
 -- permission set without assignment
 SELECT Name, isCustom FROM PermissionSet WHERE Id NOT IN (SELECT PermissionSetId FROM PermissionSetAssignment)
+
+-- list all users which have a certain permission set assigned
+SELECT Assignee.Name,ExpirationDate,Id,IsActive,PermissionSetGroupId,PermissionSet.Name 
+FROM PermissionSetAssignment 
+WHERE PermissionSetId = '' -- <- place Id of Permission Set here
