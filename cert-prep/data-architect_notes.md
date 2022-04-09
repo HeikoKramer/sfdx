@@ -30,17 +30,17 @@ Storage is divided into two categories – **file storage** and **data storage**
 
 **Data storage** includes all standard and custom object **records**. <br>
 The most Salesforce editions come with **10 GB of data storage** for their production environment. <br>
-Exceptions are the *Developer (5MB)* and the *Personal (20MB)* editions. <br>
+Exceptions are the **Developer (5MB)** and the **Personal (20MB)** editions. <br>
 Additional license data storage allocation is not available for those two editions. <br>
 The other editions get storage allocated per user license as following: <br>
 
-**+ 20MB per License**
+**+ 20MB per License:**
 * Contact Manager
 * Group
 * Professional
 * Enterprise
 
-**+ 120MB per License**\*
+**+ 120MB per License:**\*
 * Performance
 * Unlimited
 
