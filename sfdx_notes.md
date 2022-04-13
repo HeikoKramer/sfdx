@@ -354,3 +354,10 @@ BOZosCalloutHourlyLimit                      20000      20000
 ConcurrentAsyncGetReportInstances            200        200
 ConcurrentEinsteinDataInsightsStoryCreation  5          5
 ```
+
+## Procedure to export and mass-delete debug logs
+
+```sh
+sfdx force:data:soql:query -u prod -t -q "SELECT Id FROM ApexLog WHERE LogUser.Name = 'B2BMA Integration' AND Status = 'Success'" -r "csv" > out.csv
+sfdx force:data:bulk:delete -u prod -s ApexLog -f ./out.csv
+```
