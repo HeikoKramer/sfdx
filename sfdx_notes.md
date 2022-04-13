@@ -344,7 +344,7 @@ If yo forget to set the **alias** with **-a** you can set it anytime later with 
 ## Limits
 You can display an ors limits (remaining, mx) with `sfdx force:limits:api:display -u Demo1`. <br>
 
-````sh
+```sh
 $ sfdx force:limits:api:display -u Demo1
 Name                                         Remaining  Max
 ───────────────────────────────────────────  ─────────  ─────────
