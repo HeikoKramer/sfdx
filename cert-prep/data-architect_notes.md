@@ -140,3 +140,10 @@ When working with big data and writing batches of records using APIs or Apex, yo
   * aggregate functions aren’t valid
   * don’t use the Id field
     * including Id in a query returns only results that have an empty ID
+  * query filter must list index fields in correct order
+    * if F1, F2 and F3 are the index fields:
+      * F1 – valid
+      * F1, F2 – valid
+      * F1, F2, F3 – valid
+      * F1, F3 – invalid
+      * F2, F3 – invalid
