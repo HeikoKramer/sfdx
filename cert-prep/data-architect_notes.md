@@ -76,4 +76,23 @@ Additional record capacity and async SOQL query is available as an **add-on lice
 
 * **Custom Big Object**
   * created to store information unique to your org
-  * extend the platform functionality 
+  * extends the platform functionality 
+  * extends your Salesforce data model
+  * used for auditing, tracking and to archive historical data
+
+<br>
+
+**Differences Between Big Objects and sObjects:**
+|Big Objects|sObjects|
+|:----------|:-------|
+|Horizontally scalable distributed database|Relational database|
+|Non-transactional database|Transactional database|
+|Billions of records|Millions of records|
+
+<br>
+
+**Behaviors to ensure consitant and scalable experience:**
+* Big Objects support only object and field permissions
+  * no regular or standard sharing rules
+* No triggers, flows, processes, or mobile app support
+* When inserting an identical big object record, only a single record is created
