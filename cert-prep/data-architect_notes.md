@@ -96,3 +96,13 @@ Additional record capacity and async SOQL query is available as an **add-on lice
   * no regular or standard sharing rules
 * No triggers, flows, processes, or mobile app support
 * When inserting an identical big object record, only a single record is created
+
+**Considerations:**
+* Big Objects support custom Lightning and Visualforce components
+  * rather than standard UI elements home pages, detail pages, list views, …
+* **100 big objects per org**
+* limits for big object fields depend on the org’s edition (same as custom object)
+* No Salesforce Connect external objects access in another org
+* Big Objects don't support encryption
+  * encrypted data from a standard / custom object is stored as clear text on B.O.
+
