@@ -40,10 +40,40 @@ The other editions get storage allocated per user license as following: <br>
 * Professional
 * Enterprise
 
+<br>
+
 **+ 120MB per License:**\*
 * Performance
 * Unlimited
 
 \* *20 MB for Lightning Platform Starter user licenses* <br>
 
+#### [Big Objects](https://developer.salesforce.com/docs/atlas.en-us.bigobjects.meta/bigobjects/big_object.htm)
+Description from developer.salesforce.com: <br>
+*A big object stores and manages massive amounts of data on the Salesforce platform. <br>
+You can archive data from other objects or bring massive datasets from outside systems into a big object to get a full view of your customers. <br>
+Clients and external systems use a standard set of APIs to access big object data. <br>
+A big object provides consistent performance, whether you have 1 million records, 100 million, or even 1 billion. <br>
+This scale gives a big object its power and defines its features.*
+<br>
+Edition availability: <br>
+* Enterprise
+* Performance
+* Unlimited
+* Developer
 
+Initial record capacity: **up to 1 million records** <br>
+Additional record capacity and async SOQL query is available as an **add-on license**. <br>
+<br>
+**Types of Big Objects:** <br>
+* **Standard Big Object**
+  * defined by Salesforce
+  * included in Salesforce products
+    * *FieldHistoryArchive* is a standard big object
+  * cannot be customized
+
+<br>
+
+* **Custom Big Object**
+  * created to store information unique to your org
+  * extend the platform functionality 
