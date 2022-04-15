@@ -97,6 +97,8 @@ Additional record capacity and async SOQL query is available as an **add-on lice
 * No triggers, flows, processes, or mobile app support
 * When inserting an identical big object record, only a single record is created
 
+<br>
+
 **Considerations:**
 * Big Objects support custom Lightning and Visualforce components
   * rather than standard UI elements home pages, detail pages, list views, …
@@ -106,3 +108,18 @@ Additional record capacity and async SOQL query is available as an **add-on lice
 * Big Objects don't support encryption
   * encrypted data from a standard / custom object is stored as clear text on B.O.
 
+<br>
+
+**Design with Resiliency in Mind** <br>
+When working with big data and writing batches of records using APIs or Apex, you can experience a partial batch failure while some records are written and others aren’t. Because the database is highly responsive and consistent at scale, this type of behavior is expected. In these cases, simply retry until all records are written. <br>
+<br>
+**Big Object principles:**
+* have a retry mechanism in place
+  * retry the batch until you get a successful result from the API or Apex method
+  * retry the entire batch
+* Big Objects don’t support transactions
+  * use asynchronous Apex
+    *  the Queueable interface isolates DML operations on different sObject types
+    *  the mixed DML error gets prevented
+* use asynchronous Apex to write to a Big Object (must retry)
+  * that way you are better equipped to handle database lifecycle events
