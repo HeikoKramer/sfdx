@@ -123,3 +123,20 @@ When working with big data and writing batches of records using APIs or Apex, yo
     *  the mixed DML error gets prevented
 * use asynchronous Apex to write to a Big Object (must retry)
   * that way you are better equipped to handle database lifecycle events
+
+<br>
+
+**Additional ressources:**
+* [Define and Deploy Custom Big Objects](https://developer.salesforce.com/docs/atlas.en-us.bigobjects.meta/bigobjects/big_object_define.htm)
+* [Populate a Custom Big Object](https://developer.salesforce.com/docs/atlas.en-us.bigobjects.meta/bigobjects/big_object_populate.htm) 
+  * via **CSV** file or **Apex** code
+* [Delete Data in a Custom Big Object](https://developer.salesforce.com/docs/atlas.en-us.bigobjects.meta/bigobjects/big_object_delete.htm) 
+  * via **Apex** or **SOAP**
+* [Big Objects Queueable Example](https://developer.salesforce.com/docs/atlas.en-us.bigobjects.meta/bigobjects/big_object_example_queueable.htm)
+* [SOQL with Big Objects](https://developer.salesforce.com/docs/atlas.en-us.bigobjects.meta/bigobjects/big_object_querying.htm)
+  * you can use `IN` only one time
+  * you can use the range operations `<`, `>`, `<=`, or `>=` only on the last field
+  * the `!=`, `LIKE`, `NOT IN`, `EXCLUDES`, and `INCLUDES` operators aren’t valid
+  * aggregate functions aren’t valid
+  * don’t use the Id field
+    * including Id in a query returns only results that have an empty ID
