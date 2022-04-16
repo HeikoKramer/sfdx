@@ -126,6 +126,15 @@ When working with big data and writing batches of records using APIs or Apex, yo
 
 <br>
 
+**Big Object index notes:**
+* a B.O. **requires an index** to be created
+  * the index must consist of a **minimum of 1** and a **maximum of 5** fields
+* all index fields must be marked **required**
+* the **maximum combined length** of the index is **100 characters**
+* index **can not be edited** once B.O. has been saved and deployed
+* all index fields **require to contain value**
+
+
 **Additional ressources:**
 * [Define and Deploy Custom Big Objects](https://developer.salesforce.com/docs/atlas.en-us.bigobjects.meta/bigobjects/big_object_define.htm)
 * [Populate a Custom Big Object](https://developer.salesforce.com/docs/atlas.en-us.bigobjects.meta/bigobjects/big_object_populate.htm) 
