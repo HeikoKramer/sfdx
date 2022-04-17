@@ -156,3 +156,15 @@ When working with big data and writing batches of records using APIs or Apex, yo
       * F1, F2, F3 – valid
       * F1, F3 – invalid
       * F2, F3 – invalid
+
+## Master Data Management (MDM)
+### Monitoring Bulk Data Loads
+The **[Bulk Data Load Jobs](https://help.salesforce.com/s/articleView?id=sf.monitoring_async_api_jobs.htm&type=5)** page in **setup** can be used to track in-progress/completed jobs. <br>
+It can be accessed to view information such as
+* type of operation
+* number of records processed
+* user who submitted the job
+
+The **[Bulk API 2.0 Event Type](https://developer.salesforce.com/docs/atlas.en-us.234.0.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_bulkapi2.htm)** in **Event Monitoring** can also be used to monitor the same information. <br>
+An event log can be downloaded to visualize the information. <br>
+
