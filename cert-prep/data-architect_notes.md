@@ -168,3 +168,20 @@ It can be accessed to view information such as
 The **[Bulk API 2.0 Event Type](https://developer.salesforce.com/docs/atlas.en-us.234.0.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_bulkapi2.htm)** in **Event Monitoring** can also be used to monitor the same information. <br>
 An event log can be downloaded to visualize the information. <br>
 
+### [Custom Metadata Types](https://help.salesforce.com/s/articleView?id=sf.custommetadatatypes_overview.htm&type=5)
+**Overall:**
+* CMT can be deployed using
+  * managed packages 
+  * unmanaged packages
+  * managed package extensions
+* mappings can be used to create associations between objects
+* Metadata API is used to 
+  * create
+  * edit
+  * delete custom metadata records
+* Apex can create and edit custom metadata records, but **not delete**
+* CMT values can be used in formula fields
+
+#### [What are Custom Metadata Types?](https://help.salesforce.com/s/articleView?id=custommetadatatypes_about.htm&type=5&language=en_US)
+Custom metadata is customizable, deployable, packageable, and upgradeable application metadata. First, you create a custom metadata type, which defines the form of the application metadata. Then you build reusable functionality that determines the behavior based on metadata of that type. <br>
+
