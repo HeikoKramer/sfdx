@@ -172,7 +172,50 @@ An event log can be downloaded to visualize the information. <br>
 tbd
 
 ### [Metadata Types](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_types_list.htm)
-tbd
+Metadata API enables you to access some entities and feature settings that you can customize in the user interface. <br>
+Metadata type 
+* names are case-sensitive 
+  * specifying a type name with an invalid case results in a deployment error
+* don’t always correspond directly to their related data types
+  * the information might be accessible but not organized as expected
+
+<br>
+
+Examples for **Metadata Types**:
+* [ApexClass](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_classes.htm)
+  * Represents an Apex class. 
+  * An Apex class is a template or blueprint from which Apex objects are created.
+  * Classes consist of other classes, user-defined methods, variables, exception types, and static initialization code.
+* [ApexTrigger](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_triggers.htm)
+  * Represents an Apex trigger.
+  * A trigger is Apex code that executes before or after specific data manipulation language (DML) events occur
+    * such as before object records are inserted into the database, or after records have been deleted
+* [Certificate](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_certificate.htm)
+  * Represents a certificate used for digital signatures which verify that requests are coming from your org. 
+  * Certificates are used for 
+    * authenticated single sign-on with an external website
+    * when using your org as an identity provider
+  * This type extends the [MetadataWithContent](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_metadatawithcontent.htm) metadata type and inherits its content and fullName fields.
+* [CustomLabel](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_customlabels.htm)
+  * The CustomLabels metadata type allows you to create custom labels that can be localized for use in different languages, countries, and currencies.
+* [CustomObject](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/customobject.htm)
+  * Represents a custom object that stores data unique to your org or an external object that maps to data stored outside your org.
+* [Flow](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_visual_workflow.htm)
+  * Represents the metadata associated with a flow. 
+  * With Flow, you can create an application that navigates users through a series of screens to query and update records in the database.
+  * You can also execute logic and provide branching capability based on user input to build dynamic applications.
+* [GlobalPicklistValue](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_globalpicklistvalue.htm)
+  * Represents the definition of a value used in a global picklist. 
+  * Custom picklist fields can inherit the picklist value set from a global picklist. 
+  * This type extends the [Metadata](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/metadata.htm) metadata type and inherits its fullName field.
+* [Layout](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/metadata.htm)
+  * Represents the metadata associated with a page layout.
+* [Metadata](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/metadata.htm)
+  * This is the base class for all metadata types. 
+  * You cannot edit this object. 
+  * A component is an instance of a metadata type.
+
+The Salesforce CLI uses the Metadata API to retrieve and deploy metadata type components. <br>
 
 ### [Custom Metadata Types](https://help.salesforce.com/s/articleView?id=sf.custommetadatatypes_overview.htm&type=5)
 **Overall:**
