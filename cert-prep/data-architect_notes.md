@@ -169,7 +169,23 @@ The **[Bulk API 2.0 Event Type](https://developer.salesforce.com/docs/atlas.en-u
 An event log can be downloaded to visualize the information. <br>
 
 ### [Event Monitoring](https://trailhead.salesforce.com/en/content/learn/modules/event_monitoring/event_monitoring_intro)
-tbd
+Salesforce **Event Monitoring** is a product which requires additional licensing. <br>
+It is sold as a bundle with other tools under the name [Salesforce Shield](https://developer.salesforce.com/docs/atlas.en-us.securityImplGuide.meta/securityImplGuide/salesforce_shield.htm). <br>
+Event Monitoring provides tracking for around 50 types of events, including:
+
+* Logins
+* Logouts
+* URI (web clicks in Salesforce Classic)
+* Lightning (web clicks, performance, and errors in Lightning Experience and the Salesforce mobile app)
+* Visualforce page loads
+* Application programming interface (API) calls
+* Apex executions
+* Report exports
+
+Event Logs can be queried via 
+* the **Event Log File Browser** (connected Heroku App)
+* SOQL (EventLogFile object)
+* via the API ([Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.224.0.api.meta/api/sforce_api_objects_eventlogfile.htm)
 
 ### [Metadata Types](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_types_list.htm)
 Metadata API enables you to access some entities and feature settings that you can customize in the user interface. <br>
