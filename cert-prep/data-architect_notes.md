@@ -185,7 +185,7 @@ Event Monitoring provides tracking for around 50 types of events, including:
 Event Logs can be queried via 
 * the **Event Log File Browser** (connected Heroku App)
 * SOQL (EventLogFile object)
-* via the API ([Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.224.0.api.meta/api/sforce_api_objects_eventlogfile.htm)
+* via the API ([Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.224.0.api.meta/api/sforce_api_objects_eventlogfile.htm))
 
 ### [Metadata Types](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_types_list.htm)
 Metadata API enables you to access some entities and feature settings that you can customize in the user interface. <br>
