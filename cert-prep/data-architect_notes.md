@@ -248,7 +248,29 @@ The Salesforce CLI uses the Metadata API to retrieve and deploy metadata type co
 * CMT values can be used in formula fields
 
 #### [What are Custom Metadata Types?](https://help.salesforce.com/s/articleView?id=custommetadatatypes_about.htm&type=5&language=en_US)
-Custom metadata is customizable, deployable, packageable, and upgradeable application metadata. First, you create a custom metadata type, which defines the form of the application metadata. Then you build reusable functionality that determines the behavior based on metadata of that type. <br>
+Custom metadata is customizable, deployable, packageable, and upgradeable application metadata. <br>
+First, you create a Custom Metadata Type, which defines the form of the application metadata. <br>
+Then you build reusable functionality that determines the behavior based on metadata of that type. <br>
+<br>
+Custom Metadata Types (CMT) can be created declaratively. <br>
+Who install a package with a CMT can add own records to the metadata type. <br>
+Custom Metadata is read by Salesforce and used to produce customized application behavior. <br>
+Typical use cases: 
+
+* Mappings—Create associations between different objects
+  * such as assignments of cities, states or provinces to particular regions in a country
+* Business rules—Combine configuration records with custom functionality
+  * Use CMTs along with Apex to route payments to the correct endpoint
+* Master data 
+  * Create for example a definition of custom charges, like duties and VAT rates
+* White lists
+  * Manage lists, such as approved donors and pre-approved vendors
+* Secrets
+  * Store information, like API keys, in your protected custom metadata types
+
+Custom metadata rows resemble custom object rows in structure. <br>
+You create, edit, and delete custom metadata rows in Metadata API or in Setup. <br>
+Because the **records are metadata**, you can migrate them using packages or Metadata API tools. <br>
 
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
