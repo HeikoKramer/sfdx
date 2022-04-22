@@ -240,10 +240,7 @@ The Salesforce CLI uses the Metadata API to retrieve and deploy metadata type co
   * unmanaged packages
   * managed package extensions
 * mappings can be used to create associations between objects
-* Metadata API is used to 
-  * create
-  * edit
-  * delete custom metadata records
+* Metadata API is used to create, edit, delete custom metadata records
 * Apex can create and edit custom metadata records, but **not delete**
 * CMT values can be used in formula fields
 
@@ -257,10 +254,12 @@ Who install a package with a CMT can add own records to the metadata type. <br>
 Custom Metadata is read by Salesforce and used to produce customized application behavior. <br>
 Typical use cases: 
 
-* Mappings—Create associations between different objects
-  * such as assignments of cities, states or provinces to particular regions in a country
-* Business rules—Combine configuration records with custom functionality
-  * Use CMTs along with Apex to route payments to the correct endpoint
+* Mappings
+  * Create associations between different objects
+    * such as assignments of cities, states or provinces to particular regions in a country
+* Business rules
+  * Combine configuration records with custom functionality
+    * Use CMTs along with Apex to route payments to the correct endpoint
 * Master data 
   * Create for example a definition of custom charges, like duties and VAT rates
 * White lists
