@@ -307,11 +307,11 @@ Custom metadata types can be used directly from:
 <br>
 CMD as pick list **default values**: <br>
 You can use a **custom metadata record field** as the **default value of a picklist**. <br>
-Put the appropriate **formular** into the **default value** input in the **picklist field settings:** <br>
+Put the appropriate **formula** into the **default value** input in the **picklist field settings:** <br>
 
 ![default-value](/cert-prep/images/cmt_default-value_01.png)
 
-**NOTE:** Custom Metadata won't show up under **Select Field Type** in the **Formular Editor**. <br>
+**NOTE:** Custom Metadata won't show up under **Select Field Type** in the **Formula Editor**. <br>
 To refer to your CMD values, use the following syntax: <br>
 `$CustomMetadata.CustomMetadataTypeAPIName.RecordAPIName.FieldAPIName` <br>
 Use the correct suffixes. 
@@ -320,8 +320,8 @@ Use the correct suffixes.
 * Records do not require a suffix
 
 CMD values in **validation rules**: <br> 
-The **formular editor** of validation rules offers `$CustomMetadata` as a standard field type: <br> 
-![validation-rule](/cert-prep/images/cmt_default-validation-rule_01.png)
+The **formula editor** of validation rules offers `$CustomMetadata` as a standard field type: <br> 
+![validation-rule](/cert-prep/images/cmt_validation-rule_01.png)
 
 So we can refer to metadata values in conditions like this: <br>
 
@@ -335,7 +335,35 @@ IF(
  )
 ```
 
-We can refer to those values in multiple rules – and update them centrally if they change!. <br> 
+We can refer to those values in multiple rules – and update them centrally if they change! <br> 
+
+CMD values in **formulas**: <br>
+CMD values are also accessible by default in the **formula field editor**. <br>
+Their values can be used to display certain things, to perform calculations .. like any other value you'd use in a formula. <br>
+Here the example formula from the Trailhead module: <br>
+
+```
+IF ( Total_Spending__c <  $CustomMetadata.Support_Tier__mdt.Bronze.Minimum_Spending__c,
+     $CustomMetadata.Support_Tier__mdt.Bronze.Minimum_Spending__c - Total_Spending__c,
+     IF ( Total_Spending__c <  $CustomMetadata.Support_Tier__mdt.Silver.Minimum_Spending__c,
+          $CustomMetadata.Support_Tier__mdt.Silver.Minimum_Spending__c - Total_Spending__c,
+          IF ( Total_Spending__c <  $CustomMetadata.Support_Tier__mdt.Gold.Minimum_Spending__c,
+               $CustomMetadata.Support_Tier__mdt.Gold.Minimum_Spending__c - Total_Spending__c,
+               0
+          )
+     )
+)
+```
+
+Here our calculated value:
+
+![formula](/cert-prep/images/cmt_formula_01.png)
+
+Same major benefit: We could change the parameters for the calculation now centrally in the CMD record. <br>
+That way we would update all the formulas using that parameter at once. <br>
+
+**NOTE:** If you decide to package your custom metadata type, subscribers to the package can customize details, like price, while you still maintain the app logic! <br>
+
 
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
