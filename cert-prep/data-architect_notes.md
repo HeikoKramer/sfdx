@@ -309,7 +309,7 @@ CMD as pick list **default values**: <br>
 You can use a **custom metadata record field** as the **default value of a picklist**. <br>
 Put the appropriate **formular** into the **default value** input in the **picklist field settings:** <br>
 
-![default-value](/images/cmt_default-value_01.png)
+![default-value](/cert-prep/images/cmt_default-value_01.png)
 
 **NOTE:** Custom Metadata won't show up under **Select Field Type** in the **Formular Editor**. <br>
 To refer to your CMD values, use the following syntax: <br>
