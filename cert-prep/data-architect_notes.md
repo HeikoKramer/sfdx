@@ -277,6 +277,18 @@ Typical use cases:
 Custom metadata rows resemble custom object rows in structure. <br>
 You create, edit, and delete custom metadata rows in Metadata API or in Setup. <br>
 Because the **records are metadata**, you can migrate them using packages or Metadata API tools. <br>
+<br>
+Custom metadata types support most standard field types, including:
+
+* Metadata Relationships
+* Checkbox
+* Date and Date/Time
+* Email and Phone
+* Number
+* Percent
+* Picklist
+* Text and Text Area
+* URL
 
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
