@@ -240,6 +240,9 @@ Intro from the [Get Started with Custom Metadata Types](https://trailhead.salesf
 *When you deploy apps with custom metadata types, all of the records and fields are included in the package installation, so no additional steps are needed. You can deploy custom metadata types from a sandbox with change sets or packaged in managed packages.* <br>
 <br>
 *Unlike custom metadata types, when you deploy apps with custom objects and custom settings, the metadata for those objects (the header) gets deployed, but the records (definitions) are left behind. Whether you’re manually loading records or inserting records using an Apex script, adding records can be a time-consuming process.* <br> 
+<br>
+*Custom metadata types are customizable, deployable, packageable, and upgradeable application metadata. In many cases, custom metadata types have an advantage over custom settings and custom objects. They can make your application lifecycle management and compliance easier, faster, and more robust.* <br>
+<br>
 
 **Overall:**
 * CMT can be deployed using
@@ -289,6 +292,16 @@ Custom metadata types support most standard field types, including:
 * Picklist
 * Text and Text Area
 * URL
+
+<br>
+Custom metadata types can be used directly from:
+
+* Apex
+* Flows
+* Formula fields
+* Process Builder
+* Validation rules
+
 
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
