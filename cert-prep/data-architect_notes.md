@@ -319,5 +319,23 @@ Use the correct suffixes.
 * For fields, use `__c`
 * Records do not require a suffix
 
+CMD values in **validation rules**: <br> 
+The **formular editor** of validation rules offers `$CustomMetadata` as a standard field type: <br> 
+![validation-rule](/cert-prep/images/cmt_default-validation-rule_01.png)
+
+So we can refer to metadata values in conditions like this: <br>
+
+```
+IF( 
+ (ISPICKVAL( Support_Tier__c , "Silver") 
+      && 
+   ( Total_Spending__c <  
+   $CustomMetadata.Support_Tier__mdt.Silver.Minimum_Spending__c 
+   )
+ )
+```
+
+We can refer to those values in multiple rules – and update them centrally if they change!. <br> 
+
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
