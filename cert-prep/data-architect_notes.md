@@ -302,6 +302,22 @@ Custom metadata types can be used directly from:
 * Process Builder
 * Validation rules
 
+#### [Custom Metadata in Formulas, Default Values, and Validation Rules](https://trailhead.salesforce.com/content/learn/modules/custom_metadata_types_dec/cmt_formulas)
+*Custom metadata types can save you a lot of time, and if you pair them with other features, you can streamline your workflow processes even more. For example, formulas save time and work by automating calculations. Combined with custom metadata types, formulas eliminate the need for hardcoded values that you need to individually update.* <br>
+<br>
+CMD as pick list **default values**: <br>
+You can use a **custom metadata record field** as the **default value of a picklist**. <br>
+Put the appropriate **formular** into the **default value** input in the **picklist field settings:** <br>
+
+![default-value](/images/cmt_default-value_01.png)
+
+**NOTE:** Custom Metadata won't show up under **Select Field Type** in the **Formular Editor**. <br>
+To refer to your CMD values, use the following syntax: <br>
+`$CustomMetadata.CustomMetadataTypeAPIName.RecordAPIName.FieldAPIName` <br>
+Use the correct suffixes. 
+* For the custom metadata type, use `__mdt` 
+* For fields, use `__c`
+* Records do not require a suffix
 
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
