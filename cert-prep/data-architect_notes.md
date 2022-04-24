@@ -403,5 +403,20 @@ Default fields of the CMD – like the *DeveloperName* – do not have any suffi
 SELECT DeveloperName, Minimum_Spending__c FROM Support_Tier__mdt
 ```
 
+#### [Custom Metadata Types in Apex](https://trailhead.salesforce.com/content/learn/modules/custom_metadata_types_adv/cmt_develop?trail_id=configure-your-app-with-custom-metadata-types)
+Records that affect the way an org behaves – such is the case with custom metadata types – **should be included in testing!** <br>
+Custom metadata types are set up the same way as workflow and validation rules. <br>
+Your Apex test classes can see custom metadata types and access their fields and records. <br>
+<br>
+Apex code can
+* create, read, and update (but not delete) custom metadata records
+  * as long as the metadata is subscriber-controlled 
+  * and visible from within the code's namespace
+
+You can edit records in memory but not upsert or delete them. <br>
+Apex code can deploy custom metadata records, but not by using a data manipulation language (DML) operation. <br>
+Use **Metadata.DeployContainer** to manage custom metadata components for deployment. <br>
+
+
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
