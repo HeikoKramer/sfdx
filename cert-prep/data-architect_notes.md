@@ -417,6 +417,11 @@ You can edit records in memory but not upsert or delete them. <br>
 Apex code can deploy custom metadata records, but not by using a data manipulation language (DML) operation. <br>
 Use **Metadata.DeployContainer** to manage custom metadata components for deployment. <br>
 
+#### Additional Custom Metadata Considerations and Resources 
+Especially when distributed across multiple org, the question who can **access** and **change** custom metadata types becomes relevant. <br>
+The [Protect Custom Metadata Types and Records](https://trailhead.salesforce.com/en/content/learn/modules/custom_metadata_types_adv/cmt_manageability?trail_id=configure-your-app-with-custom-metadata-types) Trailhead module provides a good overview on the topic. <br>
+<br>
+Useful document: [Custom Metadata Types Implementation Guide](http://resources.docs.salesforce.com/218/9/en-us/sfdc/pdf/custom_metadata_types_impl_guide.pdf)
 
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
