@@ -394,6 +394,14 @@ A **Custom Metadata Type** relationship field will grant you access to the CMT r
 Those relationships in our now created mapping records can be used to enhance functionality via Apex or Flow. <br>
 ![formula](/cert-prep/images/cmt_relationship-field_06.png)
 
+#### Custom Metadata Types in SOQL
+Custom Metadata records can be queried like any other Salesforce object. <br>
+**NOTE:** Even though the suffix for the custom metadata type is __mdt, the suffix for the custom field stays as __c. <br>
+Standard fields like the *DeveloperName* do not have any suffix. <br> 
+
+```sql
+SELECT DeveloperName, Minimum_Spending__c FROM Support_Tier__mdt
+```
 
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
