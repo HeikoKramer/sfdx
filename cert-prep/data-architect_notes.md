@@ -374,24 +374,24 @@ Custom metadata types support three types of relationships:
 * Relationship to an EntityDefinition (such as a custom or a standard object definition)
 * Relationship to a FieldDefinition (for both custom and standard fields)
 
-Add a new **Metadata Relationship** to you CMT:
+Add a new **Metadata Relationship** to you CMT: <br>
 ![formula](/cert-prep/images/cmt_relationship-field_01.png)
 
-To relate it to an object, select **Entity Definition**:
+To relate it to an object, select **Entity Definition**: <br>
 ![formula](/cert-prep/images/cmt_relationship-field_02.png)
 
-After that you can create **Field Definition** relationship fields:
+After that you can create **Field Definition** relationship fields: <br>
 ![formula](/cert-prep/images/cmt_relationship-field_03.png)
 
-That field relation ship requires a **controlling field** – the entity definition relation ship field from the prior step:
+That field relation ship requires a **controlling field** – the entity definition relation ship field from the prior step: <br>
 ![formula](/cert-prep/images/cmt_relationship-field_04.png)
 
 In the CMT record, you can now choose the object to relate to in the **Entity Definition** relationship field. <br>
 This will grant you access to those object's field in the **Field Definition** relationship field. <br>
-A **Custom Metadata Type** relationship field will grant you access to the CMT records available for the related type.
+A **Custom Metadata Type** relationship field will grant you access to the CMT records available for the related type. <br>
 ![formula](/cert-prep/images/cmt_relationship-field_05.png)
 
-Those relationships in our now created mapping records can be used to enhance functionality via Apex or Flow.  
+Those relationships in our now created mapping records can be used to enhance functionality via Apex or Flow. <br>
 ![formula](/cert-prep/images/cmt_relationship-field_06.png)
 
 
