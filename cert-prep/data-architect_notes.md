@@ -364,6 +364,36 @@ That way we would update all the formulas using that parameter at once. <br>
 
 **NOTE:** If you decide to package your custom metadata type, subscribers to the package can customize details, like price, while you still maintain the app logic! <br>
 
+#### [Metadata Relationship Fields](https://trailhead.salesforce.com/en/content/learn/modules/custom_metadata_types_adv/cmt_md_relationships?trail_id=configure-your-app-with-custom-metadata-types)
+Metadata relationship fields work like relationship fields for standard or custom objects. <br>
+Because they are custom metadata types, they have the same benefits of application configuration data. <br>
+<br>
+Custom metadata types support three types of relationships:
+
+* Relationship to another custom metadata type
+* Relationship to an EntityDefinition (such as a custom or a standard object definition)
+* Relationship to a FieldDefinition (for both custom and standard fields)
+
+Add a new **Metadata Relationship** to you CMT:
+![formula](/cert-prep/images/cmt_relationship-field_01.png)
+
+To relate it to an object, select **Entity Definition**:
+![formula](/cert-prep/images/cmt_relationship-field_02.png)
+
+After that you can create **Field Definition** relationship fields:
+![formula](/cert-prep/images/cmt_relationship-field_03.png)
+
+That field relation ship requires a **controlling field** – the entity definition relation ship field from the prior step:
+![formula](/cert-prep/images/cmt_relationship-field_04.png)
+
+In the CMT record, you can now choose the object to relate to in the **Entity Definition** relationship field. <br>
+This will grant you access to those object's field in the **Field Definition** relationship field. <br>
+A **Custom Metadata Type** relationship field will grant you access to the CMT records available for the related type.
+![formula](/cert-prep/images/cmt_relationship-field_05.png)
+
+Those relationships in our now created mapping records can be used to enhance functionality via Apex or Flow.  
+![formula](/cert-prep/images/cmt_relationship-field_06.png)
+
 
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
 tbd
