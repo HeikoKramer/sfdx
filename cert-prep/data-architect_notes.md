@@ -396,7 +396,7 @@ Those relationships in our now created mapping records can be used to enhance fu
 
 #### Custom Metadata Types in SOQL
 Custom Metadata records can be queried like any other Salesforce object. <br>
-**NOTE:** Even though the suffix for the custom metadata type is __mdt, the suffix for the custom field stays as __c. <br>
+**NOTE:** Even though the suffix for the custom metadata type is **__mdt**, the suffix for the custom field stays as **__c**. <br>
 Standard fields like the *DeveloperName* do not have any suffix. <br> 
 
 ```sql
