@@ -424,4 +424,20 @@ The [Protect Custom Metadata Types and Records](https://trailhead.salesforce.com
 Useful document: [Custom Metadata Types Implementation Guide](http://resources.docs.salesforce.com/218/9/en-us/sfdc/pdf/custom_metadata_types_impl_guide.pdf)
 
 ### [Custom Settings](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_customsettings.htm)
-tbd
+*Custom settings are similar to custom objects. Application developers can create custom sets of data and associate custom data for an organization, profile, or specific user. All custom settings data is exposed in the application cache, which enables efficient access without the cost of repeated queries to the database. Formula fields, validation rules, flows, Apex, and SOAP API can then use this data.* <br>
+<br>
+There are two types of custom settings:
+* List Custom Settings
+  * provides a reusable set of static data that can be accessed across your organization
+  * put frequently used data in a list custom setting to streamlines access to it
+  * data in list settings does not vary with profile or user, but is available organization-wide
+  * examples of list data:
+    * two-letter state abbreviations
+    * international dialing prefixes
+    * catalog numbers for products
+  * data is cached
+  * access is low-cost and efficient
+    * you don't have to use SOQL queries that count against your governor limits
+* Hierarchy Custom Settings
+  * uses a built-in hierarchical logic that lets you **personalize** settings for specific profiles or users
+  * checks the organization, profile, and user settings for the current user and returns the most specific, or “lowest,” value
