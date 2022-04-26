@@ -447,3 +447,6 @@ There are two types of custom settings:
 
 ### [Translation Workbench](https://help.salesforce.com/s/articleView?id=sf.customize_wbench.htm&type=5)
 tbd
+
+### [Customer 360 Data Manager] (https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
+tbd
