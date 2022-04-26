@@ -441,3 +441,6 @@ There are two types of custom settings:
 * Hierarchy Custom Settings
   * uses a built-in hierarchical logic that lets you **personalize** settings for specific profiles or users
   * checks the organization, profile, and user settings for the current user and returns the most specific, or “lowest,” value
+
+## Salesforce Data Management
+[Common REGEX Validation](https://help.salesforce.com/s/articleView?id=000334073&type=1)
