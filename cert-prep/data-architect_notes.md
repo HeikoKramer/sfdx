@@ -444,3 +444,6 @@ There are two types of custom settings:
 
 ## Salesforce Data Management
 [Common REGEX Validation](https://help.salesforce.com/s/articleView?id=000334073&type=1)
+
+### [Translation Workbench](https://help.salesforce.com/s/articleView?id=sf.customize_wbench.htm&type=5)
+tbd
