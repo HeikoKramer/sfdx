@@ -450,3 +450,14 @@ tbd
 
 ### [Customer 360 Data Manager] (https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
 tbd
+
+### [Experience Cloud User Licenses](https://help.salesforce.com/s/articleView?id=sf.users_license_types_communities.htm&type=5)
+**Main Features:**
+
+|Features|Customer Community|Customer Community Plus|Partner Community|Channel Account|External Apps|
+|:-------|:-----------------|:----------------------|:----------------|:--------------|:------------|
+|Accounts, Assets, Contacts, Orders, Price Books, Products, Tasks|y|y|y|y|read only|
+|Leads, Campaigns, Opportunities, Quotes|n|n|y|y|n|
+|Cases, Entitlements, Events, WO, WOLI|y|y|y|y|n|
+|External Objects|y|y|y|y|y|
+|Custom Objects|10|10|10|10|100|
