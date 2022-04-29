@@ -486,3 +486,9 @@ Batch Apex can
 
 A Batch Apex job can be scheduled to process records in batches. <br>
 Docu: [Using Batch Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_batch_interface.htm) <br>
+
+### [Salesforce as Identity Provider](https://help.salesforce.com/s/articleView?id=sf.identity_provider_enable.htm&type=5)
+tbd
+
+### [Canvas App](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_canvas.htm&type=5)
+tbd
