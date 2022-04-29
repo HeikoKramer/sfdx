@@ -470,3 +470,6 @@ tbd
 
 ### [Duplicate Management](https://help.salesforce.com/s/articleView?id=sf.duplicate_prevention_map_of_tasks.htm&type=5)
 tbd
+
+#### [Merging Duplicate Contacts](https://help.salesforce.com/s/articleView?id=sf.contacts_considerations_for_merging_duplicates.htm&type=5)
+tbd
