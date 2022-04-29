@@ -467,3 +467,6 @@ tbd
 
 ### [Lightning Data](https://help.salesforce.com/s/articleView?id=sf.lightning_data_packages_use.htm&type=5)
 tbd
+
+### [Duplicate Management](https://help.salesforce.com/s/articleView?id=sf.duplicate_prevention_map_of_tasks.htm&type=5)
+tbd
