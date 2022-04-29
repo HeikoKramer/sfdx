@@ -476,3 +476,13 @@ tbd
 
 ### [Customer 360 Data Manager](https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
 tbd
+
+### [Batch Apex](https://developer.salesforce.com/blogs/engineering/2013/02/force-com-batch-apex-and-large-data-volumes)
+Batch Apex allows for asynchronous processing of large number of records. <br>
+Batch Apex can 
+* make callouts to external systems
+* apply business logic
+* create records in Salesforce
+
+A Batch Apex job can be scheduled to process records in batches. <br>
+Docu: [Using Batch Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_batch_interface.htm) <br>
