@@ -474,6 +474,9 @@ tbd
 #### [Merging Duplicate Contacts](https://help.salesforce.com/s/articleView?id=sf.contacts_considerations_for_merging_duplicates.htm&type=5)
 tbd
 
+#### [Duplicate Jobs](https://help.salesforce.com/s/articleView?id=sf.duplicate_jobs.htm&type=5)
+tbd
+
 ### [Customer 360 Data Manager](https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
 tbd
 
