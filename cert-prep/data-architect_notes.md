@@ -513,3 +513,9 @@ tbd
 
 ### [Salesforce CDP](https://help.salesforce.com/s/articleView?id=sf.customer360_a.htm&type=5)
 tbd
+
+### [Salesforce Connect](https://help.salesforce.com/s/articleView?id=sf.platform_connect_about.htm&type=5)
+tbd
+
+#### [Salesforce Connect Cross-Org Adapter](https://help.salesforce.com/s/articleView?id=sf.xorg_setup.htm&type=5)
+tbd
