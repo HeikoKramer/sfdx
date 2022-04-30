@@ -477,6 +477,9 @@ tbd
 ### [Customer 360 Data Manager](https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
 tbd
 
+#### [Data Mapping](https://help.salesforce.com/s/articleView?id=sf.c360map_map_your_data.htm&type=5)
+tbd
+
 ### [Batch Apex](https://developer.salesforce.com/blogs/engineering/2013/02/force-com-batch-apex-and-large-data-volumes)
 Batch Apex allows for asynchronous processing of large number of records. <br>
 Batch Apex can 
