@@ -502,7 +502,28 @@ Enabling Translation Workbench makes these changes to your Salesforce org:
 When you deactivate a language, all translations for that language are still available in Translation Workbench. <br>
 However, users with that language selected see the org’s default language values. <br>
 
-### [Customer 360 Data Manager] (https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
+#### [Considerations for Managing Translations](https://help.salesforce.com/s/articleView?id=sf.workbench_best_practices.htm&type=5)
+* Salesforce assumes that all customizations are entered in the Salesforce org’s default language
+  * it's recommended that global administrators work together in the org’s default language
+* Salesforce recommends the XML Localization Interchange File Format (.xlf) for translation files
+* When creating a custom report type for translation into multiple languages via Translation Workbench
+  * set your personal language to match your org’s default language
+  * this ensures that translated words display in the correct language for translators
+* users can customize reports or list views to use filter criteria values in their personal language
+  * if they use the *starts with* or *contains* operators, advise them to choose the language of the filter criteria values they entered
+* If you installed a managed package that includes translations
+  * those translated values appear to users regardless of whether the language is active on the Translation Language Settings Setup page
+  * To override delivered metadata translations, see [Override Translations in Second-Generation Managed Packages and Unlocked Packages](https://help.salesforce.com/s/articleView?id=sf.entering_translated_terms_in_packages.htm&type=5)
+* Let translators know which languages they are responsible for translating
+* Notify all translators when you add new translated components to your org 
+  * for best results, have your translators check their translations frequently, and be sure to notify them when changes occur
+* Periodically review outdated translations by exporting your translations 
+  * use the *Outdated and Untranslated* export type or *Bilingual* export type 
+    * to generate a list of all the translatable customizations and the associated Out of Date states 
+
+There are additional [Considerations for Translating Flows](https://help.salesforce.com/s/articleView?id=sf.workbench_flow_considerations.htm&type=5).
+
+### [Customer 360 Data Manager](https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
 tbd
 
 ### [Experience Cloud User Licenses](https://help.salesforce.com/s/articleView?id=sf.users_license_types_communities.htm&type=5)
