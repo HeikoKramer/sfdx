@@ -157,7 +157,22 @@ When working with big data and writing batches of records using APIs or Apex, yo
       * F1, F3 – invalid
       * F2, F3 – invalid
 
-## Master Data Management (MDM)
+## Master Data Management (5%)
+Given a customer scenario, you should be able to:
+* compare and contrast the various techniques, approaches and considerations for implementing Master Data Management Solutions 
+  * MDM implementation styles
+  * harmonizing & consolidating data from multiple sources
+  * establishing data survivorship rules 
+  * thresholds & weights
+  * leveraging external reference data for enrichment
+  * Canonical modeling techniques
+  * hierarchy management
+* recommend and use techniques for establishing a "golden record" or "system of truth" for the customer domain in a Single Org
+* recommend approaches and techniques for consolidating data attributes from multiple sources
+  * discuss criteria and methodology for picking the winning attributes
+* recommend appropriate approaches and techniques to capture and maintain customer reference & metadata
+  * to preserve traceability and establish a common context for business rules 
+
 ### Monitoring Bulk Data Loads
 The **[Bulk Data Load Jobs](https://help.salesforce.com/s/articleView?id=sf.monitoring_async_api_jobs.htm&type=5)** page in **setup** can be used to track in-progress/completed jobs. <br>
 It can be accessed to view information such as
@@ -442,7 +457,7 @@ There are two types of custom settings:
   * uses a built-in hierarchical logic that lets you **personalize** settings for specific profiles or users
   * checks the organization, profile, and user settings for the current user and returns the most specific, or “lowest,” value
 
-## Salesforce Data Management
+## Salesforce Data Management (25%)
 Given a customer scenario, you should be able to
 * recommend appropriate combination of Salesforce license types 
   * to effectively leverage standard and custom objects to meet business needs
