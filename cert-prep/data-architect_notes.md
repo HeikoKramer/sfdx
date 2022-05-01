@@ -560,7 +560,13 @@ License limitations:
 |Cases, Entitlements, Events, WO, WOLI|y|y|y|y|n|
 |External Objects|y|y|y|y|y|
 |Custom Objects|10|10|10|10|100|
+|Events and Calendar|read only|y|y|y|n|
+|Notes and Attachments|Exceptions apply|y|y|y|n|
+|Reports|n|y|y|y|n|
+|+ Extra Data Storage (member-based/login-based)|none|2MB/1MB|5MB/1MB|5MB/1MB|10MB/none|
+|+ API Calls per day (member-based/login-based)|0|200/100|200/10|200/10|200/400|
 
+License Type Decision Diagram: 
 ![license-types](/cert-prep/images/community-cloud_license-types.png)
 
 #### [Channel Account Licenses](https://help.salesforce.com/s/articleView?id=sf.users_license_types_partner_based.htm&type=5)
