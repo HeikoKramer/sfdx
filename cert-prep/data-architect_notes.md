@@ -524,7 +524,31 @@ However, users with that language selected see the org’s default language valu
 There are additional [Considerations for Translating Flows](https://help.salesforce.com/s/articleView?id=sf.workbench_flow_considerations.htm&type=5).
 
 ### [Customer 360 Data Manager](https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
-tbd
+**NOTE:** Feature is scheduled for retirement as of Summer ’22! <br>
+*I'll anyhow list some key-infos here, as this could still be part of the cert when I'm taking it.* <br>
+<br>
+Purpose:
+* integrate data among multiple Service Cloud orgs and Commerce Cloud 
+* connect data across multiple orgs
+  * case history, order history, and customer data across your enterprise 
+* Customer 360 Data Manager assigns a **global profile** to each unique customer
+  * to for example view a customer’s order history in Service Console without having to swivel to Commerce Cloud
+
+Features:
+Set match rules using individual Name fields:
+* first name, last name, suffix 
+* phone numbers
+* email addresses
+* postal addresses
+* unique party identifiers such as loyalty numbers
+
+Data encryption limitations:
+* no Shield Platform encryption or customer-provided encryption support
+* If you don’t want that encrypted Salesforce data visible, don’t include it in your data loads or mapped data
+
+License limitations:
+* Customer 360 Data Manager is provisioned with 10 user licenses
+* Additional licenses can be purchased 
 
 ### [Experience Cloud User Licenses](https://help.salesforce.com/s/articleView?id=sf.users_license_types_communities.htm&type=5)
 **Main Features:**
