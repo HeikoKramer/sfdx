@@ -443,7 +443,15 @@ There are two types of custom settings:
   * checks the organization, profile, and user settings for the current user and returns the most specific, or “lowest,” value
 
 ## Salesforce Data Management
-[Common REGEX Validation](https://help.salesforce.com/s/articleView?id=000334073&type=1)
+Given a customer scenario, you should be able to
+* recommend appropriate combination of Salesforce license types 
+  * to effectively leverage standard and custom objects to meet business needs
+* recommend techniques to ensure data is persisted in a consistent manner 
+* describe techniques to represent a single view of the customer on the Salesforce platform, with multiple systems of interaction
+* recommend a design to effectively consolidate and/or leverage data from multiple Salesforce instances
+
+Generally interesting resources:
+* [Common REGEX Validation](https://help.salesforce.com/s/articleView?id=000334073&type=1)
 
 ### [Translation Workbench](https://help.salesforce.com/s/articleView?id=sf.customize_wbench.htm&type=5)
 tbd
