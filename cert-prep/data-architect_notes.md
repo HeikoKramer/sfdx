@@ -8,7 +8,18 @@ Resources used for my prep-works:
 * [Book: Salesforce Data Architecture and Management](https://www.packtpub.com/product/salesforce-data-architecture-and-management/9781801073240)
 * [FocusOnForce Data Architect Certification Practice Exams](https://focusonforce.com/salesforce-data-architecture-and-management-designer-certification-practice-exams/)
 
-## Data Modeling
+## Data Modeling / Database Design (25%)
+Given a customer scenario, you should be able to:
+* compare and contrast various techniques and considerations for designing a data model for the Customer 360 platform
+  * (e.g. objects, fields & relationships, object features)
+* recommend approaches and techniques to design a scalable data model that obeys the current security and sharing model
+* compare and contrast various techniques, approaches and considerations for capturing and managing business and technical metadata 
+  * (e.g. business dictionary, data lineage, taxonomy, data classification)
+* compare and contrast the different reasons for implementing Big Objects vs Standard/Custom objects within a production instance
+  * alongside the unique pros and cons of utilizing Big Objects in a Salesforce data model
+* given a customer scenario, recommend approaches and techniques to avoid data skew 
+  * (record locking, sharing calculation issues, and excessive child to parent relationships)
+
 ### [Types of Salesforce Objects & Storage](https://youtu.be/Sw-iqjxdI7w?t=767)
 It is important to understand 
 * when you create a record, how much space it takes in the system
