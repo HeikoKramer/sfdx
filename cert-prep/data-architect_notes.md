@@ -565,8 +565,9 @@ License limitations:
 |Reports|n|y|y|y|n|
 |+ Extra Data Storage (member-based/login-based)|none|2MB/1MB|5MB/1MB|5MB/1MB|10MB/none|
 |+ API Calls per day (member-based/login-based)|0|200/100|200/10|200/10|200/400|
+<br>
 
-License Type Decision Diagram: <br>
+**License Type Decision Diagram:** <br>
 
 ![license-types](/cert-prep/images/community-cloud_license-types.png)
 
