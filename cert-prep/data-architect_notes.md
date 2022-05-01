@@ -561,6 +561,8 @@ License limitations:
 |External Objects|y|y|y|y|y|
 |Custom Objects|10|10|10|10|100|
 
+![license-types](/cert-prep/images/community-cloud_license-types.png)
+
 #### [Channel Account Licenses](https://help.salesforce.com/s/articleView?id=sf.users_license_types_partner_based.htm&type=5)
 tbd
 
