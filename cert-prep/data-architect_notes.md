@@ -480,7 +480,27 @@ Generally interesting resources:
 * [Common REGEX Validation](https://help.salesforce.com/s/articleView?id=000334073&type=1)
 
 ### [Translation Workbench](https://help.salesforce.com/s/articleView?id=sf.customize_wbench.htm&type=5)
-tbd
+Translation Workbench allows you to …
+
+* specify languages for translation 
+* assign translators
+* manage your translations 
+
+… through the workbench or bulk translation. <br>
+<br>
+Enabling Translation Workbench makes these changes to your Salesforce org:
+* The **Manage Translation** systems permission is available in permission sets
+* You must edit picklist values individually 
+  * You can’t mass-edit existing picklist values, but you can still mass-add new values
+* When picklist values are sorted alphabetically, the values are alphabetical by the org’s default language
+* Reports have a Filter Language dropdown list in the Filters pane of the report builder 
+  * for any filter criteria that use the starts with, contains, or does not contain operator
+* Import files have a Language dropdown list, and all records and values within the import file must be in the selected language
+* Web-to-Lead and Web-to-Case have a Language dropdown list before you generate the HTML
+
+**Note:** If a customized component doesn’t have a translated value, the component uses the org’s default language. <br>
+When you deactivate a language, all translations for that language are still available in Translation Workbench. <br>
+However, users with that language selected see the org’s default language values. <br>
 
 ### [Customer 360 Data Manager] (https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
 tbd
