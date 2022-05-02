@@ -586,6 +586,7 @@ Business-to-business sites and portals that calculate their usage based on numbe
 * Extra users, beyond the typical 40, can be purchased if necessary
 
 <br>
+
 **When do you use a partner-based license?** <br>
 * when you want to give your partner users access to Experience Cloud sites
   * but aren’t sure how many users need access
