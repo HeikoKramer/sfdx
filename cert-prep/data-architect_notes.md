@@ -577,8 +577,7 @@ License limitations:
 **Best Used For:**
 Business-to-business sites and portals that calculate their usage based on number of partners instead of number of individual users. <br>
 <br>
-**What are partner-based licenses?**
-
+**What are partner-based licenses?** <br>
 * external license
 * gives you the power to buy a specific number of licenses for your partner accounts
 * Each partner account with an assigned license is given up to 40 partner users 
@@ -587,8 +586,7 @@ Business-to-business sites and portals that calculate their usage based on numbe
 * Extra users, beyond the typical 40, can be purchased if necessary
 
 <br>
-**When do you use a partner-based license?**
-
+**When do you use a partner-based license?** <br>
 * when you want to give your partner users access to Experience Cloud sites
   * but aren’t sure how many users need access
 * when you want to give your partners the power to manage their own users
