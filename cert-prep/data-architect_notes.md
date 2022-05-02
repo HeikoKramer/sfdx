@@ -572,7 +572,24 @@ License limitations:
 ![license-types](/cert-prep/images/community-cloud_license-types.png)
 
 #### [Channel Account Licenses](https://help.salesforce.com/s/articleView?id=sf.users_license_types_partner_based.htm&type=5)
-tbd
+*The Channel Account license is available for Experience Cloud sites and has the same permission and feature access as the Partner Community license. Unlike login or member-based licenses, Channel Account licenses are priced per partner account. Partners then open up access to users.* <br>
+<br>
+**Best Used For:**
+Business-to-business sites and portals that calculate their usage based on number of partners instead of number of individual users. <br>
+<br>
+**What are partner-based licenses?**
+* external license
+* gives you the power to buy a specific number of licenses for your partner accounts
+* Each partner account with an assigned license is given up to 40 partner users 
+* User licenses are pooled
+  * making it less likely for partners to exceed user limits 
+* Extra users, beyond the typical 40, can be purchased if necessary
+
+<br>
+**When do you use a partner-based license?**
+* when you want to give your partner users access to Experience Cloud sites
+  * but aren’t sure how many users need access
+* when you want to give your partners the power to manage their own users
 
 ### [Lightning Data](https://help.salesforce.com/s/articleView?id=sf.lightning_data_packages_use.htm&type=5)
 tbd
