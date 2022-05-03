@@ -631,6 +631,9 @@ By default **blank fields** are not matched – but can be selected to be part o
 The **filter logic** can be adjusted. <br> 
 ![matching-rules_setup](/cert-prep/images/matching-rules_setup.png)
 
+##### [Matching Rules Considerations](https://help.salesforce.com/s/articleView?id=sf.matching_rules_considerations.htm&type=5)
+tbd
+
 #### [Merging Duplicate Contacts](https://help.salesforce.com/s/articleView?id=sf.contacts_considerations_for_merging_duplicates.htm&type=5)
 tbd
 
