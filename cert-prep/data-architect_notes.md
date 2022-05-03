@@ -608,8 +608,28 @@ Popular services:
 * miEdge Prospector
   * brings insurance and risk insights into Salesforce
 
-### [Duplicate Management](https://help.salesforce.com/s/articleView?id=sf.duplicate_prevention_map_of_tasks.htm&type=5)
-tbd
+### [Duplicate Management](https://help.salesforce.com/s/articleView?id=sf.managing_duplicates_overview.htm&type=5)
+Out of the box, Salesforce gives you tools for
+* managing duplicates one at a time 
+* managing duplicates across your org
+* to track your progress in eliminating duplicates
+
+#### [Matching Rules](https://salesforce.vidyard.com/watch/PdYJPLbTqiI-kCXlWrr32w)
+**Matching Rules** identify duplicate records for
+* Accounts
+* Contacts
+* Leads
+
+A matching rule contains **fields** and **criterias**:
+![matching-rules](/cert-prep/images/matching-rules.png)
+
+Matching rules identify **similar** strings, by comparing them with the **exact** or **fuzzy** matching method:
+![similar-matching-rule](/cert-prep/images/matching-rules_similar.png)
+
+Choose between **exact** and **fuzzy** matching method. <br>
+By default **blank fields** are not matched – but can be selected to be part of the **matching criteria**. <br>
+The **filter logic** can be adjusted. <br> 
+![matching-rules_setup](/cert-prep/images/matching-rules_setup.png)
 
 #### [Merging Duplicate Contacts](https://help.salesforce.com/s/articleView?id=sf.contacts_considerations_for_merging_duplicates.htm&type=5)
 tbd
