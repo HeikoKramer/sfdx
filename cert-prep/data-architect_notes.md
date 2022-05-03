@@ -593,7 +593,20 @@ Business-to-business sites and portals that calculate their usage based on numbe
 * when you want to give your partners the power to manage their own users
 
 ### [Lightning Data](https://help.salesforce.com/s/articleView?id=sf.lightning_data_packages_use.htm&type=5)
-tbd
+**Lightning Data** is rather an App Exchange category than a concrete product. <br>
+Salesforce describes it like this: <br>
+*Lightning Data apps give customers next-level data quality, enabling them to create more intelligent processes built on better, more targeted data, which improves CRM user adoption and ROI. Best of all, seamless integration requires minimal ongoing maintenance, and makes data readily available on any device without IT involvement.* <br>
+<br>
+Yes, .. just a category: https://appexchange.salesforce.com/appxStore**?type=Data** <br>
+<br>
+Popular services:
+* D&B Optimizer
+  * Dun & Bradstreet Account and Lead Data for Salesforce
+* Omnata for Salesforce
+  * Connect Salesforce to your cloud data warehouse
+  * integrate data from Snowflake, BigQuery & Rockset
+* miEdge Prospector
+  * brings insurance and risk insights into Salesforce
 
 ### [Duplicate Management](https://help.salesforce.com/s/articleView?id=sf.duplicate_prevention_map_of_tasks.htm&type=5)
 tbd
