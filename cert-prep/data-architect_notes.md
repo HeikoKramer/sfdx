@@ -617,9 +617,6 @@ tbd
 #### [Duplicate Jobs](https://help.salesforce.com/s/articleView?id=sf.duplicate_jobs.htm&type=5)
 tbd
 
-### [Customer 360 Data Manager](https://help.salesforce.com/s/articleView?id=sf.c360_basics.htm&type=5)
-tbd
-
 #### [Data Mapping](https://help.salesforce.com/s/articleView?id=sf.c360map_map_your_data.htm&type=5)
 tbd
 
