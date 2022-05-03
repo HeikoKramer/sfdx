@@ -597,7 +597,7 @@ Business-to-business sites and portals that calculate their usage based on numbe
 Salesforce describes it like this: <br>
 *Lightning Data apps give customers next-level data quality, enabling them to create more intelligent processes built on better, more targeted data, which improves CRM user adoption and ROI. Best of all, seamless integration requires minimal ongoing maintenance, and makes data readily available on any device without IT involvement.* <br>
 <br>
-Yes, .. just a category: https://appexchange.salesforce.com/appxStore**?type=Data** <br>
+Yes, .. just a category: https://appexchange.salesforce.com/appxStore `?type=Data` <br>
 <br>
 Popular services:
 * D&B Optimizer
