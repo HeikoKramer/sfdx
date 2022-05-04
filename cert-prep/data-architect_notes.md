@@ -614,6 +614,19 @@ Out of the box, Salesforce gives you tools for
 * managing duplicates across your org
 * to track your progress in eliminating duplicates
 
+#### [Duplicate Rules](https://salesforce.vidyard.com/watch/GOnlv-GJRRSrdeN-Kn0-JQ)
+**Duplicate rules** determine how Salesforce handles duplicate records – identified by **matching rules**. <br>
+Salesforce includes standard Duplicate Rules for the following objects:
+* Accounts
+* Contacts
+* Leads
+
+When duplicate rules are activated, sales reps are informed about potential duplicates when viewing or creating a record. <br>
+They can than **merge** duplicate records into one record. <br>
+An admin can set up a Duplicate Rule to **block** users from creating duplicate records. <br>
+Duplicate rules can be set up to **bypass sharing rules** – so duplicates are detected, even if the user has by default no access to the other record. <br>
+Users with a certain **role** or **profile** can be excluded to be affected by duplicate rules. <br>
+
 #### [Matching Rules](https://salesforce.vidyard.com/watch/PdYJPLbTqiI-kCXlWrr32w)
 **Matching Rules** identify duplicate records for
 * Accounts
