@@ -632,7 +632,12 @@ The **filter logic** can be adjusted. <br>
 ![matching-rules_setup](/cert-prep/images/matching-rules_setup.png)
 
 ##### [Matching Rules Considerations](https://help.salesforce.com/s/articleView?id=sf.matching_rules_considerations.htm&type=5)
-tbd
+**Limits:** 
+* Up to five matching rules can be activated or deactivated at a time
+* Up to five active matching rules are allowed per object
+* Up to 25 total active matching rules are allowed
+* Up to 100 total matching rules are allowed (both active and inactive)
+* Only one lookup relationship field is allowed per matching rule
 
 #### [Merging Duplicate Contacts](https://help.salesforce.com/s/articleView?id=sf.contacts_considerations_for_merging_duplicates.htm&type=5)
 tbd
