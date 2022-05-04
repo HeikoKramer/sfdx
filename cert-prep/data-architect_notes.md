@@ -627,6 +627,40 @@ An admin can set up a Duplicate Rule to **block** users from creating duplicate 
 Duplicate rules can be set up to **bypass sharing rules** – so duplicates are detected, even if the user has by default no access to the other record. <br>
 Users with a certain **role** or **profile** can be excluded to be affected by duplicate rules. <br>
 
+##### [Duplicate Rules Considerations](https://help.salesforce.com/s/articleView?id=duplicate_rules_overview.htm&type=5&language=en_US)
+**Number of Duplicate and Matching Rules**
+* You can use up to **five active duplicate rules per object**
+* You can add up to **three matching rules in each duplicate rule**
+  * with **one active matching rule per object**
+
+If you select the **report option** for identified duplicates and a user saves a duplicate record, the following happens: <br>
+The saved record and the maximum number of duplicates are reassigned to a new or existing **duplicate record set**. <br>
+For each matching rule run on a record, up to 100 duplicates can be reassigned to a duplicate record set. <br>
+The saved record and each of its duplicates are listed as **duplicate record items** in the duplicate record set. <br>
+If the duplicate rule looks for duplicates across objects (for example, contacts that duplicate leads), the duplicate record set includes duplicates on the other objects. <br>
+If a duplicate lead is converted before the duplicate record set is created, the duplicate record set doesn’t include the converted lead. <br>
+<br>
+**NOTE:** If a user who updates a record doesn’t have access to one or more fields referenced in a matching rule, then the duplicate rule doesn’t work as expected! <br>
+**NOTE:** Rules only run on edited records when the edited fields **are included** in the associated matching rule! <br>
+**NOTE:** Global picklist values aren’t supported in duplicate rules! <br>
+**NOTE:** Custom picklist fields aren’t supported in matching rules used in cross-object duplicate rules! <br>
+**NOTE:** Rules only compare new records with records already in Salesforce – bulk load data is not compared in itself! <br>
+**NOTE:** The Translation Workbench doesn’t support the customizable alert text in duplicate rules. <br>
+<br>
+**Conditions under which duplicate rules don’t run:**
+* Records are created using Quick Create or Community Self-Registration
+* Leads are converted to accounts or contacts, and Use Apex Lead Convert isn’t enabled
+* Records are restored with the Undelete button
+* Records are added using Lightning Sync or Einstein Activity Capture
+* Records are manually merged
+* A Self-Service user creates records, and the rules include conditions based on the User object
+* Duplicate rule conditions are set for lookup relationship fields and records but no value for these fields has been saved
+<br>
+**In the following situations, no alert is shown and users can’t save records:**
+* Records are added using the data import tools
+* A person account is converted to a business account and the business account matches an other account
+* Records are added or edited using Salesforce APIs
+
 #### [Matching Rules](https://salesforce.vidyard.com/watch/PdYJPLbTqiI-kCXlWrr32w)
 **Matching Rules** identify duplicate records for
 * Accounts
