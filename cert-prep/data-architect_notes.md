@@ -690,6 +690,9 @@ The **filter logic** can be adjusted. <br>
 A duplicate record set is a list of items identified as duplicates. It’s created when a duplicate rule or job runs. <br>
 Let your Lightning Experience users merge duplicates by granting them access to duplicate record sets. <br>
 
+####[Duplicate Error Logs](https://help.salesforce.com/s/articleView?id=sf.duplicate_management_duplicate_error_log.htm&type=5)
+The **Duplicate Error Logs** section in **Setup** provides you a list view with all errors linked to standard de-duplication. <br>
+
 #### [Merging Duplicate Contacts](https://help.salesforce.com/s/articleView?id=sf.contacts_considerations_for_merging_duplicates.htm&type=5)
 tbd
 
