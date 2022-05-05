@@ -694,7 +694,45 @@ Let your Lightning Experience users merge duplicates by granting them access to 
 The **Duplicate Error Logs** section in **Setup** provides you a list view with all errors linked to standard de-duplication. <br>
 
 #### [Merging Duplicate Contacts](https://help.salesforce.com/s/articleView?id=sf.contacts_considerations_for_merging_duplicates.htm&type=5)
-tbd
+**Primary Account**
+* **Lightning Experience**: You can merge contacts that have different primary accounts
+* **Salesforce Classic**: You can merge only contacts that have the same primary account 
+
+**NOTE:** You contacts associated with a portal user can only be merged with an other portal user contact. <br>
+Have a look at the [Considerations for Merging Contacts Associated with Portal Users](https://help.salesforce.com/s/articleView?id=sf.contacts_merging_contacts_associated_with_portal_users.htm&type=5)
+<br>
+**Data Privacy Preferences** <br>
+When you merge duplicate leads or contacts, you also associate a **data privacy record** with the primary record. <br>
+You can select to retain the **most recently updated** data privacy record or choose manually which one to retain. <br>
+<br>
+**Contact Roles** <br>
+When contacts are merged, contact roles on non-master contacts lose their status. <br>
+<br>
+**Portal Users**
+* **Lightning**: Portal user status isn’t shown during merging
+  * The merged record retains the portal user status of the primary record
+* **Classic**: Portal user status is shown during merging
+  * You choose the portal status you want to retain in the merged record
+* **Lightning** and Classic: The primary contact must be associated with a portal user
+  * The merged contact retains the portal user status of the primary contact
+  * If a non-master contact is associated with a portal user, that user is deactivated
+
+**Campaigns** <br>
+When duplicate contacts that are members of different campaigns are merged, Salesforce retains the Member Status Updated date for each campaign the merged contact is a member of. <br>
+<br>
+**Related Items, Chatter Feeds, and Attachments** <br>
+Salesforce relates items to merged records, with some exceptions:
+* Chatter feeds are retained from the primary record only
+* Salesforce Files attached in the Chatter feed or Files related list are retained in the merged record
+
+**Hidden and Read-Only Fields** <br>
+Salesforce retains any data in hidden or read-only fields, such as sharing settings, from the primary record. <br>
+Hidden fields aren’t shown while you merge. <br>
+A merged record retains the Created By user and Created Date from the oldest record merged, regardless of which record is the primary. <br>
+The record shows the merge date as the Last Modified By date. <br>
+<br>
+**Non-Master Contacts** <br>
+The non-master contacts are moved to the Recycle Bin. <br>
 
 #### [Duplicate Jobs](https://help.salesforce.com/s/articleView?id=sf.duplicate_jobs.htm&type=5)
 tbd
