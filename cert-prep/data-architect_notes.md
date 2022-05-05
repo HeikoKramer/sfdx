@@ -701,6 +701,7 @@ The **Duplicate Error Logs** section in **Setup** provides you a list view with 
 **NOTE:** You contacts associated with a portal user can only be merged with an other portal user contact. <br>
 Have a look at the [Considerations for Merging Contacts Associated with Portal Users](https://help.salesforce.com/s/articleView?id=sf.contacts_merging_contacts_associated_with_portal_users.htm&type=5)
 <br>
+
 **Data Privacy Preferences** <br>
 When you merge duplicate leads or contacts, you also associate a **data privacy record** with the primary record. <br>
 You can select to retain the **most recently updated** data privacy record or choose manually which one to retain. <br>
