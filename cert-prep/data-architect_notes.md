@@ -686,6 +686,10 @@ The **filter logic** can be adjusted. <br>
 * Up to 100 total matching rules are allowed (both active and inactive)
 * Only one lookup relationship field is allowed per matching rule
 
+####[Duplicate Record Sets](https://help.salesforce.com/s/articleView?id=sf.duplicate_management_duplicate_record_sets.htm&type=5)
+A duplicate record set is a list of items identified as duplicates. It’s created when a duplicate rule or job runs. <br>
+Let your Lightning Experience users merge duplicates by granting them access to duplicate record sets. <br>
+
 #### [Merging Duplicate Contacts](https://help.salesforce.com/s/articleView?id=sf.contacts_considerations_for_merging_duplicates.htm&type=5)
 tbd
 
