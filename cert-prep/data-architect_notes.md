@@ -763,6 +763,13 @@ Batch Apex can
 
 A Batch Apex job can be scheduled to process records in batches. <br>
 Docu: [Using Batch Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_batch_interface.htm) <br>
+<br>
+Batch Apex allows you to run complex and long-running processeses. <br>
+It typically goes through the following general steps:
+* The start method of collects the records or objects that will be processed
+  * Using well-performing SOQL in the start() method reduces the chances of a job being aborted
+* The execute method picks up batches of these records and does the bulk of the processing
+* After the batches are processed, the finish method sends confirmation emails or executes post-processing operations
 
 ### [Salesforce as Identity Provider](https://help.salesforce.com/s/articleView?id=sf.identity_provider_enable.htm&type=5)
 tbd
