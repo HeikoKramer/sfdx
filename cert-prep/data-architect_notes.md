@@ -772,7 +772,9 @@ It typically goes through the following general steps:
 * After the batches are processed, the finish method sends confirmation emails or executes post-processing operations
 
 ### [Salesforce as Identity Provider](https://help.salesforce.com/s/articleView?id=sf.identity_provider_enable.htm&type=5)
-tbd
+You can enable your Salesforce org as a single sign-on (SSO) SAML identity provider to external service providers. <br>
+When your org acts as a SAML identity provider, your users can access multiple apps with a single login. <br>
+After you enable Salesforce as an identity provider, define a service provider by setting up a SAML-enabled connected app. <br>
 
 ### [Canvas App](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_canvas.htm&type=5)
 tbd
