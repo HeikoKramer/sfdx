@@ -828,7 +828,61 @@ You process a set of records by creating a job that contains one or more batches
 Whether you create an ingest or query job, Salesforce automatically optimizes your request to process the job as quickly as possible and to minimize timeouts or other failures. <br>
 
 #### [Limits](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/bulk_common_limits.htm)
-tbd
+Questions that might help to plan for limits: <br>
+
+* How many other integrations are making API requests into your org?
+* How close does your org come to reaching its entitled request limit each day?
+* How many API requests per day would be required in order to address your use cases and data volume?
+* Of the APIs that could do the job you’re planning, what are their limits characteristics?
+
+**Batch Allocations** <br>
+
+You can submit up to **15,000 batches per rolling 24-hour** period. <br>
+This allocation is shared between Bulk API and Bulk API 2.0. <br>
+Every batch that is processed in Bulk API or Bulk API 2.0 counts towards this allocation. <br>
+
+<br>
+
+**Maximum number of records uploaded per 24-hour rolling period** <br>
+**Bulk API:** 150,000,000 (15,000 batches x 10,000 records per batch maximum) <br>
+**Bulk API 2.0:** 150,000,000 <br>
+
+<br>
+
+**Batch processing time** <br>
+**Both Bulk APIs:** Batches are processed in chunks. The chunk size depends on the API version. In API version 20.0 and earlier, the chunk size is 100 records. In API version 21.0 and later, **the chunk size is 200 records**. If it takes **longer than 10 minutes** to process a whole batch, the Bulk API places the remainder of the batch back in the queue for later processing. If the Bulk API continues to exceed the 10-minute limit on subsequent attempts, the batch is placed back in the queue and reprocessed up to 10 times before the batch is permanently marked as failed.
+
+<br>
+
+**Maximum time before a batch is retried** <br>
+**Bulk API:** 10 minutes <br>
+**Bulk API 2.0:** The API automatically handles retries. If you receive a message that the API retried more than 10 times, use a smaller upload file and try again. <br> 
+
+<br>
+
+**Maximum file size** <br>
+**Bulk API:** 10MB <br>
+**Bulk API 2.0:** 150MB <br>
+
+<br>
+
+**Maximum number of fields in a record** <br>
+**Both Bulk APIs:** 5.000 <br>
+
+<br>
+
+**Maximum number of characters in a record** <br>
+**Both Bulk APIs:** 400.000 <br>
+
+<br>
+
+**Maximum number of records in a batch** <br>
+**Bulk API:** 10.000 <br>
+**Bulk API 2.0:** N/A <br>
+
+**Maximum number of characters for all the data in a batch** <br>
+**Bulk API:** 10.000.000 <br>
+**Bulk API 2.0:** N/A <br>
 
 #### [Bulk API Query](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_bulk_query_intro.htm)
 tbd
