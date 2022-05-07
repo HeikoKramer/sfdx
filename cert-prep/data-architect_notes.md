@@ -777,7 +777,22 @@ When your org acts as a SAML identity provider, your users can access multiple a
 After you enable Salesforce as an identity provider, define a service provider by setting up a SAML-enabled connected app. <br>
 
 ### [Canvas App](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_canvas.htm&type=5)
-tbd
+You can expose your connected app as a canvas app. <br>
+Canvas apps are available as apps that your org’s Salesforce admin install or as personal apps that users install across orgs. <br>
+Users access a canvas personal app from the Chatter tab, and are prompted to allow the app to connect to their Salesforce data. <br>
+Users can choose to make an app a canvas personal app. <br>
+
+#### [Canvas Personal Apps](https://developer.salesforce.com/docs/atlas.en-us.236.0.platform_connect.meta/platform_connect/canvas_personal_apps_about.htm)
+Canvas personal apps let you create connected apps that are designed specifically for end users across organizations. <br>
+With a canvas personal app, you make your own app available for installation without relying on organization administrators for distribution. <br>
+<br>
+Previously, only administrators could install canvas apps. <br>
+Administrators can still install canvas apps, but now developers can create canvas personal apps that end users can install themselves. <br>
+<br>
+End users install and use canvas personal apps right from the Chatter tab (provided that they have appropriate permissions in Salesforce). <br>
+When end users install the app, they are prompted to allow the app to use their Salesforce data. <br>
+<br>
+More information in the [Canvas Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.236.0.platform_connect.meta/platform_connect/canvas_framework_intro.htm)
 
 ### [Bulk API 2.0](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_intro.htm)
 tbd
