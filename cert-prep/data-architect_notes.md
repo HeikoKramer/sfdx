@@ -796,34 +796,38 @@ More information in the [Canvas Developer Guide](https://developer.salesforce.co
 
 ### [Bulk API 2.0](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_intro.htm)
 The **REST-based** Bulk API 2.0 provides a programmatic option to **asynchronously** 
+
 * upload
 * query
 * or delete 
+
 large data sets in your Salesforce org. <br>
 Any data operation that includes **more than 2,000 records** is a good candidate for Bulk API 2.0 to successfully 
+
 * prepare
 * execute
 * and manage 
+
 an asynchronous workflow that makes use of the Bulk framework. <br>
 Jobs with fewer than 2,000 records should involve “bulkified” synchronous calls in REST (for example, Composite) or SOAP. <br>
 Using the API requires basic familiarity with software development, web services, and the Salesforce user interface. <br>
 This API is enabled by default for Performance, Unlimited, Enterprise, and Developer Editions. <br>
 The **API Enabled** permission must be enabled. <br>
-<br>
-[What’s the Difference Between Bulk API 2.0 and Bulk API?](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/bulk_common_diff_two_versions.htm)
+
+#### [What’s the Difference Between Bulk API 2.0 and Bulk API?](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/bulk_common_diff_two_versions.htm)
 Although Bulk API 2.0's predecessor, “Bulk API”, is available, use Bulk API 2.0 instead of Bulk API if you want a more streamlined workflow. <br>
 Bulk API 2.0 provides a simple interface to load large amounts of data into your Salesforce org and to perform bulk queries on your org data. <br>
 Its design is more consistent and better integrated with other Salesforce APIs. <br>
 Bulk API 2.0 also has the advantage of future innovation. <br>
-<br>
-[How Requests Are Processed](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/how_requests_are_processed.htm)
+
+#### [How Requests Are Processed](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/how_requests_are_processed.htm)
 Bulk ingest jobs allow you to upload records to your org by using a CSV file representation. <br>
 Bulk query jobs return records based on the specified query. <br>
 A Bulk API job specifies which object is being processed and what type of action is being used (insert, upsert, update, or delete). <br>
 You process a set of records by creating a job that contains one or more batches. <br>
 Whether you create an ingest or query job, Salesforce automatically optimizes your request to process the job as quickly as possible and to minimize timeouts or other failures. <br>
-<br>
-[Limits](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/bulk_common_limits.htm)
+
+#### [Limits](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/bulk_common_limits.htm)
 tbd
 
 #### [Bulk API Query](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_bulk_query_intro.htm)
