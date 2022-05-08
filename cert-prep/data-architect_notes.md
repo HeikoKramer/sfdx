@@ -918,7 +918,33 @@ Custom report types are subject to some limits for high performance and usabilit
 * When a lookup relationship is created for a standard or custom object as an Opportunity Product field, and then a custom report type is created with that primary object, Opportunity Product isn’t available as a secondary object for that custom report type
 
 ### [Record-triggered Flows](https://help.salesforce.com/s/articleView?id=sf.flow_concepts_trigger_record.htm&type=5)
-tbd
+Creating or updating a record can trigger an autolaunched flow to make additional updates to that record before it's saved to the database. <br>
+A record-triggered flow can update a Salesforce record **10 times faster** than a record-change process. <br> 
+Configure the record trigger in the Start element of your autolaunched flow. <br>
+<br>
+A flow that makes **before-save** updates is similar to a **before trigger**. <br>
+In a save procedure, before-save updates in flows are **executed immediately prior to Apex before triggers**. <br>
+<br>
+Because of their speed, we recommend that you use before-save updates in flows to update fields on new or changed records. <br>
+However, sometimes you must use a **record-change process** or an **Apex after trigger** to: <br>
+
+* Access field values that are set only **after the record is saved**
+  * such as the Last Modified Date field or the **ID of the new record**
+* Create or update related records
+* Perform actions other than updating the record that launches the flow
+
+Flows that make before-save updates are typically simpler to build than other types of flows. <br>
+
+* The `$Record` global variable contains the values from the record that triggers the flow to run 
+ * As a result, there’s **no need to add a Get Records element** to obtain the record data nor create flow variables to store the record data
+* When the flow changes the values in the `$Record` global variable, Salesforce automatically applies those new values to the record 
+  * So there’s **no need to add an Update Records element** to save the new values to the database
+* Only these elements are supported:
+  * Assignment 
+  * Decision
+  * Get Records
+  * Loop
+    * These elements let you obtain data from other Salesforce records, and use them to decide whether to update the triggering record’s fields and to what values
 
 ### [Salesforce CDP](https://help.salesforce.com/s/articleView?id=sf.customer360_a.htm&type=5)
 tbd
