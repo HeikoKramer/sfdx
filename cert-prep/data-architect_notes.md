@@ -890,7 +890,32 @@ A bulk query can retrieve up to **15 GB** of data, divided into **15 files of 1 
 The data formats supported are **CSV, XML, and JSON**. <br>
 
 ### [Limits on Report Types](https://help.salesforce.com/s/articleView?id=sf.reports_report_type_guidelines.htm&type=5)
-tbd
+Custom report types are subject to some limits for high performance and usability. <br>
+
+* A custom report type can contain up to **60 object references** 
+  * For example, if you select the maximum limit of four object relationships for a report type, you can select fields via lookup from an extra 56 objects
+* If a user runs a report from a custom report type and the report has columns from **more than 20 different objects**, an **error occurs**
+* You can add up to **1,000 fields** to each custom report type 
+  * A counter at the top of the Page Layout step shows the current number of fields 
+  * If you have too many fields, you can’t save the layout
+* You can’t add these fields to custom report types:
+  * Product schedule fields
+  * History fields
+  * The Age field on cases and opportunities
+* Custom report types based on the Service Appointments object don't support these fields:
+  * Parent Record
+  * Owner
+* Object references can be used as the main four objects, as sources of fields via lookup, or as objects used to traverse relationships
+  * Each referenced object counts toward the maximum limit even if no fields are chosen from it
+  * For example, if you do a lookup from account to account owner’s role, but select no fields from account owner, all the referenced objects still count toward the limit of 60
+* Reports run from custom report types that include cases don’t display the Units dropdown list, which lets users view the time values of certain case fields by hours, minutes, or days
+* Report types associated with custom objects in the Deleted Custom Objects list count against the maximum number of custom report types you can create
+* Reports on feed activities don’t include information about system-generated posts, such as feed tracked changes
+* Custom report type names support up to 50 characters
+  * If you enter a name that is longer than 50 characters, the name gets truncated
+* Custom report type descriptions support up to 255 characters 
+  * If you enter a description that is longer than 255 characters, the description gets truncated
+* When a lookup relationship is created for a standard or custom object as an Opportunity Product field, and then a custom report type is created with that primary object, Opportunity Product isn’t available as a secondary object for that custom report type
 
 ### [Record-triggered Flows](https://help.salesforce.com/s/articleView?id=sf.flow_concepts_trigger_record.htm&type=5)
 tbd
