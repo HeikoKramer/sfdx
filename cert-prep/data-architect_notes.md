@@ -885,7 +885,9 @@ Every batch that is processed in Bulk API or Bulk API 2.0 counts towards this al
 **Bulk API 2.0:** N/A <br>
 
 #### [Bulk API Query](https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_bulk_query_intro.htm)
-tbd
+Use bulk query to efficiently query large data sets and reduce the number of API requests. <br>
+A bulk query can retrieve up to **15 GB** of data, divided into **15 files of 1 GB each**. <br>
+The data formats supported are **CSV, XML, and JSON**. <br>
 
 ### [Limits on Report Types](https://help.salesforce.com/s/articleView?id=sf.reports_report_type_guidelines.htm&type=5)
 tbd
