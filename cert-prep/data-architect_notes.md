@@ -960,5 +960,16 @@ Even though the data is stored outside your org, Salesforce Connect provides sea
 External objects are available to Salesforce tools, such as global search, lookup relationships, record feeds, and the Salesforce mobile app. <br>
 External objects are also available to Apex, SOSL, SOQL queries, Salesforce APIs, and deployment via the Metadata API, change sets, and packages. <br>
 
+<br>
+
+**NOTE:** Using Salesforce Connect to access external data in an org requires one or more Salesforce Connect add-on licenses!
+
+#### [Salesforce Connect Adapters](https://help.salesforce.com/s/articleView?id=sf.platform_connect_adapters.htm&type=5)
+|Salesforce Connect Adapter|Description|When to Use|Number of Connections per License|
+|:-------------------------|:----------|:----------|:--------------------------------|
+|Cross-org|Uses the Lightning Platform REST API to access data that’s stored in other Salesforce orgs.|To seamlessly connect data between your Salesforce orgs. For example, provide your service representatives a unified view of customer transactions by integrating data from different Salesforce orgs.|5|
+|OData 2.0 <br /> OData 4.0|Uses Open Data Protocol to access data that’s stored outside Salesforce. The external data must be exposed via OData producers.|To integrate external data sources into your org that support the ODATA protocol and publish an OData provider. For example, give your account executives a unified data view by pulling data from legacy systems such as SAP, Microsoft, and Oracle in real time.|1|
+|Custom adapter <br /> created via Apex|You use the Apex Connector Framework to develop your own custom adapter when the other available adapters aren’t suitable for your needs. A custom adapter can obtain data from anywhere. For example, some data can be retrieved from the Internet via callouts, while other data can be manipulated or even generated programmatically.|To develop your own adapter with the Apex Connector Framework when the other available adapters aren’t suitable for your needs. For example, when you want to retrieve data via callouts from a REST API.|1|
+
 #### [Salesforce Connect Cross-Org Adapter](https://help.salesforce.com/s/articleView?id=sf.xorg_setup.htm&type=5)
 tbd
