@@ -946,9 +946,6 @@ Flows that make before-save updates are typically simpler to build than other ty
   * Loop
     * These elements let you obtain data from other Salesforce records, and use them to decide whether to update the triggering record’s fields and to what values
 
-### [Salesforce CDP](https://help.salesforce.com/s/articleView?id=sf.customer360_a.htm&type=5)
-tbd
-
 ### [Salesforce Connect](https://help.salesforce.com/s/articleView?id=sf.platform_connect_about.htm&type=5)
 tbd
 
