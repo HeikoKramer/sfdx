@@ -947,7 +947,18 @@ Flows that make before-save updates are typically simpler to build than other ty
     * These elements let you obtain data from other Salesforce records, and use them to decide whether to update the triggering record’s fields and to what values
 
 ### [Salesforce Connect](https://help.salesforce.com/s/articleView?id=sf.platform_connect_about.htm&type=5)
-tbd
+Salesforce Connect maps Salesforce external objects to data tables in external systems. <br>
+Instead of copying the data into your org, Salesforce Connect accesses the data on demand and in real time. <br>
+The data is never stale, and we access only what you need. <br>
+Use Salesforce Connect when:
+
+* You have a large amount of data that you don’t want to copy into your Salesforce org
+* You need small amounts of data at any one time
+* You want real-time access to the latest data
+
+Even though the data is stored outside your org, Salesforce Connect provides seamless integration with the Lightning Platform. <br>
+External objects are available to Salesforce tools, such as global search, lookup relationships, record feeds, and the Salesforce mobile app. <br>
+External objects are also available to Apex, SOSL, SOQL queries, Salesforce APIs, and deployment via the Metadata API, change sets, and packages. <br>
 
 #### [Salesforce Connect Cross-Org Adapter](https://help.salesforce.com/s/articleView?id=sf.xorg_setup.htm&type=5)
 tbd
