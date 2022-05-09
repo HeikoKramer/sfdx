@@ -1033,3 +1033,34 @@ If the report, list view, or query you’re optimizing changes—for example, to
 
 * [Long- and Short-Term Approaches for Tuning Force.com Performance](https://developer.salesforce.com/blogs/engineering/2013/03/long-and-short-term-approaches-for-tuning-force-com-performance)
  
+### [Using Mashups](https://developer.salesforce.com/docs/atlas.en-us.salesforce_large_data_volumes_bp.meta/salesforce_large_data_volumes_bp/ldv_deployments_techniques_using_mashups.htm)
+One approach to reducing the amount of data in Salesforce is to maintain large data sets in a different application, and then make that application available to Salesforce as needed. <br>
+Salesforce refers to such an arrangement as a mashup because it provides a quick, loosely coupled integration of the two applications. <br>
+Mashups use Salesforce presentation to display Salesforce-hosted data and externally hosted data. <br>
+
+<br>
+
+**Supported mashup designs:**
+
+* External Website
+  * The Salesforce UI displays an external website, and passes information and requests to it
+  * With this design, you can make the website look like part of the Salesforce UI
+* Callouts
+  * Apex code allows Salesforce to use Web services to exchange information with external systems in real time
+
+**NOTE:** Because of their real-time restrictions, mashups are limited to short interactions and small amounts of data. <br>
+
+<br>
+
+**Advantages of Using Mashups**
+
+* Data is never stale
+* No proprietary method needs to be developed to integrate the two systems
+
+**Disadvantages of Using Mashups**
+
+* Accessing data takes more time
+* Functionality is reduced
+  * **reporting and workflow do not work on the external data**
+
+
