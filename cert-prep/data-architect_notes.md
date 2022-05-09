@@ -971,9 +971,64 @@ External objects are also available to Apex, SOSL, SOQL queries, Salesforce APIs
 |OData 2.0 <br /> OData 4.0|Uses Open Data Protocol to access data that’s stored outside Salesforce. The external data must be exposed via OData producers.|To integrate external data sources into your org that support the ODATA protocol and publish an OData provider. For example, give your account executives a unified data view by pulling data from legacy systems such as SAP, Microsoft, and Oracle in real time.|1|
 |Custom adapter <br /> created via Apex|You use the Apex Connector Framework to develop your own custom adapter when the other available adapters aren’t suitable for your needs. A custom adapter can obtain data from anywhere. For example, some data can be retrieved from the Internet via callouts, while other data can be manipulated or even generated programmatically.|To develop your own adapter with the Apex Connector Framework when the other available adapters aren’t suitable for your needs. For example, when you want to retrieve data via callouts from a REST API.|1|
 
+
 ## Large Data Volume considerations (20%)
 * design a data model that scales considering large data volume and solution performance
 * recommend a data archiving and purging plan that is optimal for customer's data storage management needs
 * decide when to use virtualised data and describe virtualised data options
 
+### [Skinny Tables](https://developer.salesforce.com/docs/atlas.en-us.salesforce_large_data_volumes_bp.meta/salesforce_large_data_volumes_bp/ldv_deployments_infrastructure_skinny_tables.htm)
+Salesforce can create skinny tables to contain frequently used fields and to avoid joins. <br>
+This can improve the performance of certain read-only operations. <br>
+Skinny tables are kept in sync with their source tables when the source tables are modified. <br>
 
+<br>
+
+If you want to use skinny tables, contact Salesforce Customer Support. <br>
+When enabled, skinny tables are created and used automatically where appropriate. <br>
+You can’t create, access, or modify skinny tables yourself. <br>
+If the report, list view, or query you’re optimizing changes—for example, to add new fields—you’ll need to contact Salesforce to update your skinny table definition. <br>
+
+<br>
+
+**Key features of skinny tables:**
+
+* more rows are returned at a faster rate
+* kept in sync with the base table 
+* queries are faster, ad they **avoid joins**
+* a collection of frequently used fields
+* useful for high data volumes (millions of records)
+* do not include soft deleted records
+* provide a view across multiple objects for easy access to combined data
+
+<br>
+
+**Skinny tables can contain the following types of fields:** 
+
+* Checkbox
+* Date
+* Date and time
+* Email
+* Number
+* Percent
+* Phone
+* Picklist (multi-select)
+* Text
+* Text area
+* Text area (long)
+* URL
+
+<br>
+
+**Skinny table considerations:**
+
+* Skinny tables can contain a maximum of 100 columns
+* Skinny tables can’t contain fields from other objects
+* For Full sandboxes: Skinny tables are copied to your Full sandbox orgs
+* For other types of sandboxes: Skinny tables aren’t copied to your sandbox organizations (contact Salesforce support)
+
+<br>
+**Ressources:**
+
+* [Long- and Short-Term Approaches for Tuning Force.com Performance](https://developer.salesforce.com/blogs/engineering/2013/03/long-and-short-term-approaches-for-tuning-force-com-performance)
+ 
