@@ -1028,6 +1028,7 @@ If the report, list view, or query you’re optimizing changes—for example, to
 * For other types of sandboxes: Skinny tables aren’t copied to your sandbox organizations (contact Salesforce support)
 
 <br>
+
 **Ressources:**
 
 * [Long- and Short-Term Approaches for Tuning Force.com Performance](https://developer.salesforce.com/blogs/engineering/2013/03/long-and-short-term-approaches-for-tuning-force-com-performance)
