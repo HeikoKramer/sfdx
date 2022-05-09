@@ -1063,4 +1063,5 @@ Mashups use Salesforce presentation to display Salesforce-hosted data and extern
 * Functionality is reduced
   * **reporting and workflow do not work on the external data**
 
-
+### [Heroku External Objects with Salesforce Connect](https://devcenter.heroku.com/articles/heroku-external-objects-salesforce)
+tbd
