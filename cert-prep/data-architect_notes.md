@@ -1069,3 +1069,6 @@ tbd
 
 ### [Integration Patterns](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_pat_summary.htm)
 tbd
+
+### [External Object Relationships](https://help.salesforce.com/s/articleView?id=sf.external_object_relationships.htm&type=5)
+tbd
