@@ -962,7 +962,8 @@ External objects are also available to Apex, SOSL, SOQL queries, Salesforce APIs
 
 <br>
 
-**NOTE:** Using Salesforce Connect to access external data in an org requires one or more Salesforce Connect add-on licenses!
+**NOTE:** Using Salesforce Connect to access external data in an org requires one or more Salesforce Connect add-on licenses! <br>
+Salesforce Connect Example: [Heroku External Objects with Salesforce Connect](https://devcenter.heroku.com/articles/heroku-external-objects-salesforce)
 
 #### [Salesforce Connect Adapters](https://help.salesforce.com/s/articleView?id=sf.platform_connect_adapters.htm&type=5)
 |Salesforce Connect Adapter|Description|When to Use|Number of Connections per License|
@@ -1063,5 +1064,3 @@ Mashups use Salesforce presentation to display Salesforce-hosted data and extern
 * Functionality is reduced
   * **reporting and workflow do not work on the external data**
 
-### [Heroku External Objects with Salesforce Connect](https://devcenter.heroku.com/articles/heroku-external-objects-salesforce)
-tbd
