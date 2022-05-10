@@ -1066,3 +1066,6 @@ Mashups use Salesforce presentation to display Salesforce-hosted data and extern
 
 ### [Salesforce Backup and Restore Essentials](https://developer.salesforce.com/blogs/2015/03/salesforce-backup-and-restore-essentials-part-1-backup-overview-api-options-and-performance)
 tbd
+
+### [Integration Patterns](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_pat_summary.htm)
+tbd
