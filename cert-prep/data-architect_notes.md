@@ -1117,6 +1117,19 @@ When choosing a backup method, keep the following factors in mind to ensure your
 
 <br>
 
+**Which API to pick?**
+If you opt to use Salesforce APIs for your backup solution, you’ll need to choose which API to use based on your backup use case. <br>
+Some APIs (such as the Bulk API) are designed for bulk operations that can be performed asynchronously, while other APIs are designed for synchronous operations. <br>
+
+|Requirements|Recommended API|Explanation|
+|:-----------|:--------------|:----------|
+|You need to preserve governor limits regarding the number of API calls|Bulk|Bulk API **does not consume API calls** but **consumes Bulk API calls**, which are less restrictive|
+|You need to preserve the governor limit regarding “number of batches per rolling 24 hour period”|REST or SOAP|REST or SOAP are not subject to Bulk-specific governor limits, however they have their own limits|
+|You need to backup an object containing a large volume of records (more than 2M records) or do a backup that raises performance challenges|Bulk|Bulk API will generally be faster than the other APIs, but the REST or SOAP APIs might sometimes get better results depending on several factors: **query batch size**, **current asynchronous load** on the instance, **degree of parallelization**|
+|You need to backup an object that is not yet supported by the Bulk API (CaseStatus, OpportunityStage, AcceptedEventRelation)|REST or SOAP|Bulk API does not yet support all queryable objects| 
+|You need to backup an object that contains a lot of XML-like information (example: EmailMessage)|REST or Bulk|While this is not directly caused by the Salesforce SOAP API, we have seen some XML parsers encountering difficulties when processing the HTTP response (mix of XML-based protocol and XML data)|
+|You need to backup metadata|Metadata|The Metadata API is by far the most exhaustive API to retrieve metadata, however a large part of the metadata is also available in the REST, SOAP and Tooling APIs|
+|You need to back up files (Attachment, ContentVersion, Document, FeedItem, StaticResource, etc.)|REST or SOAP|The Salesforce CLI makes retrieving metadata rather easy.|
 
 ### [Integration Patterns](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_pat_summary.htm)
 tbd
