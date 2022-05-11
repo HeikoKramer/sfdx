@@ -1131,6 +1131,9 @@ Some APIs (such as the Bulk API) are designed for bulk operations that can be pe
 |You need to backup metadata|Metadata|The Metadata API is by far the most exhaustive API to retrieve metadata, however a large part of the metadata is also available in the REST, SOAP and Tooling APIs|
 |You need to back up files (Attachment, ContentVersion, Document, FeedItem, StaticResource, etc.)|REST or SOAP|The Salesforce CLI makes retrieving metadata rather easy.|
 
+#### [Backup and Restore](https://help.salesforce.com/s/articleView?id=release-notes.rn_security_backup_restore_ga.htm&type=5&release=234)
+tbd
+
 ### [Integration Patterns](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_pat_summary.htm)
 tbd
 
