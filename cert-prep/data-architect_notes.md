@@ -1090,6 +1090,33 @@ These APIs will allow you to set up either a **full**, **incremental**, or **par
 
 <br>
 
+**Security**
+Any local backup should be properly guarded against security risks, which might involve encryption of local data or other security measures. <br>
+When choosing a backup method, keep the following factors in mind to ensure your backup data is secure. <br>
+
+* File system storage
+  * data location
+  * disk capacity
+  * redundancy
+  * availability
+  * durability
+  * encryption of the data at rest
+  * encryption key management
+  * physical security access
+  * authentication
+  * access logs
+* Backup and Restore server configuration
+* run and maintenance 
+  * availability
+  * redundancy
+  * encryption of data in transit
+  * encryption of cached data
+  * network/CPU/memory capacity
+* Backup archives retention 
+  * retain backups for a specific amount of time
+
+<br>
+
 
 ### [Integration Patterns](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_pat_summary.htm)
 tbd
