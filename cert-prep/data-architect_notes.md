@@ -1148,3 +1148,6 @@ tbd
 
 ### [Deferred Sharing Calculations](https://developer.salesforce.com/blogs/engineering/2013/08/extreme-force-com-data-loading-part-6-taking-advantage-of-deferred-sharing-calculation)
 tbd
+
+### [Reporting Snapshots](https://help.salesforce.com/s/articleView?id=sf.data_about_analytic_snap.htm&type=5)
+tbd
