@@ -1146,3 +1146,5 @@ tbd
 ### [Salesforce Field Indexes](https://developer.salesforce.com/blogs/engineering/2015/06/know-thy-salesforce-field-indexes-fast-reports-list-views-soql)
 tbd
 
+### [Deferred Sharing Calculations](https://developer.salesforce.com/blogs/engineering/2013/08/extreme-force-com-data-loading-part-6-taking-advantage-of-deferred-sharing-calculation)
+tbd
