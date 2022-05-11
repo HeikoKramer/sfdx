@@ -1136,3 +1136,6 @@ tbd
 
 ### [External Object Relationships](https://help.salesforce.com/s/articleView?id=sf.external_object_relationships.htm&type=5)
 tbd
+
+### [Field History Tracking](https://help.salesforce.com/s/articleView?id=sf.tracking_field_history.htm&type=5)
+tbd
