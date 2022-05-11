@@ -1065,7 +1065,31 @@ Mashups use Salesforce presentation to display Salesforce-hosted data and extern
   * **reporting and workflow do not work on the external data**
 
 ### [Salesforce Backup and Restore Essentials](https://developer.salesforce.com/blogs/2015/03/salesforce-backup-and-restore-essentials-part-1-backup-overview-api-options-and-performance)
-tbd
+**Reasons to do backups** <br>
+Salesforce performs real-time replication to disk at each data center, and near real-time data replication between the production data center and the disaster recovery center. <br>
+However, there are many different reasons why a customer would like to organize their own backup of information from Salesforce. <br>
+
+* Recover from data corruption (unintended user error or malicious activity)
+* Prepare for a data migration rollback
+* Archive data to reduce volumes
+* Replicate data to a data warehouse/BI
+* Take snapshots of development versions
+
+<br>
+
+**What to backup and how?** <br>
+There are two types of information you can backup from Salesforce: **Data** and **Metadata**. <br>
+Salesforce provides four APIs to backup data and metadata information from the application: <br>
+
+* REST API
+* SOAP API
+* Bulk API
+* Metadata API
+
+These APIs will allow you to set up either a **full**, **incremental**, or **partial** backup. <br>
+
+<br>
+
 
 ### [Integration Patterns](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_pat_summary.htm)
 tbd
