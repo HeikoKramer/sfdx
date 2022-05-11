@@ -1139,3 +1139,7 @@ tbd
 
 ### [Field History Tracking](https://help.salesforce.com/s/articleView?id=sf.tracking_field_history.htm&type=5)
 tbd
+
+### [Salesforce Field Indexes](https://developer.salesforce.com/blogs/engineering/2015/06/know-thy-salesforce-field-indexes-fast-reports-list-views-soql)
+tbd
+
