@@ -1132,7 +1132,24 @@ Some APIs (such as the Bulk API) are designed for bulk operations that can be pe
 |You need to back up files (Attachment, ContentVersion, Document, FeedItem, StaticResource, etc.)|REST or SOAP|The Salesforce CLI makes retrieving metadata rather easy.|
 
 #### [Backup and Restore](https://help.salesforce.com/s/articleView?id=release-notes.rn_security_backup_restore_ga.htm&type=5&release=234)
-tbd
+Salesforce provides the own backup solution **Backup & Restore** at additional license cost. <br>
+With Backup & Restore you can protect your organization against <br>
+
+* incorrect data updates
+* integration execution issues
+* malicious actors
+* and ransom ware attacks 
+
+Backup & Restore provides: <br>
+
+* Custom and Standard Object backups
+* Daily incremental backups
+* Backup in the same region
+* Backup-to-Current-State comparisons
+* Record previews before restoring
+* Restoration to original org
+* Backup dashboard & statistics
+* Run logs on which to build custom triggers and flows
 
 ### [Integration Patterns](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_pat_summary.htm)
 tbd
