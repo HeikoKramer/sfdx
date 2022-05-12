@@ -1171,3 +1171,6 @@ tbd
 
 ### [Data Virtualization](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_data_virtualization.htm)
 tbd
+
+### [Query Plan Tool](https://help.salesforce.com/s/articleView?id=000334796&type=1)
+tbd
