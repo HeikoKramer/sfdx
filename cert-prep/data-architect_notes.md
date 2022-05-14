@@ -1189,7 +1189,7 @@ If the child is an external object, you can instead change the field type of an 
 This table summarizes the types of relationships that are available to external objects. <br>
 
 |Relationship|Allowed Child Objects|Allowed Parent Objects|Parent Field for Matching Records|
-|:---------------------------------|:---------------------|:--------------------------------|
+|:-----------|:--------------------|:---------------------|:--------------------------------|
 |Lookup|Standard <br /> Custom <br /> External|Standard <br /> Custom|The 18-character Salesforce record ID|
 |External Lookup|Standard <br /> Custom <br /> External|External|The External ID standard field|
 |Indirect Lookup|External|Standard <br /> Custom|You select a custom field with the `External ID` and `Unique` attributes|
