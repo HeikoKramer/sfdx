@@ -1182,9 +1182,12 @@ When values match, the records are related to each other. <br>
 To create an external object relationship, create a custom field on the child object with one of the following field types. <br>
 If the child is an external object, you can instead change the field type of an existing custom field to one of the following. <br>
 
-* Lookup Relationship
-* External Lookup Relationship
-* Indirect Lookup Relationship
+* [Lookup Relationship](https://help.salesforce.com/s/articleView?id=sf.external_object_lookup_relationships.htm&type=5)
+  * Use a lookup when the external data includes a column that identifies related Salesforce records by their **18-character IDs**
+* [External Lookup Relationship](https://help.salesforce.com/s/articleView?id=external_object_external_lookup_relationships.htm&type=5&language=en_US)
+  * Use an external lookup **when the parent is an external object**
+* [Indirect Lookup Relationship](https://help.salesforce.com/s/articleView?id=external_object_indirect_lookup_relationships.htm&type=5&language=en_US)
+  * Use an indirect lookup **when the external data doesn’t include Salesforce record IDs**
 
 This table summarizes the types of relationships that are available to external objects. <br>
 
