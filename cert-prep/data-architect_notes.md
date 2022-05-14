@@ -1229,6 +1229,27 @@ Similarly, MyCustomObject__History tracks field history for the MyCustomObject__
   * For example, the following SOQL query isn’t valid:
   * `SELECT AccountId, Field FROM AccountHistory LIMIT 1 FOR VIEW`
 
+<br>
+
+**Interactions With Other Salesforce Features** <br>
+
+* In Lightning, you can see gaps in numerical order in the Created Date and ID fields
+  * All tracked changes still are committed and recorded to your audit log 
+  * the exact time that those changes occur in the database can vary widely and aren't guaranteed to occur within the same millisecond 
+  * For example, there can be triggers or updates on a field that increase the commit time, and you can see a gap in time
+  * During that time period, IDs are created in increasing numerical order but can also have gaps for the same reason
+* If Process Builder, an Apex trigger, or a Flow causes a change on an object the current user doesn’t have permission to edit, that change isn’t tracked 
+  * Field history honors the permissions of the current user and doesn’t record changes that occur in system context
+* Salesforce attempts to track all changes to a history-tracked field, even if a particular change is never stored in the database 
+  * For example, let’s say an admin defines an Apex before trigger on an object that changes a Postal Code field value of 12345 to 94619
+  * A user adds a record to the object and sets the Postal Code field to 12345
+  * Because of the Apex trigger, the actual Postal Code value stored in the database is 94619
+  * Although only one value was eventually stored in the database, the tracked history of the Zip Code field has two new entries
+    * No value --> 12345 (the change made by the user when they inserted the new record)
+    * 12345 --> 94619 (the change made by the Apex trigger)
+
+
+
 ### [Salesforce Field Indexes](https://developer.salesforce.com/blogs/engineering/2015/06/know-thy-salesforce-field-indexes-fast-reports-list-views-soql)
 tbd
 
