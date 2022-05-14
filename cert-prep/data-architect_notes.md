@@ -1199,7 +1199,35 @@ This table summarizes the types of relationships that are available to external 
 
 
 ### [Field History Tracking](https://help.salesforce.com/s/articleView?id=sf.tracking_field_history.htm&type=5)
-tbd
+You can select certain fields to track and display the field history in the History related list of an object. <br>
+Field history data is retained for up to **18 months through your org**, and up to **24 months via the API**. <br>
+**NOTE:** Field history tracking data doesn’t count against your Salesforce org’s data storage limits! <br>
+
+<br>
+
+Salesforce stores an object’s tracked field history in an associated object called StandardObjectNameHistory or CustomObjectName__History. <br>
+For example, AccountHistory represents the history of changes to the values of an Account record’s fields. <br>
+Similarly, MyCustomObject__History tracks field history for the MyCustomObject__c custom object. <br>
+
+<br>
+
+**General Considerations:** <br>
+
+* Salesforce starts tracking field history from the date and time that you enable it on a field
+  * Changes made before this date and time aren’t included and didn't create an entry in the History related list
+* Use Data Loader or the queryAll() API to retrieve field history that's 18–24 months old
+* Changes to fields with more than 255 characters are tracked as edited, and their old and new values aren’t recorded
+* Changes to time fields aren’t tracked in the field history related list
+* The Field History Tracking timestamp is precise to a second in time
+  * if two users update the same tracked field on the same record in the same second, both updates have the same timestamp
+  * Salesforce can’t guarantee the commit order of these changes to the database 
+  * As a result, the display values can look out of order
+* You can’t create a record type on a standard or custom object and enable field history tracking on the record type in the same Metadata API deployment 
+  * Instead, create the record type in one deployment and enable history tracking on it in a separate deployment
+* Salesforce doesn’t enable the recently viewed or referenced functionality in StandardObjectNameHistory or CustomObjectName__History objects
+  * As a result, you can’t use the FOR VIEW or FOR REFERENCE clauses in SOQL queries on these history objects
+  * For example, the following SOQL query isn’t valid:
+  * `SELECT AccountId, Field FROM AccountHistory LIMIT 1 FOR VIEW`
 
 ### [Salesforce Field Indexes](https://developer.salesforce.com/blogs/engineering/2015/06/know-thy-salesforce-field-indexes-fast-reports-list-views-soql)
 tbd
