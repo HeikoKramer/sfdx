@@ -1248,7 +1248,18 @@ Similarly, MyCustomObject__History tracks field history for the MyCustomObject__
     * No value --> 12345 (the change made by the user when they inserted the new record)
     * 12345 --> 94619 (the change made by the Apex trigger)
 
+<br>
 
+**Translation and Locale Considerations** <br>
+
+* Tracked field values aren’t automatically translated; they display in the language in which they were made
+  * For example, if a field is changed from Green to Verde, Verde is displayed no matter what a user’s language is, unless the field value has been translated into other languages via the Translation Workbench
+  * This behavior also applies to record types and picklist values
+* Changes to custom field labels that have been translated via the Translation Workbench are shown in the locale of the user viewing the History related list
+  * For example, if a custom field label is Red and translated into Spanish as Rojo, then a user with a Spanish locale sees the custom field label as Rojo
+  * Otherwise, the user sees the custom field label as Red
+* Changes to date fields, number fields, and standard fields are shown in the locale of the user viewing the History related list
+  * For example, a date change to August 5, 2012 shows as 8/5/2012 for a user with the English (United States) locale, and as 5/8/2012 for a user with the English (United Kingdom) locale
 
 ### [Salesforce Field Indexes](https://developer.salesforce.com/blogs/engineering/2015/06/know-thy-salesforce-field-indexes-fast-reports-list-views-soql)
 tbd
