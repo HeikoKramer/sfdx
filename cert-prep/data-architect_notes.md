@@ -1164,7 +1164,36 @@ Lists of integration patterns: <br>
 |Data Virtualization|Salesforce accesses external data in real time. This removes the need to persist data in Salesforce and then reconcile the data between Salesforce and the external system.|
 
 ### [External Object Relationships](https://help.salesforce.com/s/articleView?id=sf.external_object_relationships.htm&type=5)
-External objects support standard lookup relationships, which use the 18-character Salesforce record IDs to associate related records with each other. However, data that’s stored outside your Salesforce org often doesn’t contain those record IDs. Therefore, two special types of lookup relationships are available for external objects: external lookups and indirect lookups.
+External objects support standard lookup relationships, which use the 18-character Salesforce record IDs to associate related records with each other. <br>
+However, data that’s stored outside your Salesforce org often doesn’t contain those record IDs. <br>
+Therefore, two special types of lookup relationships are available for external objects: **external lookups** and **indirect lookups**. <br>
+
+<br>
+
+External lookups and indirect lookups compare a **specific field’s values on the parent object** to the relationship field’s values on the child object. <br>
+When values match, the records are related to each other. <br>
+
+<br>
+
+**Note:** Federated Search supports only external lookup relationships, and the Federated Search external object is always the parent. <br>
+
+<br>
+
+To create an external object relationship, create a custom field on the child object with one of the following field types. <br>
+If the child is an external object, you can instead change the field type of an existing custom field to one of the following. <br>
+
+* Lookup Relationship
+* External Lookup Relationship
+* Indirect Lookup Relationship
+
+This table summarizes the types of relationships that are available to external objects. <br>
+
+|Relationship|Allowed Child Objects|Allowed Parent Objects|Parent Field for Matching Records|
+|:---------------------------------|:---------------------|:--------------------------------|
+|Lookup|Standard<br />Custom<br />External|Standard<br />Custom|The 18-character Salesforce record ID|
+|External Lookup|Standard<br />Custom<br />External|External|The External ID standard field|
+|Indirect Lookup|External|Standard<br />Custom|You select a custom field with the `External ID` and `Unique` attributes|
+
 
 ### [Field History Tracking](https://help.salesforce.com/s/articleView?id=sf.tracking_field_history.htm&type=5)
 tbd
