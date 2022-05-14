@@ -1190,9 +1190,9 @@ This table summarizes the types of relationships that are available to external 
 
 |Relationship|Allowed Child Objects|Allowed Parent Objects|Parent Field for Matching Records|
 |:---------------------------------|:---------------------|:--------------------------------|
-|Lookup|Standard<br />Custom<br />External|Standard<br />Custom|The 18-character Salesforce record ID|
-|External Lookup|Standard<br />Custom<br />External|External|The External ID standard field|
-|Indirect Lookup|External|Standard<br />Custom|You select a custom field with the `External ID` and `Unique` attributes|
+|Lookup|Standard <br /> Custom <br /> External|Standard <br /> Custom|The 18-character Salesforce record ID|
+|External Lookup|Standard <br /> Custom <br /> External|External|The External ID standard field|
+|Indirect Lookup|External|Standard <br /> Custom|You select a custom field with the `External ID` and `Unique` attributes|
 
 
 ### [Field History Tracking](https://help.salesforce.com/s/articleView?id=sf.tracking_field_history.htm&type=5)
