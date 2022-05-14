@@ -1164,7 +1164,7 @@ Lists of integration patterns: <br>
 |Data Virtualization|Salesforce accesses external data in real time. This removes the need to persist data in Salesforce and then reconcile the data between Salesforce and the external system.|
 
 ### [External Object Relationships](https://help.salesforce.com/s/articleView?id=sf.external_object_relationships.htm&type=5)
-tbd
+External objects support standard lookup relationships, which use the 18-character Salesforce record IDs to associate related records with each other. However, data that’s stored outside your Salesforce org often doesn’t contain those record IDs. Therefore, two special types of lookup relationships are available for external objects: external lookups and indirect lookups.
 
 ### [Field History Tracking](https://help.salesforce.com/s/articleView?id=sf.tracking_field_history.htm&type=5)
 tbd
