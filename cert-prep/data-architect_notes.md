@@ -1425,11 +1425,33 @@ After you set up a reporting snapshot, users can: <br>
 * Create dashboards from the source report.
 * Define list views on the target object, if it's included on a custom object tab.
 
-For example, a customer support manager could set up a reporting snapshot that reports on the open cases assigned to his or her team everyday at 5:00 PM, and store that data in a custom object to build a history on open cases from which he or she could spot trends via reports. <br>
-Then the customer support manager could report on point-in-time or trend data stored in the custom object and use the report as a source for a dashboard component. <br>
+For example, a customer support manager could set up a reporting snapshot that reports on the open cases assigned to his or her team everyday at 5:00 PM, and store that data in a custom object to build a history on open cases from which he or she could spot trends via reports. Then the customer support manager could report on point-in-time or trend data stored in the custom object and use the report as a source for a dashboard component. <br>
 
 **NOTE:** Reporting snapshots don't support row-level formula fields. <br>
 
+[Prepare Reporting Snapshots](https://help.salesforce.com/s/articleView?id=data_setting_up_analytic_snap.htm&type=5&language=en_US)
+To set up a reporting snapshot, you need a source report and a target object with fields to contain the data in the source report. <br>
+
+[Define a Reporting Snapshot](https://help.salesforce.com/s/articleView?id=data_defining_analytic_snap.htm&type=5&language=en_US)
+After you create a source report, target object, and target object fields, you can define your reporting snapshot. <br>
+You define a reporting snapshot by naming it and choosing the source report that will load report results into the target object you specify when the reporting snapshot runs. <br>
+
+[Map Reporting Snapshot Fields](https://help.salesforce.com/s/articleView?id=data_mapping_analytic_snap.htm&type=5&language=en_US)
+After you create a source report, target object, target object fields, and define your reporting snapshot, you can map the fields on your source report to the fields on your target object. <br>
+You map source report fields to target object fields so that when the report runs, it automatically loads specific target object fields with data from specific source report fields. <br>
+
+[Schedule and Run a Reporting Snapshot](https://help.salesforce.com/s/articleView?id=data_scheduling_analytic_snap.htm&type=5&language=en_US)
+After you create a source report, target object, target object fields, define your reporting snapshot, and map its fields, you can schedule when it runs. <br>
+You can schedule a reporting snapshot to run daily, weekly, or monthly so that data from the source report is loaded into the target object when you need it. <br>
+
+[Manage Reporting Snapshots](https://help.salesforce.com/s/articleView?id=data_managing_analytic_snap.htm&type=5&language=en_US)
+After you set up a reporting snapshot, you can view details about it and edit and delete it. <br>
+From Setup, enter Reporting Snapshots in the Quick Find box, then select Reporting Snapshots to display the Reporting Snapshots page, which shows the list of reporting snapshots defined for your organization. <br>
+
+[Troubleshoot Reporting Snapshots](https://help.salesforce.com/s/articleView?id=data_troubleshooting_snapshots.htm&type=5&language=en_US)
+The Run History section of a reporting snapshot detail page displays if a reporting snapshot ran successfully or not. <br>
+When a reporting snapshot fails during a scheduled run, the failure is noted in the Result column. <br>
+To view the details of a run, click the date and time of the run in the Run Start Time column. <br>
 
 ### [Data Virtualization](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_data_virtualization.htm)
 tbd
