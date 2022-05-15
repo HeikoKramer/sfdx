@@ -1507,3 +1507,6 @@ The following elements / sections should be included in your Data Governance Pla
 * Center-out
   * Experts define a governance 
 
+### [Privacy Cente](https://help.salesforce.com/s/articleView?id=sf.privacy_center.htm&type=5)
+tbd
+
