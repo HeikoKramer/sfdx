@@ -1489,3 +1489,10 @@ Given a customer scenario
 * compare and contrast various approaches and considerations for designing and implementing an enterprise data governance program 
 
 ### [Data Governance Plan](https://a.sfdcstatic.com/content/dam/www/ocms-backup/assets/pdf/misc/data_Governance_Stewardship_ebook.pdf)
+The following elements / sections should be included in your Data Governance Plan: <br>
+
+* Data Definitions
+* Data Quality Standards
+* Quality Control Process
+* Roles & Ownership
+* Security & Permission
