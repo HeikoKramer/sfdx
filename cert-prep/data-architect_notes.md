@@ -1262,7 +1262,22 @@ Similarly, MyCustomObject__History tracks field history for the MyCustomObject__
   * For example, a date change to August 5, 2012 shows as 8/5/2012 for a user with the English (United States) locale, and as 5/8/2012 for a user with the English (United Kingdom) locale
 
 ### [Salesforce Field Indexes](https://developer.salesforce.com/blogs/engineering/2015/06/know-thy-salesforce-field-indexes-fast-reports-list-views-soql)
-tbd
+Creating selective, optimizable filter conditions that target indexed fields is key when you want to run fast Salesforce 
+
+* reports 
+* list views
+* SOQL queries
+
+**Creating Indexes** <br>
+
+One way that custom indexes get created is by Salesforce’s **auto-indexer**. <br>
+The platform constantly analyzes custom index candidates, and when it sees that a custom index would make a noticeable difference in the response time for one or more queries, it automatically creates the index for you. <br>
+
+<br>
+
+Another other way is to log a case with Salesforce Support requesting a custom index to help the response time for a query. <br>
+You can request a custom index too (and should) when you are working with large objects and know that an index will help your application perform more efficiently and faster. <br>
+
 
 ### [Deferred Sharing Calculations](https://developer.salesforce.com/blogs/engineering/2013/08/extreme-force-com-data-loading-part-6-taking-advantage-of-deferred-sharing-calculation)
 tbd
