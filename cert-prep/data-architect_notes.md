@@ -1510,3 +1510,6 @@ The following elements / sections should be included in your Data Governance Pla
 ### [Privacy Cente](https://help.salesforce.com/s/articleView?id=sf.privacy_center.htm&type=5)
 tbd
 
+### [Custom Field Encryption](https://developer.salesforce.com/docs/atlas.en-us.securityImplGuide.meta/securityImplGuide/fields_about_encrypted_fields.htm)
+tbd
+
