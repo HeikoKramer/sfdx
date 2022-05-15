@@ -1455,6 +1455,29 @@ The Run History section of a reporting snapshot detail page displays if a report
 When a reporting snapshot fails during a scheduled run, the failure is noted in the Result column. <br>
 To view the details of a run, click the date and time of the run in the Run Start Time column. <br>
 
-
 ### [Query Plan Tool](https://help.salesforce.com/s/articleView?id=000334796&type=1)
-tbd
+Use this tool to check the Query Plan for any SOQL queries that execute slowly. <br>
+It will provide you with insight on the different plans and should you have some of the filters indexed, provide the cost of using the index compared to a full table scan. <br>
+
+If the cost for the table scan is lower than the index, and the query is timing out, you will need to perform further analysis on using other filters to improve selectivity, or, if you have another selective filter in that query that is not indexed but is a candidate for one. <br>
+
+**Determine if a filter is selective:** <br>
+
+* Determine if it has an index.
+* If the filter is on a standard field, it'll have an index if it is a
+  * primary key (Id, Name, OwnerId)
+  * a foreign key (CreatedById, LastModifiedById, lookup, master-detail relationship)
+  * an audit field (CreatedDate, SystemModstamp)
+* Custom fields will have an index if they have been marked as **Unique** or **External Id**
+* If the filter doesn't have an index, it won't be considered for optimization.
+* If the filter has an index, determine how many records it would return:
+  * For a standard index, the threshold is 30 percent of the first million targeted records and 15 percent of all records after that first million. 
+  * In addition, the selectivity threshold for a standard index maxes out at **1 million total targeted records**
+    * which you could reach only if you had more than 5.6 million total records.
+  * For a custom index, the selectivity threshold is 10 percent of the first million targeted records and 5 percent all records after that first million.
+  * In addition, the selectivity threshold for a custom index maxes out at 333,333 targeted records
+    * which you could reach only if you had more than 5.6 million records.
+* If the filter exceeds the threshold, it won't be considered for optimization.
+* If the filter doesn't exceed the threshold, this filter IS selective, and the query optimizer will consider it for optimization.
+
+Check out the [Database Query & Search Optimization Cheat Sheet](http://resources.docs.salesforce.com/194/0/en-us/sfdc/pdf/salesforce_query_search_optimization_developer_cheatsheet.pdf)
