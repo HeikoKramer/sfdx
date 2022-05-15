@@ -1311,9 +1311,105 @@ You can create External IDs only on the following fields:
 * Number
 * Text
 
-
 ### [Deferred Sharing Calculations](https://developer.salesforce.com/blogs/engineering/2013/08/extreme-force-com-data-loading-part-6-taking-advantage-of-deferred-sharing-calculation)
-tbd
+At some point during your project, you must configure your sharing settings so that your users have the appropriate level of access to the appropriate records. <br>
+If your organization has large data volumes, you might find that the calculations you need to complete this configuration and implement your record access model add a substantial amount of time to your data loading. <br>
+The calculations can increase your total data loading time for several reasons: <br>
+
+* To determine if users who try to access records should actually be able to access those records, Salesforce stores data that specifies the individuals, roles, and groups that should have record access, as well as data that specifies which group members actually belong to a group.
+* When new data is added or sharing settings are changed, the stored record sharing and group membership data must be updated accordingly.
+* There are multiple ways to grant any user or group access to a record.
+* Changes to the role and territory hierarchies can affect a large number of users in the organization, and require updating the sharing data for a large number of records.
+
+Changes to organization-wide defaults and sharing rules can affect your users’ access to some or all of that object’s records. <br>
+
+<br>
+
+**Timing Your Sharing Configuration Steps** <br>
+
+Pre-Data Loading Configuration Steps: <br>
+
+* Create the role hierarchy.
+* Assign users to roles.
+* Set organization-wide defaults to Public Read/Write.
+
+In the role hierarchy, record access is inherited based on record ownership, and managers automatically gain access to all of the records owned by people assigned to subordinate roles. <br>
+If you load a lot of data, and then make significant changes to the role hierarchy or the users assigned to roles within that hierarchy, those changes will trigger a recalculation of record access so that the managers above the affected roles and role members have the appropriate, adjusted record access. <br>
+
+<br>
+
+If you set an object’s organization-wide default to Public Read/Write, the system will not use or maintain an object share table for that object—users will already have an unrestricted baseline level of access to all of that object’s records. <br>
+Because the system is not maintaining an object share table for that object, it does not need to spend time calculating who should have access to its records when you load data. <br>
+
+**NOTE:** The Public Read/Write organization-wide default can speed up your data loading, but at some point, you might need to use a different sharing setting to meet your business requirements. <br>
+
+Post-Data Loading Configuration Steps: <br>
+
+* Set organization-wide defaults to Public Read Only or Private.
+* Create public groups and queues.
+* Create sharing rules.
+ 
+Once you have completed your data load and changed your objects’ organization-wide defaults to Public Read Only or Private, the system must perform a sharing calculation, which will take a substantial amount of time. <br>
+As always, if you plan to load very large volumes of data, test your data load in a sandbox organization so that you can plan for the time that it will take to complete in production. <br>
+Because sandbox and production environments are different, what you see in your sandbox organization might not line up perfectly with what you see in your production organization, but it should indicate the general scope and impact of your changes. <br>
+Again, you cannot use Defer Sharing Calculation when changing your organization-wide defaults, but you can speed up these changes by asking Customer Support to enable the parallel sharing rule processing feature for your organization. <br>
+
+Because public groups and queues are not part of the role hierarchy or the territory hierarchy, creating them does not slow sharing performance significantly, and there isn’t a strong reason for creating them at a specific time. <br>
+Configuring them later just allows you to focus on loading your records as quickly and efficiently as possible. <br>
+
+Finally, if you create a sharing rule before your data is loaded into an object, the platform must check every record that you insert during your data loading against that rule, and then adjust the object share table if necessary. <br>
+This process does not take much time for each insert, but the aggregation of all of your inserts can slow your data loading noticeably. <br>
+To avoid this drag on loading performance, you can **create your sharing rules after all the data has been loaded**. <br>
+
+There are two options for doing this: <br>
+
+* Create each rule and allow it to recalculate before creating the next rule.
+* Use Defer Sharing Calculation to suspend the processing of sharing rules
+  * create all of the rules at once
+  * then recalculate all of the rules at once
+
+The second option might be more efficient, but it might also require a very long time to recalculate all the rules. <br>
+If you have limited ability to set aside maintenance windows for these activities, the first option might be more appropriate for your organization. <br>
+
+**Configuring Record Access with the Defer Sharing Calculation Feature** <br>
+
+By default, when you create or modify a sharing rule, a role or a group — or change who belongs to a group — the system updates the object share tables and the group membership tables immediately. <br>
+If these sharing calculations take longer than you expect, they can throw off your planned loading schedule. <br>
+With Defer Sharing Calculation, you can turn off these recalculations while you submit additional sharing changes, and then let them all execute together later. <br>
+And if you test these submissions and calculations in a sandbox organization, you can better predict how long they will take in your production organization, allowing you to negotiate more reasonable maintenance windows with your customers. <br>
+
+**Configuring Defer Sharing Calculation** <br>
+
+* Contact Customer Support to enable Defer Sharing Calculation.
+* Once the feature is enabled, users with `View Setup and Configuration` permission will see the **Defer Sharing Calculations** link in Setup.
+* To see the **Suspend**, **Resume**, and **Recalculate** buttons on this page, users must also have the `Manage Sharing Calculation Deferral` permission. 
+  * Creating a permission set allows you to easily assign this permission to all users who require access to these buttons.
+
+**NOTE:** This permission also grants the users who receive it the `Manage Users`, `View Setup and Configuration`, and `Reset User Passwords and Unlock Users` permissions, so it is a powerful permission that should be restricted to a few senior administrators. <br>
+
+**Using the Defer Sharing Calculation Feature** <br>
+
+The controls on the Defer Sharing Calculations page allow you to: <br>
+
+* View the current state of group membership and sharing calculations
+* Suspend group membership calculations, which will also suspend sharing rule calculations, or suspend only sharing rule calculations
+* Perform all of your planned changes to roles, groups, queues, and sharing rules quickly while calculations are suspended
+* Resume the calculation of group membership or sharing rules
+
+When you resume group membership and sharing calculations after making many changes in an organization with large data volumes, those calculations might take a long time to complete. <br>
+Changes to group membership are calculated automatically when you resume the calculations, but changes to sharing rules are not. <br>
+You can use the **Recalculate button** to ensure that all changes to sharing rules have taken effect. <br>
+**Until you click this button, users might not have the access that you have specified in your sharing rules**, and they might continue to have access that you intended to remove. <br>
+
+**NOTE:** When you suspend group membership calculations, the system must recalculate all sharing rules, even if you did not add, delete, or modify any sharing rules. This is because the changes that make to groups might affect some or all of the **Owned by members of** or **Share with** groups specified in your sharing rules. <br>
+
+Remember that when group membership or sharing rule calculations are suspended, any administrators performing operations on roles, groups, queues, or sharing rules will discover that their changes have not taken effect. <br>
+To develop good coordination between administrators — and realistic estimates of the maintenance windows you will need to make large scale changes to your sharing configuration — we recommend thoroughly testing deferred group membership and sharing calculations in a sandbox organization with the data volumes that you anticipate having in production. <br>
+
+**When Not to Use Defer Sharing Calculation** <br>
+
+Although using Defer Sharing Calculation is a best practice for organizations with large volumes of data, some customers might have so much data that attempting to recalculate all sharing changes at once is not feasible or takes an impractical amount of time. <br>
+These customers might find that allowing sharing calculations to proceed normally while they configure and load data into their organizations provides the best overall throughput for their organization. <br>
 
 ### [Reporting Snapshots](https://help.salesforce.com/s/articleView?id=sf.data_about_analytic_snap.htm&type=5)
 tbd
