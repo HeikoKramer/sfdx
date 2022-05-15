@@ -1481,3 +1481,11 @@ If the cost for the table scan is lower than the index, and the query is timing 
 * If the filter doesn't exceed the threshold, this filter IS selective, and the query optimizer will consider it for optimization.
 
 Check out the [Database Query & Search Optimization Cheat Sheet](http://resources.docs.salesforce.com/194/0/en-us/sfdc/pdf/salesforce_query_search_optimization_developer_cheatsheet.pdf)
+
+## Data Governance (10%)
+Given a customer scenario
+* recommend an approach for designing a GDPR compliant data model
+* discuss the various options to identify, classify and protect personal and sensitive information 
+* compare and contrast various approaches and considerations for designing and implementing an enterprise data governance program 
+
+### [Data Governance Plan](https://a.sfdcstatic.com/content/dam/www/ocms-backup/assets/pdf/misc/data_Governance_Stewardship_ebook.pdf)
