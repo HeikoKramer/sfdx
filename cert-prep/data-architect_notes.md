@@ -1412,7 +1412,24 @@ Although using Defer Sharing Calculation is a best practice for organizations wi
 These customers might find that allowing sharing calculations to proceed normally while they configure and load data into their organizations provides the best overall throughput for their organization. <br>
 
 ### [Reporting Snapshots](https://help.salesforce.com/s/articleView?id=sf.data_about_analytic_snap.htm&type=5)
-tbd
+A reporting snapshot lets you report on historical data. <br>
+Authorized users can save tabular or summary report results to fields on a custom object, then map those fields to corresponding fields on a target object. <br>
+They can then schedule when to run the report to load the custom object's fields with the report's data. <br>
+Reporting snapshots enable you to work with report data similarly to how you work with other records in Salesforce. <br>
+
+<br>
+
+After you set up a reporting snapshot, users can: <br>
+
+* Create and run custom reports from the target object.
+* Create dashboards from the source report.
+* Define list views on the target object, if it's included on a custom object tab.
+
+For example, a customer support manager could set up a reporting snapshot that reports on the open cases assigned to his or her team everyday at 5:00 PM, and store that data in a custom object to build a history on open cases from which he or she could spot trends via reports. <br>
+Then the customer support manager could report on point-in-time or trend data stored in the custom object and use the report as a source for a dashboard component. <br>
+
+**NOTE:** Reporting snapshots don't support row-level formula fields. <br>
+
 
 ### [Data Virtualization](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_data_virtualization.htm)
 tbd
