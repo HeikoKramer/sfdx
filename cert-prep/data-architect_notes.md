@@ -1163,6 +1163,8 @@ Lists of integration patterns: <br>
 |UI Update Based on Data Changes|The Salesforce user interface must be automatically updated as a result of changes to Salesforce data.|
 |Data Virtualization|Salesforce accesses external data in real time. This removes the need to persist data in Salesforce and then reconcile the data between Salesforce and the external system.|
 
+Great article on [Data Virtualization](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_data_virtualization.htm).
+
 ### [External Object Relationships](https://help.salesforce.com/s/articleView?id=sf.external_object_relationships.htm&type=5)
 External objects support standard lookup relationships, which use the 18-character Salesforce record IDs to associate related records with each other. <br>
 However, data that’s stored outside your Salesforce org often doesn’t contain those record IDs. <br>
@@ -1453,8 +1455,6 @@ The Run History section of a reporting snapshot detail page displays if a report
 When a reporting snapshot fails during a scheduled run, the failure is noted in the Result column. <br>
 To view the details of a run, click the date and time of the run in the Run Start Time column. <br>
 
-### [Data Virtualization](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_data_virtualization.htm)
-tbd
 
 ### [Query Plan Tool](https://help.salesforce.com/s/articleView?id=000334796&type=1)
 tbd
