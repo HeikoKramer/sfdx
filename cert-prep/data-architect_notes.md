@@ -1496,3 +1496,14 @@ The following elements / sections should be included in your Data Governance Pla
 * Quality Control Process
 * Roles & Ownership
 * Security & Permission
+
+### Governance Models
+* Top-down
+  * Management defines the governance based on their vision
+* Bottom-up
+  * End users define governance based on their work practice 
+* Silo-in
+  * Multiple groups collectively work out and agree on a governance 
+* Center-out
+  * Experts define a governance 
+
