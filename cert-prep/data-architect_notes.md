@@ -1273,10 +1273,43 @@ Creating selective, optimizable filter conditions that target indexed fields is 
 One way that custom indexes get created is by Salesforce’s **auto-indexer**. <br>
 The platform constantly analyzes custom index candidates, and when it sees that a custom index would make a noticeable difference in the response time for one or more queries, it automatically creates the index for you. <br>
 
-<br>
-
 Another other way is to log a case with Salesforce Support requesting a custom index to help the response time for a query. <br>
 You can request a custom index too (and should) when you are working with large objects and know that an index will help your application perform more efficiently and faster. <br>
+
+#### [Technical View on Indexes](https://developer.salesforce.com/docs/atlas.en-us.salesforce_large_data_volumes_bp.meta/salesforce_large_data_volumes_bp/ldv_deployments_infrastructure_indexes.htm)
+The custom indexes that Salesforce Customer Support creates in your production environment are copied to all sandboxes that you create from that production environment. <br>
+
+The platform maintains indexes on the following fields for most objects:
+
+* RecordTypeId
+* Division
+* CreatedDate
+* Systemmodstamp (LastModifiedDate)
+* Name
+* Email (for contacts and leads)
+* Foreign key relationships (lookups and master-detail)
+* The unique Salesforce record ID, which is the primary key for each object
+
+<br>
+
+Salesforce also supports custom indexes on custom fields, except for:
+
+* multi-select picklists
+* text areas (long)
+* text areas (rich)
+* non-deterministic formula fields
+* encrypted text fields
+
+<br>
+
+External IDs cause an index to be created on that field. <br>
+The query optimizer then considers those fields. <br>
+You can create External IDs only on the following fields:
+
+* Auto Number
+* Email
+* Number
+* Text
 
 
 ### [Deferred Sharing Calculations](https://developer.salesforce.com/blogs/engineering/2013/08/extreme-force-com-data-loading-part-6-taking-advantage-of-deferred-sharing-calculation)
