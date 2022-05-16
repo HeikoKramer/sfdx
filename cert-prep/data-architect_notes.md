@@ -1541,4 +1541,6 @@ The `Enhanced Personal Information Management` setting can be enabled on the `Us
 To customize the user fields that are concealed, they can be added or removed from the `PersonalInfo_EPIM` field set on the User object. <br>
 Custom user fields and all standard user fields are supported. <br>
 
+### [Data Privacy Preferences](https://help.salesforce.com/s/articleView?id=sf.individuals_store_data_privacy.htm&type=5)
+tbd
 
