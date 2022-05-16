@@ -1547,3 +1547,6 @@ tbd
 #### [Which Standard Fields Can I Encrypt?](https://help.salesforce.com/s/articleView?id=sf.security_pe_standard_fields.htm&type=5)
 tbd
 
+### [Einstein Data Detect](https://help.salesforce.com/s/articleView?id=release-notes.rn_security_einstein_data_detect_ga.htm&type=5&release=234)
+tbd
+
