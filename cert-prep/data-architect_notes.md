@@ -1516,3 +1516,20 @@ tbd
 ### Key Principles of GDPR
 tbd
 
+### [Data Stewardship](https://admin.salesforce.com/blog/2019/why-effective-data-stewardship-gives-you-a-competitive-edge)
+Some of the key areas which would be important to analyze for optimizing a data stewardship engagement include the following: <br>
+
+* **Redundant metadata** 
+  * Any redundant metadata can have an adverse impact on the overall quality of data 
+    * because it can cause inconsistencies related to data entry
+  * Some users might enter the data in one set of fields while other users might enter it in another
+    * leading to inconsistent data quality and seemingly incomplete records
+* **Sharing model** 
+  * When the organization-wide default sharing setting is 'Private', users are more likely to create duplicate records
+  * If a user can't see a record that is owned by another user, then they are likely to create a duplicate version of it 
+    * under the assumption that the record does not exist in Salesforce
+  * An organization may consider changing the setting of an object to 'Public Read Only'
+    * if it is not essential to keep records owned by others hidden from users
+* **Required fields and validation rules**
+  * The fields that are required for data entry and the data that should be validated prior to saving the records are necessary to consider for evaluating a data stewardship engagement
+
