@@ -1544,3 +1544,6 @@ Custom user fields and all standard user fields are supported. <br>
 ### [Data Privacy Preferences](https://help.salesforce.com/s/articleView?id=sf.individuals_store_data_privacy.htm&type=5)
 tbd
 
+#### [Which Standard Fields Can I Encrypt?](https://help.salesforce.com/s/articleView?id=sf.security_pe_standard_fields.htm&type=5)
+tbd
+
