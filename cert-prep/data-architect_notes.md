@@ -1533,3 +1533,12 @@ Some of the key areas which would be important to analyze for optimizing a data 
 * **Required fields and validation rules**
   * The fields that are required for data entry and the data that should be validated prior to saving the records are necessary to consider for evaluating a data stewardship engagement
 
+### [User Management Settings](https://help.salesforce.com/s/articleView?id=sf.users_mgmt_settings.htm&type=5)
+tbd
+
+**Mask personal user information** <br>
+The `Enhanced Personal Information Management` setting can be enabled on the `User Management Settings` page in Setup to block **view** and **edit** access to 30 fields that are considered personal information. <br>
+To customize the user fields that are concealed, they can be added or removed from the `PersonalInfo_EPIM` field set on the User object. <br>
+Custom user fields and all standard user fields are supported. <br>
+
+
