@@ -1554,5 +1554,23 @@ tbd
 tbd
 
 ### [Data Retention](https://www.salesforce.org/blog/ask-an-architect-3-recommended-steps-to-building-a-data-retention-policy/)
-tbd
+A data retention policy is a statement of how long data will be stored by the organization including how the data is deleted or otherwise treated. <br>
+
+Data needs to be cataloged and should list the
+
+* type of data
+* business owner
+* purpose
+* how it is used
+* classification level
+
+
+It defines
+
+* how long the data is required
+* when it will be 
+  * deleted
+  * anonymized
+  * archived
+
 
