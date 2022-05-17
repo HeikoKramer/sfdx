@@ -1575,3 +1575,6 @@ It defines
 
 ### [Shield Encryption](https://trailhead.salesforce.com/en/content/learn/modules/spe_admins/spe_admins_get_started)
 tbd
+
+### [Enhanced Transaction Security](https://help.salesforce.com/s/articleView?id=sf.enhanced_transaction_security_policy_types.htm&type=5)
+tbd
