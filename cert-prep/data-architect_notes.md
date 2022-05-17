@@ -1573,4 +1573,5 @@ It defines
   * anonymized
   * archived
 
-
+### [Shield Encryption](https://trailhead.salesforce.com/en/content/learn/modules/spe_admins/spe_admins_get_started)
+tbd
