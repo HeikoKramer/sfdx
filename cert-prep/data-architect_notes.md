@@ -1553,3 +1553,6 @@ tbd
 ### Options to protect data
 tbd
 
+### [Data Retention](https://www.salesforce.org/blog/ask-an-architect-3-recommended-steps-to-building-a-data-retention-policy/)
+tbd
+
