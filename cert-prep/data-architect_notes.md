@@ -1534,7 +1534,46 @@ Some of the key areas which would be important to analyze for optimizing a data 
   * The fields that are required for data entry and the data that should be validated prior to saving the records are necessary to consider for evaluating a data stewardship engagement
 
 ### [User Management Settings](https://help.salesforce.com/s/articleView?id=sf.users_mgmt_settings.htm&type=5)
-tbd
+Manage org-wide user settings to improve user experience and increase org security. <br>
+
+* Enable User Self-Deactivation
+  *  Let external Experience Cloud site and Chatter users deactivate their own accounts 
+  * The results are identical to an administrator-initiated deactivation
+* Personal User Information Policies and Timelines
+  * To protect your external users’ data, Salesforce introduced security settings that let you control personal user information visibility
+  * Use this topic as a starting point to understand all the security improvements and updates 
+    * including timelines for enforcement and how to prepare for the changes
+* Manage Personal User Information Visibility for External Users
+  * Protect your external users’ data by concealing personal information fields from other external users 
+  * To meet your business’s security needs, you can modify which user fields are classified as personal information and hidden
+* Hide Personal User Information from External Users
+   * Orgs with Experience Cloud sites or legacy portals can enable the Hide Personal Information setting 
+    * to conceal certain fields when users with external profiles search user records
+* Let Users Scramble Their User Data
+  * When users no longer want their personal data recognized in Salesforce, you can permanently scramble the data 
+    * with the **System.UserManagement.obfuscateUser** Apex method
+  * However, when you invoke the method for a user, the data becomes anonymous, and you can never recover it 
+  * As an extra precaution, you can’t use the method until you enable Scramble Specific Users’ Data for your org
+* Enable Contactless Users
+  * Enable the contactless user feature for your org to reduce the overhead of managing customers and partners 
+    * by creating users without contact information
+  * Without contacts, you don’t have to worry about keeping user and contact records in sync 
+* Enable Enhanced Profile List Views
+  * Enhanced lists give you the ability to quickly view, customize, and edit list data to speed up your daily productivity
+* Enable Enhanced Permission Set Component Views
+  * When you have large numbers of Apex class assignments for permission sets
+    * enable a paginated result set, standard filtering, and sorting to work more efficiently
+* Enable the Enhanced Profile User Interface
+  * The enhanced profile user interface provides a streamlined experience for managing profiles 
+  * You can easily navigate, search, and modify settings for a profile 
+  * Your Salesforce org can use one profile user interface at a time
+* Limit Profile Details to Required Users
+  * Limit users from viewing any profile names other than their own
+* Restrict Permissions Cloning in Profiles
+  * Use the Restricted Profile Cloning option to ensure that **only permissions accessible to your org** are enabled when you clone profiles
+  * If you don't enable this setting, all permissions currently enabled in the source profile are also enabled for the cloned profile
+* Enable the Email Domain Allowlist
+  * Enable the Email Domain Allowlist Setup page, where you can restrict the email domains allowed in a user’s Email field
 
 **Mask personal user information** <br>
 The `Enhanced Personal Information Management` setting can be enabled on the `User Management Settings` page in Setup to block **view** and **edit** access to 30 fields that are considered personal information. <br>
