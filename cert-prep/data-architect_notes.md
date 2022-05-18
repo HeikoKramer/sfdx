@@ -1542,7 +1542,16 @@ To customize the user fields that are concealed, they can be added or removed fr
 Custom user fields and all standard user fields are supported. <br>
 
 ### [Data Privacy Preferences](https://help.salesforce.com/s/articleView?id=sf.individuals_store_data_privacy.htm&type=5)
-tbd
+Manage components of data privacy law such as the General Data Protection Regulation (GDPR), and fulfill customer requests on how their personally identifiable information (PII) is stored, deleted, and transferred. <br>
+
+<br>
+
+Privacy Center helps you maintain customer privacy through every stage of the data lifecycle. <br>
+Create policies that satisfy your customer’s right to be forgotten with the Right to Be Forgotten Policies feature. <br>
+Or retain and de-identify a customer’s personally identifiable information (PII) using the Retention Policies feature. <br>
+Portability Policies compile and deliver PII to customers in response to data subject access requests. <br>
+
+More information in the [Whitepaper](https://resources.docs.salesforce.com/rel1/doc/en-us/static/pdf/privacy_center_whitepaper.pdf) <br>
 
 #### [Which Standard Fields Can I Encrypt?](https://help.salesforce.com/s/articleView?id=sf.security_pe_standard_fields.htm&type=5)
 tbd
