@@ -1520,7 +1520,50 @@ Portability Policies compile and deliver PII to customers in response to data su
 More information in the [Whitepaper](https://resources.docs.salesforce.com/rel1/doc/en-us/static/pdf/privacy_center_whitepaper.pdf) <br>
 
 ### [Custom Field Encryption](https://developer.salesforce.com/docs/atlas.en-us.securityImplGuide.meta/securityImplGuide/fields_about_encrypted_fields.htm)
-tbd
+Restrict other Salesforce users from seeing custom text fields that you want to keep private. <br>
+Only users with the `View Encrypted Data` permission can see data in encrypted custom text fields. <br>
+
+<br>
+
+**Implementation Notes** <br>
+
+* Encrypted fields are encrypted with **128-bit master keys** and use the **Advanced Encryption Standard (AES) algorithm**
+  * You can archive, delete, and import your master encryption key
+  * To enable master encryption key management, contact Salesforce
+* You can use encrypted fields in email templates but the value is always masked 
+  * regardless of whether you have the `View Encrypted Data` permission.
+* If you have the `View Encrypted Data` permission and you grant login access to another user
+  * the user can see encrypted fields in plain text
+* Only users with the `View Encrypted Data` permission can clone the value of an encrypted field when cloning that record
+* Only the `<apex:outputField>` component supports presenting encrypted fields in Visualforce pages
+
+
+**Restrictions** <br>
+
+Encrypted text fields: <br>
+
+* Can’t be unique, have an external ID, or have default values
+* Aren’t available for mapping leads to other objects
+* Are **limited to 175 characters** because of the encryption algorithm
+* Aren’t available for use in filters such as list views, reports, roll-up summary fields, and rule filters
+* Can’t be used to define report criteria, but they can be included in report results
+* Aren’t searchable, but they can be included in search results
+* Aren’t available for Connect Offline, Salesforce for Outlook, lead conversion, workflow rule criteria or formulas, formula fields, outbound messages, default values, and Web-to-Lead and Web-to-Case forms
+
+
+**Best Practices** <br>
+
+* Encrypted fields are editable regardless of whether the user has the View Encrypted Data permission 
+  * Use validation rules, field-level security settings, or page layout settings to prevent users from editing encrypted fields
+* You can still validate the values of encrypted fields using validation rules or Apex 
+  * Both work regardless of whether the user has the `View Encrypted Data` permission
+* To view encrypted data unmasked in the debug log, the user must also have the `View Encrypted Data` in the service that Apex requests originate from 
+  * These requests can include Apex Web services, triggers, workflows, inline Visualforce pages (a page embedded in a page layout), and Visualforce email templates
+* Existing custom fields can’t be converted into encrypted fields nor can encrypted fields be converted into another data type 
+  * To encrypt the values of an existing (unencrypted) field, export the data, create an encrypted custom field to store that data, and import that data into the new encrypted field
+* Mask Type isn’t an input mask that ensures the data matches the Mask Type
+  * Use validation rules to ensure that the data entered matches the mask type selected
+* Use encrypted custom fields only when government regulations require it because they involve more processing and have search-related limitations
 
 ### Key Principles of GDPR
 tbd
