@@ -1566,7 +1566,36 @@ Encrypted text fields: <br>
 * Use encrypted custom fields only when government regulations require it because they involve more processing and have search-related limitations
 
 ### Key Principles of GDPR
-tbd
+**Legitimate Purpose** <br>
+* Personal data can only be collected for legitimate purpose 
+* Data used must be limited, explicit and for specific purpose
+
+**Data Deletion** <br>
+* Personal Data must be deleted if it is no longer required for the original purpose
+
+**Secure** <br>
+* Data must kept secure
+* Measures must be in place to prevent
+  * unauthorized access
+  * disclosure
+  * loss
+  * destruction
+  * alteration
+
+**Consent** <br>
+* Consent to collect and store personal data must be 
+  * freely given
+  * specific
+  * informed
+  * unambiguous
+* It can be revoked
+
+**Accurate** <br>
+* Personal data must be accurate and kept up to date
+
+**Accountable** <br>
+* Data is handled accordingly GDPR principles
+  * demonstrated compliance via record keeping and reporting
 
 ### [Data Stewardship](https://admin.salesforce.com/blog/2019/why-effective-data-stewardship-gives-you-a-competitive-edge)
 Some of the key areas which would be important to analyze for optimizing a data stewardship engagement include the following: <br>
