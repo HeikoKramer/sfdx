@@ -1663,7 +1663,44 @@ Custom user fields and all standard user fields are supported. <br>
 
 
 #### [Which Standard Fields Can I Encrypt?](https://help.salesforce.com/s/articleView?id=sf.security_pe_standard_fields.htm&type=5)
-tbd
+There are actually a lot of encryptable standard field among multiple objects. I'll list only field from **Account**, **Contact** and **Lead** object here. <br>
+
+**Account** <br>
+* Account Name
+* Account Site
+* Billing Address (encrypts Billing Street and Billing City)
+* Description
+* Fax
+* Phone
+* Shipping Address (encrypts Shipping Street and Shipping City)
+* Website
+
+**Contact** <br>
+* Assistant
+* Assistant Phone
+* Description
+* Email
+* Fax
+* Home Phone
+* Mailing Address (encrypts Mailing Street and Mailing City)
+* Mobile
+* Name (encrypts First Name, Middle Name, and Last Name)
+* Other Address (encrypts Other Street and Other City)
+* Other Phone
+* Phone
+* Title
+
+**Lead** <br>
+* Address (Encrypts Street and City)
+* Company
+* Description
+* Email
+* Fax
+* Mobile
+* Name (Encrypts First Name, Middle Name, and Last Name)
+* Phone
+* Title
+* Website
 
 ### [Einstein Data Detect](https://help.salesforce.com/s/articleView?id=release-notes.rn_security_einstein_data_detect_ga.htm&type=5&release=234)
 tbd
