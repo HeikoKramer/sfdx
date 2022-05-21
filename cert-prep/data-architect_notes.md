@@ -1703,7 +1703,25 @@ There are actually a lot of encryptable standard field among multiple objects. I
 * Website
 
 ### [Einstein Data Detect](https://help.salesforce.com/s/articleView?id=release-notes.rn_security_einstein_data_detect_ga.htm&type=5&release=234)
-tbd
+Sometimes users make data entry mistakes, or customers mistakenly provide personally identifiable information (PII). <br>
+When sensitive data ends up where it doesn’t belong, it’s hard to meet data privacy and security obligations. <br>
+Einstein Data Detect helps you quickly find sensitive data such as credit card numbers and social security numbers no matter where it’s entered in your org. <br>
+You can then apply data classification categories right from the UI and adjust privacy and security controls as necessary. <br>
+
+* **Where:** 
+  * This change applies to Lightning Experience in Enterprise, Performance, and Unlimited Editions editions
+* **Who:** 
+  * The Einstein Data Detect managed package is available to customers who have purchased the **Salesforce Shield add-on subscription**
+* **Why:** 
+  * Einstein Data Detect helps you find misplaced data in fields, attachments, and documents
+  * Built with platform-native technology, you can:
+    * Determine the sensitivity of a field based on its contents and categorize it accurately
+    * Categorize data classification metadata in bulk without having to store your data in a third-party service
+    * Identify which other Salesforce security and privacy products can help you meet your security and privacy requirements
+
+For example, review detected fields and decide which to encrypt with Shield Platform Encryption or mask with Data Mask. <br>
+Pair your results with Privacy Center to automatically create Deletion, Masking, and Retention templates for specific categories of data. <br>
+And if you know that specific fields contain PII, you can create Transaction Security policies that place guardrails on reports that contain those fields. <br>
 
 ### Options to protect data
 tbd
