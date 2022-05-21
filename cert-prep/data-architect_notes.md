@@ -1724,7 +1724,33 @@ Pair your results with Privacy Center to automatically create Deletion, Masking,
 And if you know that specific fields contain PII, you can create Transaction Security policies that place guardrails on reports that contain those fields. <br>
 
 ### Options to protect data
-tbd
+**Encryption** <br>
+* Shield Platform Encryption for
+  * fields
+  * files
+  * attachments
+  * and the rest
+* Classic Encryption for
+  * encrypt and mask custom fields
+
+**Salesforce Data Mask** <br>
+* Mask sensitive data
+  * in **Full or Partial Sandboxes**
+
+**Event Monitoring** <br>
+* **monitor** and **prevent** access to sensitive data
+
+**Sharing Model** <br>
+* ensure users only have access to appropriate records
+
+**Field Level Security** <br>
+* ensure users only have access to appropriate fields on a record
+
+**Session Security Settings** <br>
+* used to secure areas in setup that are considered sensitive operations
+  * like accessing reports
+  * managing encryption keys
+  * authentication
 
 ### [Data Retention](https://www.salesforce.org/blog/ask-an-architect-3-recommended-steps-to-building-a-data-retention-policy/)
 A data retention policy is a statement of how long data will be stored by the organization including how the data is deleted or otherwise treated. <br>
