@@ -1808,3 +1808,10 @@ The actions are
 * Notifications
 
 **NOTE:** Requires **Salesforce Shield** or **Salesforce Event Monitoring** add-on subscriptions.
+
+## Data Migration (15%)
+* Given a customer scenario, recommend appropriate techniques and methods for ensuring high data quality at load time. 
+* Compare and contrast various techniques for improving performance when migrating large data volumes into Salesforce.
+* Compare and contrast various techniques and considerations for exporting data from Salesforce.
+
+
