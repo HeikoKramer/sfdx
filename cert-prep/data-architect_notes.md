@@ -1814,4 +1814,6 @@ The actions are
 * Compare and contrast various techniques for improving performance when migrating large data volumes into Salesforce.
 * Compare and contrast various techniques and considerations for exporting data from Salesforce.
 
+### [Granular Locking](https://developer.salesforce.com/docs/atlas.en-us.216.0.draes.meta/draes/draes_tools_granular_locking.htm)
+tbd
 
