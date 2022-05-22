@@ -1793,6 +1793,8 @@ The data is encrypted with a stronger **256-bit AES key**. <br>
 Subscribers can manage access to their data with a wider range of keys and permissions. <br>
 Shield Platform Encryption allows you to search for encrypted data in databases. <br>
 
+<br>
+
 Shield Platform Encryption gives customers an encryption advantage because it allows you to 
 * prove compliance with regulatory and industry requirements
 * show that you meet contractual obligations for securing private data in the cloud
