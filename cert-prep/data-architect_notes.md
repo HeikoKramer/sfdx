@@ -1817,3 +1817,14 @@ The actions are
 ### [Granular Locking](https://developer.salesforce.com/docs/atlas.en-us.216.0.draes.meta/draes/draes_tools_granular_locking.htm)
 tbd
 
+### Improve Loading Performance 
+The following steps can be taken prior to loading the data in order to improve performance: <br>
+
+* Set the organization-wide default sharing setting to `Public Read/Write` 
+  * to make sure that Salesforce does not use or maintain an object share table
+* Since workflow rules, validation rules, and Apex triggers can slow down processing, they should be disabled prior to loading the data
+* Sharing rules should be created after loading the data
+  * they can affect the performance of the data load
+* Complex object relationships (lookup and master-detail relationships) should be defined after loading the data 
+  * they can also affect the performance of the data load 
+  * If more lookups are defined on an object, the system has to perform more checks during data loading
