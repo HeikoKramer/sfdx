@@ -1800,4 +1800,11 @@ Shield Platform Encryption gives customers an encryption advantage because it al
 * show that you meet contractual obligations for securing private data in the cloud
 
 ### [Enhanced Transaction Security](https://help.salesforce.com/s/articleView?id=sf.enhanced_transaction_security_policy_types.htm&type=5)
-tbd
+Enhanced Transaction Security is a framework that intercepts real-time events and applies appropriate actions to monitor and control user activity. <br>
+Each transaction security policy has conditions that evaluate events and the real-time actions that are triggered after those conditions are met. <br>
+The actions are 
+* Block 
+* Multi-Factor Authentication
+* Notifications
+
+**NOTE:** Requires **Salesforce Shield** or **Salesforce Event Monitoring** add-on subscriptions.
