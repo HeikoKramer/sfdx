@@ -1773,7 +1773,29 @@ It defines
   * archived
 
 ### [Shield Encryption](https://trailhead.salesforce.com/en/content/learn/modules/spe_admins/spe_admins_get_started)
-tbd
+Salesforce offers you two ways to encrypt data. <br>
+Classic encryption is included in the base price of your Salesforce license. <br>
+With classic encryption, you can protect a special type of custom text field that you create for data you want to encrypt. <br>
+The custom field is protected with industry-standard 128-bit Advanced Encryption Standard (AES) keys. <br>
+
+<br>
+
+Shield Platform Encryption is available for free in Developer Edition orgs. <br>
+All other editions require you to purchase a license. <br>
+With Shield Platform Encryption, you can encrypt all kinds of confidential and sensitive data at rest on the Salesforce Platform. <br>
+“At rest” means any data that’s inactive or stored in 
+* files
+* spreadsheets
+* standard and custom fields
+* and databases and data warehouses
+
+The data is encrypted with a stronger **256-bit AES key**. <br> 
+Subscribers can manage access to their data with a wider range of keys and permissions. <br>
+Shield Platform Encryption allows you to search for encrypted data in databases. <br>
+
+Shield Platform Encryption gives customers an encryption advantage because it allows you to 
+* prove compliance with regulatory and industry requirements
+* show that you meet contractual obligations for securing private data in the cloud
 
 ### [Enhanced Transaction Security](https://help.salesforce.com/s/articleView?id=sf.enhanced_transaction_security_policy_types.htm&type=5)
 tbd
