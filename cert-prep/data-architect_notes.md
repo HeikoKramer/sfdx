@@ -1828,3 +1828,6 @@ The following steps can be taken prior to loading the data in order to improve p
 * Complex object relationships (lookup and master-detail relationships) should be defined after loading the data 
   * they can also affect the performance of the data load 
   * If more lookups are defined on an object, the system has to perform more checks during data loading
+
+### [Standard Account Duplicate Rule](https://help.salesforce.com/s/articleView?id=sf.duplicate_rules_standard_account_rule.htm&type=5)
+tbd
