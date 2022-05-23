@@ -1834,3 +1834,6 @@ tbd
 
 ### [Standard Account Matching Rule](https://help.salesforce.com/s/articleView?id=sf.matching_rules_standard_account_rule.htm&type=5)
 tbd
+
+### [Sequencing Load Operations](https://developer.salesforce.com/blogs/engineering/2013/06/extreme-force-com-data-loading-part-4-sequencing-load-operations)
+tbd
