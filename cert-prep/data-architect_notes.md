@@ -1840,3 +1840,6 @@ tbd
 
 ### [Performance Tests](https://help.salesforce.com/s/articleView?id=000335652&type=1)
 tbd
+
+### [Create Audit Fields Permission](https://help.salesforce.com/s/articleView?id=000334139&type=1)
+tbd
