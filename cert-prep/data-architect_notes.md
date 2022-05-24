@@ -1837,3 +1837,6 @@ tbd
 
 ### [Sequencing Load Operations](https://developer.salesforce.com/blogs/engineering/2013/06/extreme-force-com-data-loading-part-4-sequencing-load-operations)
 tbd
+
+### [Performance Tests](https://help.salesforce.com/s/articleView?id=000335652&type=1)
+tbd
