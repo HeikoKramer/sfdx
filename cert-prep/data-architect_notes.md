@@ -1815,7 +1815,20 @@ The actions are
 * Compare and contrast various techniques and considerations for exporting data from Salesforce.
 
 ### [Granular Locking](https://developer.salesforce.com/docs/atlas.en-us.216.0.draes.meta/draes/draes_tools_granular_locking.htm)
-tbd
+By default, the Lightning Platform platform **locks the entire group membership table** to protect data integrity when Salesforce makes changes to roles and groups. <br>
+This locking makes it **impossible to process group changes in multiple threads** to increase throughput on updates. <br>
+When the granular locking feature is enabled, the system employs **additional logic to allow multiple updates to proceed simultaneously** if there is **no hierarchical or other relationship between the roles or groups** involved in the updates. <br>
+Administrators can adjust their maintenance processes and integration code to take advantage of this limited concurrency to process large-scale updates faster, all while still avoiding locking errors. <br>
+
+The key advantages of granular locking are that:
+
+* Groups that are in separate hierarchies are now able to be manipulated concurrently.
+* Public groups and roles that do not include territories are no longer blocked by territory operations.
+* Users can be added concurrently to territories and public groups.
+* User provisioning can now occur in parallel.
+  * Portal user creation requires locks only if new portal roles are being created.
+  * Provisioning new portal users in existing accounts occurs concurrently.
+* A single-long running process, such as a role delete, blocks only a small subset of operations.
 
 ### Improve Loading Performance 
 The following steps can be taken prior to loading the data in order to improve performance: <br>
