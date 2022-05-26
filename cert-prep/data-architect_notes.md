@@ -1843,7 +1843,20 @@ The following steps can be taken prior to loading the data in order to improve p
   * If more lookups are defined on an object, the system has to perform more checks during data loading
 
 ### [Standard Account Matching Rule](https://help.salesforce.com/s/articleView?id=sf.matching_rules_standard_account_rule.htm&type=5)
-tbd
+The standard account matching rule identifies duplicate accounts using 
+* match keys
+* a matching equation
+* and matching criteria. 
+
+It’s activated by default. <br>
+<br>
+
+**Match Keys** <br>
+Match keys speed up matching by narrowing the potential matches to the most likely duplicates before the rule applies the comprehensive matching equation. <br>
+
+|Match Key Notation|Match Key Value Examples|
+|:-----------------|:-----------------------|
+|Company (2,6) City (\_, 6)|Account: Orange Sporting Company = orangesporti <br /> City: San Francisco = sanfra <br /> Key: orangesportisanfra|
 
 ### [Sequencing Load Operations](https://developer.salesforce.com/blogs/engineering/2013/06/extreme-force-com-data-loading-part-4-sequencing-load-operations)
 tbd
