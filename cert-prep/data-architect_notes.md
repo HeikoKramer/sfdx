@@ -1858,6 +1858,15 @@ Match keys speed up matching by narrowing the potential matches to the most like
 |:-----------------|:-----------------------|
 |Company (2,6) City (\_, 6)|Account: Orange Sporting Company = orangesporti <br /> City: San Francisco = sanfra <br /> Key: orangesportisanfra|
 
+**Matchingh Equation** <br>
+`(Account Name AND Billing Street) OR (Account Name AND City AND State)`
+
+**Matching Criteria** <br>
+
+|Field|Matching Algorithms|Scoring Method|Threshold|Blank Fields|Special Handling|
+|:----|:------------------|:-------------|:--------|:-----------|:---------------|
+|Account Name|Acronym <br /> Edit Distance <br /> Exact|Maximum|70|Don't match|Removes words such as “Inc” and “Corp” before comparing fields. Company names are normalized.|
+
 ### [Sequencing Load Operations](https://developer.salesforce.com/blogs/engineering/2013/06/extreme-force-com-data-loading-part-4-sequencing-load-operations)
 tbd
 
