@@ -1944,21 +1944,18 @@ Follow these steps to create your test plan:
 **Submit a Request for Performance Testing** <br>
 After you create your test plan, include this information in the case description. <br>
 
-* A copy of the test plan that you created in Performance Assistant. (Image shown for example only.)
-
-Test Plan
-
-* The time and date when the test starts.
-* The time and date when the test ends.
-* The Organization ID for the sandbox where the test occurs. 
-  * **Performance tests can be conducted only in a sandbox!**
-* The contact information of the person conducting the test
-  * including name, phone number, and email.
-* The business case or scenario to test
-  * for example, holiday shopping event or new website launch.
-* The business justification for testing.
-* If you expect volumes over 40 requests per second
-  * include the ramp schedule provided in Performance Assistant.
+* A copy of the test plan that you created in Performance Assistant.
+  * The time and date when the test starts.
+  * The time and date when the test ends.
+  * The Organization ID for the sandbox where the test occurs. 
+    * **Performance tests can be conducted only in a sandbox!**
+  * The contact information of the person conducting the test
+    * including name, phone number, and email.
+  * The business case or scenario to test
+    * for example, holiday shopping event or new website launch.
+  * The business justification for testing.
+  * If you expect volumes over 40 requests per second
+    * include the ramp schedule provided in Performance Assistant.
 
 ### [Create Audit Fields Permission](https://help.salesforce.com/s/articleView?id=000334139&type=1)
 tbd
