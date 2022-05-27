@@ -1918,7 +1918,47 @@ If you focus only on making individual processes as fast as possible, and don’
 By understanding how various configuration and loading steps affect one another, you can sequence your operations intelligently and increase your overall loading throughput. <br>
 
 ### [Performance Tests](https://help.salesforce.com/s/articleView?id=000335652&type=1)
-tbd
+Salesforce Support **can’t** design or interpret customer performance test results. <br>
+Support's role is strictly to monitor test activity to ensure that there are no issues with Salesforce services. <br>
+
+Changes and customizations to your Salesforce implementation can impact performance. <br>
+For this reason, it’s wise to run sandbox performance tests before deploying changes to production. <br>
+To get started, read [Measure Performance for Your Salesforce Org](https://help.salesforce.com/s/articleView?id=sf.technical_requirements_measuring_ept.htm&type=5), then generate your test plan and schedule a testing window with [Performance Assistant](https://help.salesforce.com/s/articleView?id=sf.technical_requirements_performance_assistant.htm&type=5). <br>
+
+**Create Your Test Plan** <br>
+Before testing, make sure that you understand [Salesforce Developer Limits](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_overview.htm). <br>
+If you exceed these limits, a throttle can be applied to your system. <br>
+To help reduce the risk of throttling, Performance Assistant provides a ramp schedule for your test plan. <br>
+[Learn more about throttles](https://help.salesforce.com/s/articleView?id=000323488&type=1). <br>
+
+Follow these steps to create your test plan:
+
+* Identify the scenarios that you plan to test and their success criteria.
+* In a sandbox, run a baseline test for each scenario with 50 users for a minimum of 30 minutes. 
+  * Tests with 50 users or fewer don’t require case approvals.
+* Record the number of inbound XMLHttpRequests (XHRs) and API calls that are generated in these tests, and record the average iteration time per user. 
+  * You can access these metrics with Event Monitoring, API reports, or the developer console in your browser.
+* To calculate the expected peak load for inbound requests and API calls, extrapolate the results from your baseline tests. 
+  * Use the expected peak load values to generate your test plan in Performance Assistant.
+
+**Submit a Request for Performance Testing** <br>
+After you create your test plan, include this information in the case description. <br>
+
+* A copy of the test plan that you created in Performance Assistant. (Image shown for example only.)
+
+Test Plan
+
+* The time and date when the test starts.
+* The time and date when the test ends.
+* The Organization ID for the sandbox where the test occurs. 
+  * **Performance tests can be conducted only in a sandbox!**
+* The contact information of the person conducting the test
+  * including name, phone number, and email.
+* The business case or scenario to test
+  * for example, holiday shopping event or new website launch.
+* The business justification for testing.
+* If you expect volumes over 40 requests per second
+  * include the ramp schedule provided in Performance Assistant.
 
 ### [Create Audit Fields Permission](https://help.salesforce.com/s/articleView?id=000334139&type=1)
 tbd
