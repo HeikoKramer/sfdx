@@ -1931,7 +1931,7 @@ If you exceed these limits, a throttle can be applied to your system. <br>
 To help reduce the risk of throttling, Performance Assistant provides a ramp schedule for your test plan. <br>
 [Learn more about throttles](https://help.salesforce.com/s/articleView?id=000323488&type=1). <br>
 
-Follow these steps to create your test plan:
+**Follow these steps to create your test plan:** <br>
 
 * Identify the scenarios that you plan to test and their success criteria.
 * In a sandbox, run a baseline test for each scenario with 50 users for a minimum of 30 minutes. 
