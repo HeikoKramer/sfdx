@@ -1868,7 +1868,54 @@ Match keys speed up matching by narrowing the potential matches to the most like
 |Account Name|Acronym <br /> Edit Distance <br /> Exact|Maximum|70|Don't match|Removes words such as “Inc” and “Corp” before comparing fields. Company names are normalized.|
 
 ### [Sequencing Load Operations](https://developer.salesforce.com/blogs/engineering/2013/06/extreme-force-com-data-loading-part-4-sequencing-load-operations)
-tbd
+**Why does the sequence of my load operations matter?** <br>
+
+The relationships between your objects, how you configure roles and users, and what you define in your sharing settings can cause each step that you perform during a data load to affect later steps. <br>
+The sequencing of some of these steps is a hard constraint—you cannot load child records in a master-detail relationship before loading their parent records because you need the parent IDs to complete your data load. <br>
+Other constraints are subtler but could have even greater effects on overall processing time. <br>
+For example, if you load your data first, then move the users who own the records around in your role hierarchy, the system must perform additional sharing calculations, which can slow down your role updates. <br>
+You should test and adjust new configurations and loading sequences in a sandbox organization to ensure that you have the most efficient process for production. <br>
+
+**1. Configuring Your Organization for the Data Load** <br>
+
+* Consider enabling the parallel recalculation and defer sharing calculation features. 
+  * To enable these features, or to ask if your organization already has or could benefit from them, contact Support.
+* Create the role hierarchy.
+* Load users, assigning them to appropriate roles.
+* Configure Public Read/Write organization-wide sharing defaults on the objects you plan to load.
+
+**2. Preparing to Load Data** <br>
+
+* Make sure the data is clean, especially in foreign key relationships. 
+  * When there’s an error, parallel loads switch to single execution mode, slowing down the load considerably.
+* Suspend events that fire on insert (See [Suspending Events that Fire on Insert](https://developer.salesforce.com/blogs/engineering/2013/05/extreme-force-com-data-loading-part-3-suspending-events-that-fire-on-insert))
+* Perform advance testing to tune your batch sizes for throughput. 
+  * For both the Bulk API and the SOAP API, look for the largest batch size that is possible without generating network timeouts from large records, or from additional processing on inserts or updates that can’t be deferred until after the load completes.
+
+**3. Executing the Data Load** <br>
+
+* Load parent objects before their master-detail children, then extract keys as needed for later loading.
+* Use the fastest operation possible: insert is faster than upsert, and **even insert + update can be faster than upsert alone**.
+* When processing updates, only send fields that have changed for existing records.
+* **Group child records by ParentId** – making sure that separate batches don’t reference the same ParentIds 
+  * This practice can greatly reduce or eliminate the risk of record-locking errors.
+  * If this cannot be arranged, you also have the option of using the Bulk API in serial execution mode to avoid locking from parallel updates.
+
+**4. Configuring Your Organization for Production** <br>
+
+* Defer sharing calculations before performing some or all of the operations below, depending on the results of your sandbox testing.
+* Change Public Read/Write organization-wide sharing models to Public Read Only or Private, where appropriate.
+* Create or configure public groups and queues.
+* Configure sharing rules.
+* If you are not using deferred sharing calculation 
+  * create public groups, queues, and sharing rules one at a time
+  * allow sharing calculations to complete before moving on to the next one
+* Resume events that fire on insert so validation and data enhancement processes run properly in production.
+
+**Summary** <br>
+Loading large volumes of data can be a complex process with a lot of moving parts. <br>
+If you focus only on making individual processes as fast as possible, and don’t address correct sequencing of the steps, just one out-of-place step could dramatically slow later operations. <br>
+By understanding how various configuration and loading steps affect one another, you can sequence your operations intelligently and increase your overall loading throughput. <br>
 
 ### [Performance Tests](https://help.salesforce.com/s/articleView?id=000335652&type=1)
 tbd
