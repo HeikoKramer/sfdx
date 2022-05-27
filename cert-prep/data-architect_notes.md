@@ -1956,6 +1956,3 @@ After you create your test plan, include this information in the case descriptio
   * The business justification for testing.
   * If you expect volumes over 40 requests per second
     * include the ramp schedule provided in Performance Assistant.
-
-### [Create Audit Fields Permission](https://help.salesforce.com/s/articleView?id=000334139&type=1)
-tbd
