@@ -44,3 +44,6 @@ Tagging rules have only three options:
   * suggests tags to users 
 * **Open Tagging** 
   * allows users to enter any tags for content
+
+### [File Visibility](https://help.salesforce.com/s/articleView?id=sf.collab_files_settings_perms.htm&type=5)
+tbd
