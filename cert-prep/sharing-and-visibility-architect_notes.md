@@ -30,3 +30,9 @@ Given a particular customer scenario
 
 ### [View All and Modify All Permissions](https://help.salesforce.com/s/articleView?id=sf.users_profiles_view_all_mod_all.htm&type=5)
 tbd
+
+### [Libraries](https://help.salesforce.com/s/articleView?id=sf.collab_admin_content_libraries.htm&type=5)
+Libraries can be used to manage and organize files and the permissions and access users have to the files. <br>
+Files types cannot be restricted by the library. <br>
+Members can include individual content users or public groups but not roles. <br>
+
