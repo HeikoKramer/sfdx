@@ -45,5 +45,27 @@ Tagging rules have only three options:
 * **Open Tagging** 
   * allows users to enter any tags for content
 
+#### [Library Permissions](https://help.salesforce.com/s/articleView?id=sf.content_workspace_perm_add.htm&type=5)
+There are three pre-built library permissions that can be assigned to library members:
+* **Viewers** can 
+  * view
+  * add comments
+  * rate
+  * deliver
+  * attach
+  * share content
+* **Authors** can 
+  * view
+  * add comments
+  * rate
+  * deliver
+  * attach
+  * publish
+  * archive
+  * share content
+* **Library Administrators** can 
+  * edit library details
+  * edit library membership
+
 ### [File Visibility](https://help.salesforce.com/s/articleView?id=sf.collab_files_settings_perms.htm&type=5)
 tbd
