@@ -36,3 +36,11 @@ Libraries can be used to manage and organize files and the permissions and acces
 Files types cannot be restricted by the library. <br>
 Members can include individual content users or public groups but not roles. <br>
 
+#### [Library Tagging Rules](https://help.salesforce.com/s/articleView?id=sf.content_tagging_rules.htm&type=5)
+Tagging rules have only three options:
+* **Restricted Tagging** 
+  * restricts the user from selecting tag other than the predefined tags 
+* **Guide Tagging** 
+  * suggests tags to users 
+* **Open Tagging** 
+  * allows users to enter any tags for content
