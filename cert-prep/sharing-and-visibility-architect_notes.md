@@ -69,3 +69,13 @@ There are three pre-built library permissions that can be assigned to library me
 
 ### [File Visibility](https://help.salesforce.com/s/articleView?id=sf.collab_files_settings_perms.htm&type=5)
 tbd
+
+### [Change a Record’s Owner](https://help.salesforce.com/s/articleView?id=sf.account_owner.htm&type=5)
+**Opportunity Owner** can be changed by:
+
+* the opportunity owner
+* a user above the owner in the role hierarchy
+* a system administrator
+* a user with the `Transfer Record` permission
+
+**NOTE:** Opportunity team members can be transferred with the opportunity by selecting an option. <br>
