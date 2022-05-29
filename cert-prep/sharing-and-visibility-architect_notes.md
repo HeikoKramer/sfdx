@@ -85,3 +85,6 @@ The `Mass Reassign Opportunity Teams` wizard is a tool that can be accessed in S
 It can be used to add, remove, or replace team members on multiple opportunity records at the same time. <br>
 `Team Selling` must be enabled on the `Opportunity Team Settings` page in Setup to use opportunity teams and this tool. <br>
 
+### [Restriction Rules](https://help.salesforce.com/s/articleView?id=sf.security_restriction_rule.htm&type=5)
+tbd
+
