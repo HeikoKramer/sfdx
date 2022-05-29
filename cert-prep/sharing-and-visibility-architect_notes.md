@@ -96,4 +96,5 @@ The `Manual User Record Sharing` checkbox can be enabled to allow users to share
 The `Require permission to view record names in lookup fields` setting can be enabled to ensure that users have **Read** access to the records in lookup fields or the `View All Lookup Record Names` permission to view the data in the fields. <br>
 This applies to user lookup fields such as `Account Owner`. <br>
 
-
+### [Organization-Wide Default Access Settings](https://help.salesforce.com/s/articleView?id=sf.sharing_model_fields.htm&type=5)
+tbd
