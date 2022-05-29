@@ -109,7 +109,7 @@ This setting ensures that users **cannot**
 * add them to a group
 * share a file or record with them
 
-### [Bypass encryption field field-level security]((http://dreamforce.vidyard.com/watch/BWyoELghogljON4KqXElvw)
+### [Bypass encryption field field-level security](http://dreamforce.vidyard.com/watch/BWyoELghogljON4KqXElvw)
 There are certain permissions that would allow a user to bypass the field-level security protections that have been set for a custom encrypted text field. <br>
 These are `Customize Application` and `Author Apex`, which would give a user the ability to modify field-level security permissions and view the value of the field. <br>
 
