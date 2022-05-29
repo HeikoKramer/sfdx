@@ -79,3 +79,9 @@ tbd
 * a user with the `Transfer Record` permission
 
 **NOTE:** Opportunity team members can be transferred with the opportunity by selecting an option. <br>
+
+### [Mass Reassign Opportunity Teams](https://help.salesforce.com/s/articleView?id=sf.opportunity_team_members_adding.htm&type=5)
+The `Mass Reassign Opportunity Teams` wizard is a tool that can be accessed in Setup or the home page of the Opportunities tab. <br>
+It can be used to add, remove, or replace team members on multiple opportunity records at the same time. <br>
+`Team Selling` must be enabled on the `Opportunity Team Settings` page in Setup to use opportunity teams and this tool. <br>
+
