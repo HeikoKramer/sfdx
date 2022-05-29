@@ -88,3 +88,12 @@ It can be used to add, remove, or replace team members on multiple opportunity r
 ### [Restriction Rules](https://help.salesforce.com/s/articleView?id=sf.security_restriction_rule.htm&type=5)
 tbd
 
+###[Additional Sharing Settings](https://help.salesforce.com/s/articleView?id=sf.other_sharing_settings.htm&type=5)
+The `Sharing Settings` page in Setup can be used to manage various additional sharing settings besides configuring organization-wide defaults and sharing rules. <br>
+
+The `Standard Report Visibility` checkbox can be disabled to ensure that users cannot view reports based on standard report types that can expose the data of users to whom they don’t have access. <br>
+The `Manual User Record Sharing` checkbox can be enabled to allow users to share their records with others. <br>
+The `Require permission to view record names in lookup fields` setting can be enabled to ensure that users have **Read** access to the records in lookup fields or the `View All Lookup Record Names` permission to view the data in the fields. <br>
+This applies to user lookup fields such as `Account Owner`. <br>
+
+
