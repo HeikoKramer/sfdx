@@ -98,3 +98,14 @@ This applies to user lookup fields such as `Account Owner`. <br>
 
 ### [Organization-Wide Default Access Settings](https://help.salesforce.com/s/articleView?id=sf.sharing_model_fields.htm&type=5)
 tbd
+
+### [Site User Visibility](https://focusonforce.com/exams/declarative-sharing-64-part-1-sharing-and-visibility-designer/)
+The `Site User Visibility` checkbox can be deselected on the Sharing Settings page to ensure that external users are not able to see each other. <br>
+
+This setting ensures that users **cannot**
+
+* search for other users 
+* find them in the site's People tab
+* add them to a group
+* share a file or record with them
+
