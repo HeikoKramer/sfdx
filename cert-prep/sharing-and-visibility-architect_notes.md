@@ -113,3 +113,5 @@ This setting ensures that users **cannot**
 There are certain permissions that would allow a user to bypass the field-level security protections that have been set for a custom encrypted text field. <br>
 These are `Customize Application` and `Author Apex`, which would give a user the ability to modify field-level security permissions and view the value of the field. <br>
 
+### [Built-in Sharing Behavior](https://help.salesforce.com/s/articleView?id=sf.sharing_across_objects.htm&type=5)
+tbd
