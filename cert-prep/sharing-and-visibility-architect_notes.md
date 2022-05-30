@@ -139,3 +139,6 @@ These are `Customize Application` and `Author Apex`, which would give a user the
 
 ### [Built-in Sharing Behavior](https://help.salesforce.com/s/articleView?id=sf.sharing_across_objects.htm&type=5)
 tbd
+
+### [Role Fields](https://help.salesforce.com/s/articleView?id=sf.user_role_fields.htm&type=5)
+tbd
