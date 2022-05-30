@@ -120,6 +120,10 @@ The `Manual User Record Sharing` checkbox can be enabled to allow users to share
 The `Require permission to view record names in lookup fields` setting can be enabled to ensure that users have **Read** access to the records in lookup fields or the `View All Lookup Record Names` permission to view the data in the fields. <br>
 This applies to user lookup fields such as `Account Owner`. <br>
 
+The `Portal User Visibility` setting can be enabled to allow users in the same customer or partner account to see each other, regardless of the organization-wide defaults. <br>
+The `Grant site users access to related cases` setting can be deselected to restrict customers access to cases. <br>
+This approach can be used if access to cases needs to be controlled by using manual sharing or Apex managed sharing. <br>
+
 ### [Organization-Wide Default Access Settings](https://help.salesforce.com/s/articleView?id=sf.sharing_model_fields.htm&type=5)
 tbd
 
