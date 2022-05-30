@@ -149,3 +149,6 @@ tbd
 
 ### [Account Access via Teams](https://help.salesforce.com/s/articleView?id=sf.accountteam_def.htm&type=5)
 tbd
+
+### [Opportunity Teams](https://help.salesforce.com/s/articleView?id=sf.salesteam_def.htm&type=5)
+tbd
