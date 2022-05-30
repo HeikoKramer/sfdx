@@ -152,3 +152,9 @@ tbd
 
 ### [Opportunity Teams](https://help.salesforce.com/s/articleView?id=sf.salesteam_def.htm&type=5)
 tbd
+
+### Convert a Master-Detail Relationship to a Lookup Relationship
+It is possible to convert a master-detail relationship to a lookup relationship as long as no roll-up summary fields exist on the master object. <br>
+Converting the relationship to a lookup relationship would change the organization-wide default sharing setting of the child object to `Public Read/Write`. <br>
+Converting the relationship from a lookup relationship to a master-detail relationship would change the organization-wide default sharing setting to `Controlled by Parent`. <br>
+
