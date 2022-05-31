@@ -168,3 +168,5 @@ A feature license is required to use CRM Content. <br>
 It can be manually added to a user but does not have to be if the Autoassign feature is used. <br>
 The Autoassign option can be used to automatically assign feature licenses to new or existing users. <br>
 
+### [Content Deliveries](https://help.salesforce.com/s/articleView?id=sf.content_delivery_create.htm&type=5)
+tbd
