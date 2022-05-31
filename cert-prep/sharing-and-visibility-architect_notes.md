@@ -158,3 +158,8 @@ It is possible to convert a master-detail relationship to a lookup relationship 
 Converting the relationship to a lookup relationship would change the organization-wide default sharing setting of the child object to `Public Read/Write`. <br>
 Converting the relationship from a lookup relationship to a master-detail relationship would change the organization-wide default sharing setting to `Controlled by Parent`. <br>
 
+### CRM Content License Assignment
+A feature license is required to use CRM Content. <br>
+It can be manually added to a user but does not have to be if the Autoassign feature is used. <br>
+The Autoassign option can be used to automatically assign feature licenses to new or existing users. <br>
+
