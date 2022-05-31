@@ -170,3 +170,12 @@ The Autoassign option can be used to automatically assign feature licenses to ne
 
 ### [Content Deliveries](https://help.salesforce.com/s/articleView?id=sf.content_delivery_create.htm&type=5)
 tbd
+
+### [Case Teams](https://help.salesforce.com/s/articleView?id=sf.caseteam_setup.htm&type=5)
+A case team allows a group of support users to work together on solving cases in Salesforce. <br>
+It is possible to create a predefined case team in Setup. <br>
+Case team roles can be used to specify either `read` or `read/write` access for the support reps to case records. <br>
+The **Case Team** related list can be added to the cases to which the case team should be assigned. <br>
+A list view can be created based on custom criteria in Lightning Experience to allow the support reps to view the cases that they should handle. <br>
+They also have the option of using the filter panel of a list view to filter their cases by **My Case Teams**. <br>
+
