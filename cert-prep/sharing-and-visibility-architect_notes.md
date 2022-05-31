@@ -91,6 +91,11 @@ There are three pre-built library permissions that can be assigned to library me
   * edit library details
   * edit library membership
 
+Users must be assigned library permissions to access files in the library. <br>
+Users can be assigned different permissions for each library they are a member of. <br>
+Standard library permissions can be modified if the standard library permissions (Author, Viewer, and Library Administrator) do not contain the permissions required. <br>
+However, this modification can only be configured in Salesforce Classic (navigate to Content Permissions in Setup). <br>
+
 ### [File Visibility](https://help.salesforce.com/s/articleView?id=sf.collab_files_settings_perms.htm&type=5)
 tbd
 
