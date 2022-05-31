@@ -106,6 +106,8 @@ The sharing setting appear on a file's detail page and on the **Shared With** li
 |Sharing Setting|Definition|When Does a File Have This Setting?|
 |:--------------|:---------|:----------------------------------|
 |Private|The file is private. It hasn't been shared with anyone else besides the owner. The file owner and users with Modify All Data permission can find and view this file. However, if the file is in a private library, only the file owner has access to it.|A file is private when you: <br> • Upload it in Files home <br /> • Publish it to your private library <br /> • Stop sharing it with everyone (Make Private) <br /> • Delete posts that include the file and the file isn't shared anywhere else|
+|Privately Shared|The file has been shared only with specific people, groups, or via link. It's not available to all users in your company. Only the file owner, users with Modify All Data or View all Data permission, and specific file viewers can find and view this file. External users see files posted to records they have access to, unless the record post was marked **Internal Only**.|A file is privately shared when it's: <br /> • Shared only with specific people or a private group <br /> • Posted to a private group <br /> • Shared via link <br /> • Posted to a feed on a record <br /> • Published to a shared library|
+|Your Company|All users in your company can find and view this file.|A file is shared with your company when it's posted: <br /> • To a feed that all users can see <br /> • To a profile <br /> • To a record <br /> • To a public group|
 
 
 ### [Change a Record’s Owner](https://help.salesforce.com/s/articleView?id=sf.account_owner.htm&type=5)
