@@ -109,6 +109,8 @@ The sharing setting appear on a file's detail page and on the **Shared With** li
 |Privately Shared|The file has been shared only with specific people, groups, or via link. It's not available to all users in your company. Only the file owner, users with Modify All Data or View all Data permission, and specific file viewers can find and view this file. External users see files posted to records they have access to, unless the record post was marked **Internal Only**.|A file is privately shared when it's: <br /> • Shared only with specific people or a private group <br /> • Posted to a private group <br /> • Shared via link <br /> • Posted to a feed on a record <br /> • Published to a shared library|
 |Your Company|All users in your company can find and view this file.|A file is shared with your company when it's posted: <br /> • To a feed that all users can see <br /> • To a profile <br /> • To a record <br /> • To a public group|
 
+<br>
+
 This table describes which actions you can perform on a file depending on your file permissions: <br>
 
 |Action|File Owner|File Collaborator|File Viewer|
@@ -123,6 +125,30 @@ This table describes which actions you can perform on a file depending on your f
 |Make a File Private|Yes|No|No|
 |Restrict Access|Yes|No|No|
 |Delete|Yes|No|No|
+
+<br>
+
+**NOTE:** <br>
+
+* No Access means that only the people in your company with whom this file is shared can find or view the file.
+  * If the file is shared with a private group, only members of the group can find or view the file.
+* Users with `Modify All Data` permission have built-in access to files that they don’t own. 
+  * What they can do with files that they don't own: 
+    * view
+    * preview
+    * download
+    * share
+    * attach
+    * make private
+    * restrict access to
+    * edit
+    * upload new versions of
+    * delete
+  * If the file is in a private library, then only the file owner has access to it.
+* Users with `View All Data` permission can view and preview files that they don't own. 
+  * However, if the file is in a private library, then only the file owner has access to it.
+* Groups (including group members) and records have viewer permission for files posted to their feeds.
+* Permissions for files shared with libraries depend on the library.
 
 ### [Change a Record’s Owner](https://help.salesforce.com/s/articleView?id=sf.account_owner.htm&type=5)
 **Opportunity Owner** can be changed by:
