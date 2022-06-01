@@ -230,3 +230,10 @@ The **Case Team** related list can be added to the cases to which the case team 
 A list view can be created based on custom criteria in Lightning Experience to allow the support reps to view the cases that they should handle. <br>
 They also have the option of using the filter panel of a list view to filter their cases by **My Case Teams**. <br>
 
+<br>
+
+**Case Team List Views** <br>
+'My Case Teams' can be selected under 'Filter By Owner'. <br>
+A public group can be created for the members of the case team. <br>
+The list view can be made visible only to the public group. <br>
+
