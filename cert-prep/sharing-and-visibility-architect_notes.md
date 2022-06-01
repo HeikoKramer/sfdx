@@ -233,7 +233,7 @@ They also have the option of using the filter panel of a list view to filter the
 <br>
 
 **Case Team List Views** <br>
-'My Case Teams' can be selected under 'Filter By Owner'. <br>
+`My Case Teams` can be selected under `Filter By Owner`. <br>
 A public group can be created for the members of the case team. <br>
 The list view can be made visible only to the public group. <br>
 
