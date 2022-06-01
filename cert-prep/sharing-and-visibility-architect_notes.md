@@ -239,3 +239,6 @@ The list view can be made visible only to the public group. <br>
 
 ### [Guest User Sharing Rules](https://help.salesforce.com/s/articleView?id=sf.security_sharing_rules_guest.htm&type=5)
 tbd
+
+### [External Organization-Wide Defaults](https://help.salesforce.com/s/articleView?id=sf.security_owd_external.htm&type=5)
+tbd
