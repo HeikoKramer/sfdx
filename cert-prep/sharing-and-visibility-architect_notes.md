@@ -245,3 +245,13 @@ tbd
 
 ### [Account Role Optimization (ARO)](https://help.salesforce.com/s/articleView?id=sf.networks_partners_optimize_roles.htm&type=5)
 tbd
+
+### [Sharing Sets](https://help.salesforce.com/s/articleView?id=sf.networks_setting_light_users.htm&type=5)
+Give Experience Cloud site users access to records using sharing sets. <br>
+A sharing set grants site users **access to any record associated with an account or contact that matches the user’s account or contact**. <br>
+You can grant access to records via access mapping, which defines access for each object in the sharing set. <br>
+Access mappings support indirect lookups from the user and target record to the account or contact. <br>
+For example, grant site users access to all cases related to an account that’s identified on the user’s contact records. <br>
+A sharing set applies across all sites that a user is a member of. <br>
+Record access granted to users via a sharing set **isn’t extended to their superiors in the role hierarchy**. <br>
+
