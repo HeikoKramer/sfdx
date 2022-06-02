@@ -242,3 +242,6 @@ tbd
 
 ### [External Organization-Wide Defaults](https://help.salesforce.com/s/articleView?id=sf.security_owd_external.htm&type=5)
 tbd
+
+### [Optimize Account Roles](https://help.salesforce.com/s/articleView?id=sf.networks_partners_optimize_roles.htm&type=5)
+tbd
