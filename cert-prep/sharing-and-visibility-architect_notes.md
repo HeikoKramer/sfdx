@@ -258,3 +258,6 @@ Record access granted to users via a sharing set **isn’t extended to their sup
 ### [Experience Cloud User Licenses](https://help.salesforce.com/s/articleView?id=sf.users_license_types_communities.htm&type=5)
 tbd
 
+### [Partner User Roles](https://help.salesforce.com/s/articleView?id=sf.networks_partner_roles_overview.htm&type=5)
+tbd
+
