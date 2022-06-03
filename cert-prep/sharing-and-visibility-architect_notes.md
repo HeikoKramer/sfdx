@@ -255,6 +255,10 @@ For example, grant site users access to all cases related to an account that’s
 A sharing set applies across all sites that a user is a member of. <br>
 Record access granted to users via a sharing set **isn’t extended to their superiors in the role hierarchy**. <br>
 
+#### [Share Groups](https://help.salesforce.com/s/articleView?id=sf.networks_sharing_light_users.htm&type=5)
+A share group can be created by adding the user as a member to the group from the `Share Group Settings` tab of the existing sharing set. <br>
+Members of a share group can access any records owned by customer site users in the associated sharing set. <br>
+
 ### [Experience Cloud User Licenses](https://help.salesforce.com/s/articleView?id=sf.users_license_types_communities.htm&type=5)
 tbd
 
