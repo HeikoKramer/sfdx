@@ -265,3 +265,18 @@ tbd
 ### [Partner User Roles](https://help.salesforce.com/s/articleView?id=sf.networks_partner_roles_overview.htm&type=5)
 tbd
 
+### [Delegated External Admins](https://help.salesforce.com/s/articleView?id=sf.networks_DPUA.htm&type=5)
+Delegated external user administration rights can only be granted to external users with the following community user license types:
+* Partner Community
+* Customer Community Plus
+* Gold Partner
+* Enterprise Administration
+* Customer Portal Manager licenses
+
+
+A delegated external administrator can
+* create and edit external user records 
+* generate new passwords for external users
+* deactivate existing external users 
+
+**NOTE:** If custom fields are present on the user detail records, they are not visible to the delegated external administrator.
