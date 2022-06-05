@@ -280,3 +280,12 @@ A delegated external administrator can
 * deactivate existing external users 
 
 **NOTE:** If custom fields are present on the user detail records, they are not visible to the delegated external administrator.
+
+### [Super User Access](https://help.salesforce.com/s/articleView?id=sf.networks_partner_super_user_access.htm&type=5)
+Super User Access can be enabled to allow **partner users** to **access data owned by other partner users** who have the same role or a role below them. <br>
+Super user access applies only to 
+* cases
+* leads
+* custom objects
+* opportunities
+
