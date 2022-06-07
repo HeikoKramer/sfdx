@@ -297,4 +297,8 @@ Sensitive on-premise information can be accessed using Salesforce through a thir
 The third-party proxy server would be situated in front of the web server. <br>
 It would forward client requests from Salesforce to the web server. <br>
 
-
+### [Assign a Territory Manually to an Opportunity](https://help.salesforce.com/s/articleView?id=sf.tm2_assign_territory_to_opportunity_manually.htm&type=5)
+On an opportunity record, you can assign and track the territory whose assigned sales reps work that opportunity. <br>
+Manual territory assignments are controlled by your access to the opportunity’s assigned (parent) account. <br>
+When you assign a territory to an opportunity, that opportunity is shared with all Salesforce users assigned to that territory’s parent in the territory model’s hierarchy. <br>
+The `Territory` field on an opportunity can be used to assign a territory to the opportunity. <br>
