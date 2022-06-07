@@ -289,3 +289,6 @@ Super user access applies only to
 * custom objects
 * opportunities
 
+### [Record-Level Access](https://resources.docs.salesforce.com/sfdc/pdf/salesforce_record_access_under_the_hood.pdf)
+tbd
+
