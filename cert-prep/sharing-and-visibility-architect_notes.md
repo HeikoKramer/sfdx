@@ -354,3 +354,12 @@ For example: `callout:My_Named_Credential/some_path`. <br>
 You can append a query string to a named credential URL. <br>
 Use a question mark (?) as the separator between the named credential URL and the query string. <br>
 For example: `callout:My_Named_Credential/some_path?format=json`. <br>
+
+### Custom Sharing Object
+All custom object sharing objects are named as follows, where 'customObject' is the name of the custom object: `customObject__Share`. <br>
+
+A share object provides information about
+* the record access level 
+* record ID
+* reason why the user or group is granted access
+* user or group ID
