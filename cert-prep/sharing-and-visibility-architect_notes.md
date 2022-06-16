@@ -386,4 +386,4 @@ This setting blocks the upload of these MIME file types:
 * .xhtml.
 
 ### [User, Sharing, and Permission Objects](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_erd_users.htm)
-![Sharing and Permission Objects](cert-prep/images/user_sharing-permissions.png)
+![Sharing and Permission Objects](/cert-prep/images/user_sharing-permissions.png)
