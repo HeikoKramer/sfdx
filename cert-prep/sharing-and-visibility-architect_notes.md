@@ -302,3 +302,55 @@ On an opportunity record, you can assign and track the territory whose assigned 
 Manual territory assignments are controlled by your access to the opportunity’s assigned (parent) account. <br>
 When you assign a territory to an opportunity, that opportunity is shared with all Salesforce users assigned to that territory’s parent in the territory model’s hierarchy. <br>
 The `Territory` field on an opportunity can be used to assign a territory to the opportunity. <br>
+
+### [Named Credentials](https://help.salesforce.com/s/articleView?id=sf.named_credentials_about.htm&type=5)
+A named credential specifies the **URL of a callout endpoint** and its required **authentication parameters** in one definition. <br>
+To simplify the setup of authenticated callouts, specify a named credential as the callout endpoint. <br>
+If you instead specify a URL as the callout endpoint, you must register that URL in your org’s remote site settings and handle the authentication yourself. <br>
+For example, for an Apex callout, your code handles authentication, which can be less secure and especially complicated for OAuth implementations. <br>
+
+Salesforce manages all authentication for callouts that specify a named credential as the callout endpoint so that you don’t have to. <br>
+You can also skip remote site settings, which are otherwise required for callouts to external sites, for the site defined in the named credential. <br>
+
+<br>
+
+Named credentials are supported in these types of callout definitions:
+
+* Apex callouts
+* External data sources of these types:
+  * Salesforce Connect: OData 2.0
+  * Salesforce Connect: OData 4.0
+  * Salesforce Connect: Custom (developed with the Apex Connector Framework)
+* External Services
+
+Named Credentials also include an OutboundNetworkConnection field that you can use to route callouts through a private connection. <br>
+By separating the endpoint URL and authentication from the callout definition, named credentials make callouts easier to maintain. <br>
+For example, if an endpoint URL changes, you update only the named credential. <br>
+All callouts that reference the named credential simply continue to work. <br>
+
+If you have multiple orgs, you can create a named credential with the same name but with a different endpoint URL in each org. <br>
+You can then package and deploy—on all the orgs—one callout definition that references the shared name of those named credentials. <br>
+For example, the named credential in each org can have a different endpoint URL to accommodate differences in development and production environments. <br>
+If an Apex callout specifies the shared name of those named credentials, the Apex class that defines the callout can be packaged and deployed on all those orgs without programmatically checking the environment. <br>
+
+A named credential authentication protocol support 
+* basic password authentication
+* OAuth 2.0
+* JWT
+* JWT Token Exchange
+* AWS Signature Version 4
+
+You can set up each named credential to use an org-wide named principal or per-user authentication. <br>
+A named principal applies the same credential or authentication configuration for the entire org, while per-user authentication provides access control at the individual user level. <br>
+
+To reference a named credential from a callout definition, use the named credential URL. <br>
+A named credential URL contains the scheme 
+* **callout:**
+* the name of the named credential
+* an optional path
+
+For example: `callout:My_Named_Credential/some_path`. <br>
+
+You can append a query string to a named credential URL. <br>
+Use a question mark (?) as the separator between the named credential URL and the query string. <br>
+For example: `callout:My_Named_Credential/some_path?format=json`. <br>
