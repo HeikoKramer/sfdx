@@ -363,3 +363,24 @@ A share object provides information about
 * record ID
 * reason why the user or group is granted access
 * user or group ID
+
+### [File Upload and Download Security](https://help.salesforce.com/s/articleView?id=sf.admin_files_type_security.htm&type=5)
+The `File Upload and Download Security` page in Setup allows Salesforce Administrators to configure **how certain file types behave** when accessed in Salesforce. <br>
+
+These download behaviors are available for each file type:
+* Download (recommended)
+  * The file, regardless of file type, is always downloaded.
+* Execute in Browser
+  * The file, regardless of file type, is displayed and executed automatically when accessed in a browser or through an HTTP request.
+* Hybrid
+  * Salesforce Files are downloaded. Attachments and documents execute in the browser.
+
+To prevent users from uploading files that can pose a security risk, select `Don't allow HTML uploads as attachments or document records`. <br>
+This setting blocks the upload of these MIME file types: 
+* .html
+* .htt
+* .mht
+* .svg
+* .swf
+* .thtml
+* .xhtml.
