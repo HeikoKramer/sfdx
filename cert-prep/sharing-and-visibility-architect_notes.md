@@ -387,3 +387,12 @@ This setting blocks the upload of these MIME file types:
 
 ### [User, Sharing, and Permission Objects](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_erd_users.htm)
 ![Sharing and Permission Objects](/cert-prep/images/user_sharing-permissions.png)
+
+### [Territory Model State](https://help.salesforce.com/s/articleView?id=sf.tm2_territory_model_state.htm&type=5)
+A territory model's lifecycle state indicates whether a territory is 
+* in the planning stage `Planning` 
+* in active use `Active`
+* or archived `Archived`
+
+There can be only one territory model in `Active` state at a time, but it is possible to create and maintain multiple models in planning or archived state to use for extra modeling or reference. <br>
+
