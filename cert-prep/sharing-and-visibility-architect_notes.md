@@ -396,3 +396,9 @@ A territory model's lifecycle state indicates whether a territory is
 
 There can be only one territory model in `Active` state at a time, but it is possible to create and maintain multiple models in planning or archived state to use for extra modeling or reference. <br>
 
+### [Magic Mover for Notes And Attachments to Lightning Experience](https://help.salesforce.com/s/articleView?id=000315846&type=1)
+**Magic Mover for Notes And Attachments to Lightning Experience** is an AppExchange package that consists of three tools. <br>
+Admins can use the **Attachments to Files** tool for bulk conversion of all the non-private attachments and the **Notes Conversion** tool to convert all the public notes. <br>
+They can also use the **Update Page Layouts** tool to update layouts for use with the new related lists exclusively. <br>
+Conversion of notes and attachments is supported for custom objects and these standard objects: Account, Asset, Campaign, Case, Contact, Contract, Lead, Opportunity, Product, Quote, and Solution. <br>
+
