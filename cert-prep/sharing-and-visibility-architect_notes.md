@@ -428,7 +428,7 @@ The following actions can be taken to prevent long-running recalculation of acce
 * If possible, the user should not be assigned to a role in the role hierarchy
 * The user should be placed in a separate role at the top of the hierarchy
 
-### Granular Locking
+### [Granular Locking](https://developer.salesforce.com/docs/atlas.en-us.216.0.draes.meta/draes/draes_tools_granular_locking.htm)
 Granular locking is a feature that is enabled by default. <br>
 It employs additional logic to allow multiple updates to proceed simultaneously if there is no 
 * hierarchical or other relationship between the roles 
@@ -436,4 +436,9 @@ It employs additional logic to allow multiple updates to proceed simultaneously 
 
 This can be used to process large-scale updates faster while avoiding locking errors. <br>
 
-
+There are several key advantages of granular locking:
+* Groups that are in separate hierarchies can be manipulated concurrently
+* Public groups and roles that do not include territories are no longer blocked by territory operations
+* Users can be added concurrently to territories and public groups
+* User provisioning can occur in parallel
+* A single-long running process, such as a role delete, blocks only a small subset of operations
