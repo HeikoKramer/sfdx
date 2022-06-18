@@ -428,3 +428,12 @@ The following actions can be taken to prevent long-running recalculation of acce
 * If possible, the user should not be assigned to a role in the role hierarchy
 * The user should be placed in a separate role at the top of the hierarchy
 
+### Granular Locking
+Granular locking is a feature that is enabled by default. <br>
+It employs additional logic to allow multiple updates to proceed simultaneously if there is no 
+* hierarchical or other relationship between the roles 
+* or groups involved in the updates
+
+This can be used to process large-scale updates faster while avoiding locking errors. <br>
+
+
