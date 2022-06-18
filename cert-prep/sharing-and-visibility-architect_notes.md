@@ -402,3 +402,8 @@ Admins can use the **Attachments to Files** tool for bulk conversion of all the 
 They can also use the **Update Page Layouts** tool to update layouts for use with the new related lists exclusively. <br>
 Conversion of notes and attachments is supported for custom objects and these standard objects: Account, Asset, Campaign, Case, Contact, Contract, Lead, Opportunity, Product, Quote, and Solution. <br>
 
+### [See Record Access Reasons](https://help.salesforce.com/s/articleView?id=release-notes.rn_forcecom_sharing_view_record_access_lex.htm&type=5&release=232)
+The `Sharing Hierarchy` button on a record can be used to view all the users who have access to the record and the reason for the access. <br>
+From the **Sharing Hierarchy list view**, one can click on `View` to view the reason for record access. <br>
+
+
