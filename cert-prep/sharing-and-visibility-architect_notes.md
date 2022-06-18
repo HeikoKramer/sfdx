@@ -406,4 +406,12 @@ Conversion of notes and attachments is supported for custom objects and these st
 The `Sharing Hierarchy` button on a record can be used to view all the users who have access to the record and the reason for the access. <br>
 From the **Sharing Hierarchy list view**, one can click on `View` to view the reason for record access. <br>
 
+### [Apex Crypto Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_classes_restful_crypto.htm)
+The Apex Crypto class allows the protection of data at rest and in transit from unauthorized parties. <br>
+The class has various functions that can be used for data encryption. <br>
+It can be used for encrypting data for integration with external services such as Google or AWS. <br>
+It allows verifying the authenticity of the source system and ensuring the integrity of the data and its confidentiality. <br>
+For example, the `Crypto.encrypt()` method allows encrypting data using a specific algorithm such as **RSA-SHA256** before sending it to an external system. <br>
+
+
 
