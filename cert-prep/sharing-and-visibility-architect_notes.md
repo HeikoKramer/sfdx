@@ -417,4 +417,14 @@ For example, the `Crypto.encrypt()` method allows encrypting data using a specif
 Accounts can be split into multiple branch accounts, and the opportunities can be distributed evenly among the accounts. <br>
 It should be ensured that no more than **10,000** opportunities are related to any single account record in Salesforce to reduce the risk of locking errors. <br>
 
+### Ownership Data Skew
+When a single user owns **more than 10,000 records**, it is called **ownership data skew**. <br>
+It can cause performance issues if the user is 
+* moved around the hierarchy
+* or if they are moved into or out of a role or group that is the source group for a sharing rule
+
+The following actions can be taken to prevent long-running recalculation of access rights:
+* The ownership of records can be distributed across a greater number of users to decrease the chance of long-running updates
+* If possible, the user should not be assigned to a role in the role hierarchy
+* The user should be placed in a separate role at the top of the hierarchy
 
