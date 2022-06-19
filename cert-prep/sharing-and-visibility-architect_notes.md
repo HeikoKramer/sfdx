@@ -456,5 +456,9 @@ Given a scenario
 * demonstrate how to properly design unit tests to verify programmatic security solutions.
 * demonstrate how to properly enforce Object and Field level permission when designing Programmatic Solutions.
 
+### [anti-CSRF token](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/pages_security_tips_csrf.htm)
+Within the Lightning platform, Salesforce has implemented an anti-CSRF token to prevent CSRF attacks. <br>
+Every page includes a random string of characters as a hidden form field. <br>
+Upon the next page load, the application checks the validity of this string of characters and does not execute the command unless the value matches the expected value. <br>
 
 
