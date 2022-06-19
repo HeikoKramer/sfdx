@@ -448,3 +448,13 @@ There are several key advantages of granular locking:
 
 ### [Group Maintenance Tables](https://developer.salesforce.com/docs/atlas.en-us.salesforce_record_access_under_the_hood.meta/salesforce_record_access_under_the_hood/uth_groups.htm)
 tbd
+
+## Programmatic Sharing (17%)
+Given a scenario
+* design a solution that leverages programmatic sharing functionalities to achieve a requirement that cannot be met using declarative functionality.
+* describe how to minimize security risks in programmatic customizations (Apex, Visualforce, Lightning Component) relative to data visibility.
+* demonstrate how to properly design unit tests to verify programmatic security solutions.
+* demonstrate how to properly enforce Object and Field level permission when designing Programmatic Solutions.
+
+
+
