@@ -413,6 +413,9 @@ It can be used for encrypting data for integration with external services such a
 It allows verifying the authenticity of the source system and ensuring the integrity of the data and its confidentiality. <br>
 For example, the `Crypto.encrypt()` method allows encrypting data using a specific algorithm such as **RSA-SHA256** before sending it to an external system. <br>
 
+## Performance and Scalability (7%)
+Given a particular complex customer org setup, design a security model that is maintainable at large scale.
+
 ### [Branch Accounts](https://resources.docs.salesforce.com/sfdc/pdf/draes.pdf)
 Accounts can be split into multiple branch accounts, and the opportunities can be distributed evenly among the accounts. <br>
 It should be ensured that no more than **10,000** opportunities are related to any single account record in Salesforce to reduce the risk of locking errors. <br>
