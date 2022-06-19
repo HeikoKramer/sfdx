@@ -442,3 +442,6 @@ There are several key advantages of granular locking:
 * Users can be added concurrently to territories and public groups
 * User provisioning can occur in parallel
 * A single-long running process, such as a role delete, blocks only a small subset of operations
+
+### [Group Maintenance Tables](https://developer.salesforce.com/docs/atlas.en-us.salesforce_record_access_under_the_hood.meta/salesforce_record_access_under_the_hood/uth_groups.htm)
+tbd
