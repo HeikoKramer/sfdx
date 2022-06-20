@@ -499,6 +499,8 @@ The `DescribeFieldResult` class contains two important methods to determin the c
   * false otherwise.
 * `isCreateable()`
   * Returns true if the object can be created by the current user, false otherwise.
+* `isDeletable()`
+  * Returns true if the object can be deleted by the current user, false otherwise.
 
 ### [Lightning Locker](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.security_locker_service)
 Lightning Locker is a security architecture implemented for Lightning components to promote a safe and secure environment for the components to interact with each other. <br>
