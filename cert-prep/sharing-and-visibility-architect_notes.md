@@ -530,3 +530,30 @@ The following are valid methods of preventing SOQL injection attacks:
 * Typecasting
 * Replacing characters
 * Allowlisting
+
+### [The `stripInaccessible` Method](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_with_security_stripInaccessible.htm)
+Use the `stripInaccessible` method to enforce field- and object-level data protection. <br>
+This method can be used to strip the fields and relationship fields from query and subquery results that the user can’t access. <br>
+The method can also be used to remove inaccessible sObject fields before DML operations to avoid exceptions and to sanitize sObjects that have been deserialized from an untrusted source. <br>
+
+The following example code removes inaccessible fields from the query result. <br>
+A display table for campaign data must always show the BudgetedCost. <br>
+The ActualCost must be shown only to users who have permission to read that field. <br>
+
+```java
+SObjectAccessDecision securityDecision = 
+         Security.stripInaccessible(AccessType.READABLE,
+                 [SELECT Name, BudgetedCost, ActualCost FROM Campaign]                 );
+
+    // Construct the output table
+    if (securityDecision.getRemovedFields().get('Campaign').contains('ActualCost')) {
+        for (Campaign c : securityDecision.getRecords()) {
+        //System.debug Output: Name, BudgetedCost
+        }
+    } else {
+        for (Campaign c : securityDecision.getRecords()) {
+        //System.debug Output: Name, BudgetedCost, ActualCost
+        }
+}
+```
+
