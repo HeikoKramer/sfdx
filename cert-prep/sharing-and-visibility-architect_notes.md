@@ -498,3 +498,15 @@ The `DescribeFieldResult` class contains two important methods to determin the c
   * or child records in a master-detail relationship field on a custom object can be reparented to different parent records
   * false otherwise.
 
+### [Lightning Locker](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.security_locker_service)
+Lightning Locker is a security architecture implemented for Lightning components to promote a safe and secure environment for the components to interact with each other. <br>
+Lightning Locker automatically enables strict mode for JavaScript code where variables require declarations, objects, and functions cannot be deleted, etc. <br>
+Lightning Locker also prevents loading of external resources. <br>
+Any external JavaScript libraries must be uploaded and referenced as static resources. <br>
+
+Access to JavaScript global variables is restricted, and they are either hidden or wrapped in secure versions. <br>
+For example, if a developer needs to access the global 'window' variable, a 'SecureWindow' variable is provided instead that is a secure version of the original variable. <br>
+Components are not allowed to access elements in other components. <br>
+A component can only access elements that it owns or created. <br>
+
+
