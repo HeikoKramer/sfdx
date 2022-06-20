@@ -523,4 +523,10 @@ The `runAs` method **ignores user license limits**. You can create new users wit
 The `runAs` method can be used to perform mixed DML operations in the test by enclosing the DML operations within the `runAs` block. <br>
 This can be used to bypass the mixed DML error that is otherwise returned when inserting or updating setup objects together with other sObjects. <br>
 
-
+### [SOQL Injection](https://focusonforce.com/exams/programmatic-sharing-25-sharing-and-visibility-designer/)
+The following are valid methods of preventing SOQL injection attacks:
+* Static queries with bind variables
+* `String.escapeSingleQuotes()`
+* Typecasting
+* Replacing characters
+* Allowlisting
