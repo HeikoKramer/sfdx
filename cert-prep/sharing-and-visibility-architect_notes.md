@@ -559,3 +559,14 @@ SObjectAccessDecision securityDecision =
 }
 ```
 
+### [With Sharing Keyword](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_keywords_sharing.htm)
+The `with sharing` keyword can be used in the definition of an Apex class to specify that the organization-wide defaults and sharing rules for the current user are considered for the Apex class. <br>
+
+```java
+public with sharing class sharingClass {
+
+   // Code here
+
+}
+```
+
