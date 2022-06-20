@@ -464,3 +464,18 @@ Upon the next page load, the application checks the validity of this string of c
 ### [Sharing a Record Using Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_bulk_sharing_creating_with_apex.htm)
 tbd
 
+#### [Apex Sharing Reasons](https://help.salesforce.com/s/articleView?id=sf.security_apex_sharing_reasons.htm&type=5)
+Apex sharing reasons can be used to troubleshoot programmatic sharing and to ensure that the share record is not deleted when the ownership is changed. <br>
+Each Apex sharing reason has a label and a name. <br>
+The label displays in the ‘Reason’ column when viewing the sharing for a record in the user interface. <br>
+It is important to note that Apex sharing reasons can only be created for custom objects; they do not support sharing records of related standard objects. <br>
+An Apex sharing reason can be viewed by clicking the ‘Sharing’ button on a record, but the detail page of the record does not display it. <br>
+
+When working with Apex sharing reasons, note the following:
+
+* Only users with the “Modify All Data” permission can add, edit, or delete sharing that uses an Apex sharing reason.
+* Deleting an Apex sharing reason will delete all sharing on the object that uses the reason.
+* You can create up to 10 Apex sharing reasons per custom object.
+* You can create Apex sharing reasons using the Metadata API.
+
+
