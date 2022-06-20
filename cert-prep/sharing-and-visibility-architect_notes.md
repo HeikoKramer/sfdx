@@ -461,4 +461,6 @@ Within the Lightning platform, Salesforce has implemented an anti-CSRF token to 
 Every page includes a random string of characters as a hidden form field. <br>
 Upon the next page load, the application checks the validity of this string of characters and does not execute the command unless the value matches the expected value. <br>
 
+### [Sharing a Record Using Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_bulk_sharing_creating_with_apex.htm)
+tbd
 
