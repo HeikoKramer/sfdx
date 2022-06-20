@@ -480,12 +480,12 @@ When working with Apex sharing reasons, note the following:
 
 ### [Cross Site Scripting](https://developer.salesforce.com/docs/atlas.en-us.secure_coding_guide.meta/secure_coding_guide/secure_coding_cross_site_scripting.htm)
 The following functions can be used to neutralize potential XSS threats:
-* HTMLENCODE() 
+* `HTMLENCODE()` 
   * This function allows performing additional HTML encoding of input prior to reflection in HTML context.
-* JSENCODE() 
+* `JSENCODE()` 
   * This function can be used to perform JavaScript encoding of input prior to reflection in JavaScript context.
-* JSINHTMLENCODE()
+* `JSINHTMLENCODE()`
   * Before the introduction of auto-HTML encoding, developers called this function when including merge-fields in JavaScript event handlers within HTML.
-* JSENCODE(HTMLENCODE())
-  * This function can be used in place of JSINHTMLENCODE().
+* `JSENCODE(HTMLENCODE())`
+  * This function can be used in place of `JSINHTMLENCODE()`.
 
