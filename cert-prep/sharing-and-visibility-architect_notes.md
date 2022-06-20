@@ -509,4 +509,18 @@ For example, if a developer needs to access the global 'window' variable, a 'Sec
 Components are not allowed to access elements in other components. <br>
 A component can only access elements that it owns or created. <br>
 
+### [Using the runAs Method](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_tools_runas.htm)
+Generally, all Apex code runs in system mode, where the permissions and record sharing of the current user aren’t taken into account. <br>
+The system method `runAs` enables you to write test methods that change the user context to an existing user or a new user so that the user’s record sharing is enforced. <br>
+The `runAs` method doesn’t enforce user permissions or field-level permissions, **only record sharing**. <br>
+**NOTE:** The user's sharing permissions are enforced within a `runAs` block, regardless of the sharing mode of the test class. <br>
+If a user-defined method is called in the `runAs` block, the sharing mode enforced is that of the class where the method is defined. <br>
+
+You can use `runAs` **only in test methods**. The original system context is started again after all `runAs` test methods complete. <br>
+The `runAs` method **ignores user license limits**. You can create new users with runAs even if your organization has no additional user licenses. <br>
+
+**NOTE:** Every call to `runAs` counts against the total number of DML statements issued in the process. 
+The `runAs` method can be used to perform mixed DML operations in the test by enclosing the DML operations within the `runAs` block. <br>
+This can be used to bypass the mixed DML error that is otherwise returned when inserting or updating setup objects together with other sObjects. <br>
+
 
