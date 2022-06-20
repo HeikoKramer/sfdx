@@ -489,3 +489,12 @@ The following functions can be used to neutralize potential XSS threats:
 * `JSENCODE(HTMLENCODE())`
   * This function can be used in place of `JSINHTMLENCODE()`.
 
+### [DescribeFieldResult Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_fields_describe.htm#apex_methods_system_fields_describe)
+The `DescribeFieldResult` class contains two important methods to determin the current user's access rights to a record:
+* `isAccessible()`
+  * Returns true if the current user can see this field, false otherwise.
+* `isUpdateable()`
+  * Returns true if the field can be edited by the current user
+  * or child records in a master-detail relationship field on a custom object can be reparented to different parent records
+  * false otherwise.
+
