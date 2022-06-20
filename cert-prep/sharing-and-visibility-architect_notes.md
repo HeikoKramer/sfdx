@@ -572,3 +572,5 @@ public with sharing class sharingClass {
 }
 ```
 
+### [Lightning Security](https://developer.salesforce.com/docs/atlas.en-us.secure_coding_guide.meta/secure_coding_guide/secure_coding_lightning_security.htm)
+tbd
