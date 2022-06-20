@@ -543,7 +543,7 @@ The ActualCost must be shown only to users who have permission to read that fiel
 ```java
 SObjectAccessDecision securityDecision = 
          Security.stripInaccessible(AccessType.READABLE,
-                 [SELECT Name, BudgetedCost, ActualCost FROM Campaign]                 );
+                 [SELECT Name, BudgetedCost, ActualCost FROM Campaign]);
 
     // Construct the output table
     if (securityDecision.getRemovedFields().get('Campaign').contains('ActualCost')) {
