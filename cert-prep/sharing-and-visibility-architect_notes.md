@@ -497,6 +497,8 @@ The `DescribeFieldResult` class contains two important methods to determin the c
   * Returns true if the field can be edited by the current user
   * or child records in a master-detail relationship field on a custom object can be reparented to different parent records
   * false otherwise.
+* `isCreateable()`
+  * Returns true if the object can be created by the current user, false otherwise.
 
 ### [Lightning Locker](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.security_locker_service)
 Lightning Locker is a security architecture implemented for Lightning components to promote a safe and secure environment for the components to interact with each other. <br>
