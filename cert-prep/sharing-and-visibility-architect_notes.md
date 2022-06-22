@@ -220,6 +220,16 @@ Other access levels are available for only specific objects, like
 |Public Read/Write/Transfer|All users can view, edit, transfer, and report on all records. **Only available for cases or leads**. For example, if Alice is the owner of ACME case number 100, all other users can view, edit, transfer ownership, and report on that case. But only Alice can delete or change the sharing on case 100.|
 |Public Full Access|All users can view, edit, transfer, delete, and report on all records. **Only available for campaigns**. For example, if Ben is the owner of a campaign, all other users can view, edit, transfer, or delete that campaign.|
 
+#### Personal Calendar Access Levels
+
+|Field|Description|
+|:----|:----------|
+|Hide Details|Others can see whether the user is available at given times, but can’t see any other information about the nature of events in the user’s calendar.|
+|Hide Details and Add Events|In addition to the sharing levels set by Hide Details, users can insert events in other users’ calendars.|
+|Show Details|Users can see detailed information about events in other users’ calendars.|
+|Show Details and Add Events|In addition to the sharing levels set by Show Details, users can insert events in other users’ calendars.|
+|Full Access|Users can see detailed information about events in other users’ calendars, insert events in other users’ calendars, and edit existing events in other users’ calendars.|
+
 ### [Site User Visibility](https://focusonforce.com/exams/declarative-sharing-64-part-1-sharing-and-visibility-designer/)
 The `Site User Visibility` checkbox can be deselected on the Sharing Settings page to ensure that external users are not able to see each other. <br>
 
