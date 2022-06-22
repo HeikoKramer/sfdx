@@ -269,7 +269,36 @@ There are certain permissions that would allow a user to bypass the field-level 
 These are `Customize Application` and `Author Apex`, which would give a user the ability to modify field-level security permissions and view the value of the field. <br>
 
 ### [Built-in Sharing Behavior](https://help.salesforce.com/s/articleView?id=sf.sharing_across_objects.htm&type=5)
-tbd
+Salesforce provides implicit sharing between accounts and child records (opportunities, cases, and contacts), and for various groups of site and portal users. <br>
+Built-in sharing behaviors apply only to standard relationships. <br>
+
+Sharing between **accounts and child records**
+
+* Access to a parent account
+  * If you have access to an account’s child record, you have implicit **Read Only** access to that account.
+* Access to child records
+  * If you have access to a parent account, you have access to the associated child records. 
+  * The account owner's role determines the level of access to child records.
+
+Sharing behavior **for site or portal users**
+
+* Account and contact access
+  * An account’s portal or site user has **Read Only** access to the parent account and to all of the account’s contacts.
+* Management access to data owned by Service Cloud portal users
+  * Since Service Cloud portal users don't have roles, portal account owners can't access their data via the role hierarchy. 
+  * To grant them access to this data, you can add account owners to the portal’s **share group** where the Service Cloud portal users are working.
+  * This step provides **access to all data owned by Service Cloud portal users** in that portal.
+* Case access
+  * If a portal or site user is a contact on a case, then the user has **Read and Write** access on the case.
+
+**Group membership operations and sharing recalculation**
+
+* Simple operations can trigger a recalculation of sharing rules. Example operations: 
+  * changing a user’s role
+  * moving a role to another branch in the hierarchy
+  * changing a site or portal account’s owner 
+* Salesforce must check access to user’s data for people who are above the user’s new or old role in the hierarchy
+  * and either add or remove shares to any affected records
 
 ### [Role Fields](https://help.salesforce.com/s/articleView?id=sf.user_role_fields.htm&type=5)
 tbd
