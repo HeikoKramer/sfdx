@@ -166,7 +166,27 @@ It can be used to add, remove, or replace team members on multiple opportunity r
 `Team Selling` must be enabled on the `Opportunity Team Settings` page in Setup to use opportunity teams and this tool. <br>
 
 ### [Restriction Rules](https://help.salesforce.com/s/articleView?id=sf.security_restriction_rule.htm&type=5)
-tbd
+Restriction rules let you enhance your security by allowing certain users to access only specified records. <br>
+They prevent users from accessing records that can contain sensitive data or information that isn’t essential to their work. <br>
+Restriction rules filter the records that a user has access to so that they can access only the records that match the criteria you specify. <br>
+
+Restriction rules are available for 
+* custom objects
+* external objects
+* contracts
+* tasks
+* events
+
+You can create up to two active restriction rules per object in Enterprise and Developer editions and up to five active restriction rules per object in Performance and Unlimited editions. <br>
+
+Restriction rules are applied to the following Salesforce features:
+* List Views
+* Lookups
+* Related Lists
+* Reports
+* Search
+* SOQL
+* SOSL
 
 ### [Additional Sharing Settings](https://help.salesforce.com/s/articleView?id=sf.other_sharing_settings.htm&type=5)
 The `Sharing Settings` page in Setup can be used to manage various additional sharing settings besides configuring organization-wide defaults and sharing rules. <br>
