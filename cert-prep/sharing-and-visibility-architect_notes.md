@@ -240,6 +240,13 @@ Other access levels are available for only specific objects, like
 |View Only|All users can view and report on price books but only users with the “Edit” permission on opportunities or users that have been manually granted use access to the price book can add them to opportunities.|
 |No Access|Users can’t see price books or add them to opportunities. Use this access level in your organization-wide default if you want only selected users to access selected price books. Then, manually share the appropriate price books with the appropriate users.|
 
+#### Activity Access Levels
+
+|Field|Description|
+|:----|:----------|
+|Private|Only the activity owner, and users above the activity owner in the role hierarchy, can edit and delete the activity; users with read access to the record to which the activity is associated can view and report on the activity.|
+|Controlled by Parent|A user can perform an action (such as view, edit, transfer, and delete) on an activity based on whether he or she can perform that same action on the records associated with the activity. For example, if a task is associated with the Acme account and the John Smith contact, then a user can only edit that task if he or she can also edit the Acme account and the John Smith record.|
+
 ### [Site User Visibility](https://focusonforce.com/exams/declarative-sharing-64-part-1-sharing-and-visibility-designer/)
 The `Site User Visibility` checkbox can be deselected on the Sharing Settings page to ensure that external users are not able to see each other. <br>
 
