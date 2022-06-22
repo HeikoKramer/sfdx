@@ -247,6 +247,13 @@ Other access levels are available for only specific objects, like
 |Private|Only the activity owner, and users above the activity owner in the role hierarchy, can edit and delete the activity; users with read access to the record to which the activity is associated can view and report on the activity.|
 |Controlled by Parent|A user can perform an action (such as view, edit, transfer, and delete) on an activity based on whether he or she can perform that same action on the records associated with the activity. For example, if a task is associated with the Acme account and the John Smith contact, then a user can only edit that task if he or she can also edit the Acme account and the John Smith record.|
 
+#### User Access Levels
+
+|Field|Description|
+|:----|:----------|
+|Private|All users have read access to their own user record and those below them in the role hierarchy.|
+|Public Read Only|All users have read access on one another. You can see all users’ detail pages. You can also see all users in lookups, list views, ownership changes, user operations, and search.|
+
 ### [Site User Visibility](https://focusonforce.com/exams/declarative-sharing-64-part-1-sharing-and-visibility-designer/)
 The `Site User Visibility` checkbox can be deselected on the Sharing Settings page to ensure that external users are not able to see each other. <br>
 
