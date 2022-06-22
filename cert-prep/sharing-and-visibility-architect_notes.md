@@ -230,6 +230,16 @@ Other access levels are available for only specific objects, like
 |Show Details and Add Events|In addition to the sharing levels set by Show Details, users can insert events in other users’ calendars.|
 |Full Access|Users can see detailed information about events in other users’ calendars, insert events in other users’ calendars, and edit existing events in other users’ calendars.|
 
+**NOTE:** Regardless of the organization-wide defaults that have been set for calendars, all users can invite all other users to events.
+
+#### Price Book Access Levels
+
+|Field|Description|
+|:----|:----------|
+|Use|All users can view price books and add them to opportunities. Users can add any product within that price book to an opportunity.|
+|View Only|All users can view and report on price books but only users with the “Edit” permission on opportunities or users that have been manually granted use access to the price book can add them to opportunities.|
+|No Access|Users can’t see price books or add them to opportunities. Use this access level in your organization-wide default if you want only selected users to access selected price books. Then, manually share the appropriate price books with the appropriate users.|
+
 ### [Site User Visibility](https://focusonforce.com/exams/declarative-sharing-64-part-1-sharing-and-visibility-designer/)
 The `Site User Visibility` checkbox can be deselected on the Sharing Settings page to ensure that external users are not able to see each other. <br>
 
