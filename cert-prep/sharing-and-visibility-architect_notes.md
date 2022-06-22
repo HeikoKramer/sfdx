@@ -201,7 +201,24 @@ The `Grant site users access to related cases` setting can be deselected to rest
 This approach can be used if access to cases needs to be controlled by using manual sharing or Apex managed sharing. <br>
 
 ### [Organization-Wide Default Access Settings](https://help.salesforce.com/s/articleView?id=sf.sharing_model_fields.htm&type=5)
-tbd
+For most objects, you can assign default access to 
+* Controlled by Parent
+* Private
+* Public Read Only
+* Public Read/Write 
+
+Other access levels are available for only specific objects, like 
+* Public Full Access 
+* View Only
+
+|Field|Description|
+|:----|:----------|
+|Controlled by Parent|A user can perform an action (such as view, edit, or delete) on a contact or order based on whether he or she can perform that same action on the record associated with it. For example, if a contact is associated with the Acme account, then a user can only edit that contact if he or she can also edit the Acme account.|
+|Private|Only the record owner, and users above that role in the hierarchy, can view, edit, and report on those records. For example, if Tom is the owner of an account, and he’s assigned to the role of Western Sales, reporting to Carol (who is in the role of VP of Western Region Sales), then Carol can also view, edit, and report on Tom’s accounts.|
+|Public Read Only|All users can view and report on records but not edit them. Only the owner, and users above that role in the hierarchy, can edit those records. For example, Sara is the owner of ABC Corp. Sara is also in the role Western Sales, reporting to Carol, who is in the role of VP of Western Region Sales. Sara and Carol have full read/write access to ABC Corp. Tom (another Western Sales Rep) can also view and report on ABC Corp, but can’t edit it.|
+|Public Read/Write|All users can view, edit, and report on all records. For example, if Tom is the owner of Trident Inc., all other users can view, edit, and report on the Trident account. However, only Tom can alter the sharing settings or delete the Trident account.|
+|Public Read/Write/Transfer|All users can view, edit, transfer, and report on all records. **Only available for cases or leads**. For example, if Alice is the owner of ACME case number 100, all other users can view, edit, transfer ownership, and report on that case. But only Alice can delete or change the sharing on case 100.|
+|Public Full Access|All users can view, edit, transfer, delete, and report on all records. **Only available for campaigns**. For example, if Ben is the owner of a campaign, all other users can view, edit, transfer, or delete that campaign.|
 
 ### [Site User Visibility](https://focusonforce.com/exams/declarative-sharing-64-part-1-sharing-and-visibility-designer/)
 The `Site User Visibility` checkbox can be deselected on the Sharing Settings page to ensure that external users are not able to see each other. <br>
