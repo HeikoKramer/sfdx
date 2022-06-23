@@ -356,7 +356,30 @@ In that case, if you give team members access to an individual opportunity, thos
 High-volume portal users **can’t** be added to teams.
 
 ### [Opportunity Teams](https://help.salesforce.com/s/articleView?id=sf.salesteam_def.htm&type=5)
-tbd
+Considerations and guidelines for using opportunity team list views, managing access to private records via opportunity teams, and adding portal users to teams. <br>
+
+**Opportunity Teams in List Views** <br>
+When you create or edit a custom list view for opportunities, the available filters include the following: <br>
+
+**My opportunity teams**
+* This filter shows opportunity teams that you belong to, whether owned by you or others.
+
+**My team’s opportunities**
+* This filter shows opportunities owned by your direct and indirect reports, based on role hierarchy.
+
+<br>
+
+**Private Accounts and Opportunities** <br>
+**Organization-Wide Default Access Set to Private**
+* Your Salesforce admin can set the organization-wide default access for accounts and opportunities to Private. 
+  * In that case, if you give team members access to an individual opportunity, those users gain read-only access to accounts on the opportunity. 
+  * Conversely, if you remove a user’s access to an individual account, the user is removed from opportunity teams related to the account.
+
+**Records Set to Private**
+* You **can’t** create opportunity teams for opportunities with the Private field selected.
+
+**Portal Users**
+* High-volume portal users **can’t** be added to teams.
 
 ### Convert a Master-Detail Relationship to a Lookup Relationship
 It is possible to convert a master-detail relationship to a lookup relationship as long as no roll-up summary fields exist on the master object. <br>
