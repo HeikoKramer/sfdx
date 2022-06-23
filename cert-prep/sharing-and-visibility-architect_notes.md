@@ -313,7 +313,47 @@ Refer to this table for descriptions of each field and how it functions in a rol
 |This role reports to|The role above this role in the hierarchy.|
 
 ### [Account Access via Teams](https://help.salesforce.com/s/articleView?id=sf.accountteam_def.htm&type=5)
-tbd
+Considerations for granting account access via account teams and adding portal users to teams. <br>
+
+**Access** <br>
+**Accounts and Related Records**
+
+* Your Salesforce admin sets default access to accounts and related records. 
+  * To grant team members more access than the default, you must be the account owner or above in the role hierarchy. 
+  * You can grant team members more access than the default, but not less
+* To add team members who don’t have Read or Read/Write access to an account, you must be the owner or above in the role hierarchy
+
+**Account Owner Changes and Group-Based Access**
+
+* Suppose that a user with group-based access adds account team members. 
+  * If the account owner is changed
+    * the team members added by users with group-based access are removed from the team, even if the Keep account team option is selected.
+* To keep the team members related to the account, they should be 
+  * added by a Salesforce admin
+  * the account owner
+  * or someone above the owner in the role hierarchy
+
+**Child Records**
+
+* You **can't** grant team members greater access to child records than you have yourself.
+  * For example, if you have Read access to child records on an account, you can’t give a team member Read/Write access. 
+  * Ask your Salesforce admin to grant the needed access.
+
+**Available Fields**
+* The fields available when sales reps add a team member are based on the reps’ level of access to the account
+
+<br>
+
+**Org-Wide Default Access to Accounts and Opportunitie** <br>
+
+Your Salesforce admin can set the default account and opportunity access to Private. <br>
+In that case, if you give team members access to an individual opportunity, those users gain Read access to accounts on the opportunity. <br>
+**Conversely, if you remove a user’s access to an individual account, the user is removed from opportunity teams related to the account.** <br>
+
+<br>
+
+**Portal Users** <br>
+High-volume portal users **can’t** be added to teams.
 
 ### [Opportunity Teams](https://help.salesforce.com/s/articleView?id=sf.salesteam_def.htm&type=5)
 tbd
