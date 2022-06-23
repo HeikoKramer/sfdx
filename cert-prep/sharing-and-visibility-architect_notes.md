@@ -301,7 +301,16 @@ Sharing behavior **for site or portal users**
   * and either add or remove shares to any affected records
 
 ### [Role Fields](https://help.salesforce.com/s/articleView?id=sf.user_role_fields.htm&type=5)
-tbd
+The fields that comprise a role entry have specific purposes. <br>
+Refer to this table for descriptions of each field and how it functions in a role. <br>
+
+|Field|Description|
+|:----|:----------|
+|Case Access|Specifies whether users can access other users’ cases that are associated with accounts the users own. This field isn’t visible if your organization’s sharing model for cases is Public Read/Write.|
+|Contact Access|Specifies whether users can access other users’ contacts that are associated with accounts the users own. This field isn’t visible if your organization’s sharing model for contacts is Public Read/Write or Controlled by Parent.|
+|Opportunity Access|Specifies whether users can access other users’ opportunities that are associated with accounts the users own. This field isn’t visible if your organization’s sharing model for opportunities is Public Read/Write.|
+|Sharing Groups|These groups are automatically created and maintained. The Role group contains all users in this role plus all users in roles above this role. The Role and Subordinates group contains all users in this role plus all users in roles above and below this role in the hierarchy. The Role and Internal Subordinates group (available if Salesforce Experiences or portals are enabled for your organization) contains all users in this role. It also contains all users in roles above and below this role, excluding site and portal users.|
+|This role reports to|The role above this role in the hierarchy.|
 
 ### [Account Access via Teams](https://help.salesforce.com/s/articleView?id=sf.accountteam_def.htm&type=5)
 tbd
