@@ -431,7 +431,14 @@ A public group can be created for the members of the case team. <br>
 The list view can be made visible only to the public group. <br>
 
 ### [Guest User Sharing Rules](https://help.salesforce.com/s/articleView?id=sf.security_sharing_rules_guest.htm&type=5)
-tbd
+A guest user sharing rule is a **special type of criteria-based sharing rule** and the only way to grant record access to unauthenticated guest users. <br>
+Guest user sharing rules can **only grant Read Only access**. <br>
+
+You must create guest user sharing rules to open up record access to guest users. <br>
+Keep in mind that the guest user sharing rule type grants access to users without login credentials. <br>
+By creating a guest user sharing rule, you're allowing **immediate and unlimited access** to all records matching the sharing rule's criteria to anyone. <br>
+To secure your Salesforce data and give your guest users access to what they need, consider all the use cases and implications of creating this type of sharing rule. <br>
+Implement security controls that you think are appropriate for the sensitivity of your data. <br>
 
 ### [External Organization-Wide Defaults](https://help.salesforce.com/s/articleView?id=sf.security_owd_external.htm&type=5)
 tbd
