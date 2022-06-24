@@ -478,7 +478,26 @@ External users include:
 * Service Cloud Portal users
 
 ### [Account Role Optimization (ARO)](https://help.salesforce.com/s/articleView?id=sf.networks_partners_optimize_roles.htm&type=5)
-tbd
+If you expect to have a large volume of business accounts with a single Experience Cloud user, we recommend enabling account role optimization (ARO) to ensure the best performance possible. <br>
+ARO minimizes the number of roles created for users with Customer Community Plus and Partner Community licenses. <br>
+**The fewer roles, the better the performance of your Experience Cloud site.** <br>
+
+With ARO enabled for an external role-based user who is the only external role-based user on the account, a shared person role is created and assigned to the user. <br>
+It rolls up to the account owner. <br>
+Without ARO, the default number of site roles (1 to 3) is created and assigned to the user. <br>
+This optimization can replace the need for possibly thousands of account roles. <br>
+
+When a second role-based user with a Customer Community Plus or Partner Community license is added to the account, more roles are necessary to support sharing data. <br>
+Instead, the default number of 1 to 3 account roles are created based on the default number of site roles. <br>
+The lowest level (Worker) role is assigned to all external role-based account users. <br>
+In a three-role hierarchy, the Executive, Manager, and User roles are created. <br>
+The top-most role rolls up to the account owner. <br>
+
+Account role optimization interacts with Customer Community Plus and Partner Community license users independently. <br>
+If an account has a single user with a Customer Community Plus license and two users with Partner Community licenses, ARO applies only to the Customer Community Plus license user. <br>
+The user with the Customer Community Plus license is assigned to the shared customer site person role. <br>
+Each user with the Partner Community license is individually assigned to one of the account’s partner site roles. <br>
+This feature doesn’t affect role usage for person accounts. <br>
 
 ### [Sharing Sets](https://help.salesforce.com/s/articleView?id=sf.networks_setting_light_users.htm&type=5)
 Give Experience Cloud site users access to records using sharing sets. <br>
