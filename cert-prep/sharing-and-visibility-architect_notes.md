@@ -441,7 +441,41 @@ To secure your Salesforce data and give your guest users access to what they nee
 Implement security controls that you think are appropriate for the sensitivity of your data. <br>
 
 ### [External Organization-Wide Defaults](https://help.salesforce.com/s/articleView?id=sf.security_owd_external.htm&type=5)
-tbd
+External organization-wide defaults provide separate organization-wide defaults for internal and external users. <br>
+They simplify your sharing rules configuration and improve recalculation performance. <br>
+Additionally, you can easily see which information is being shared to external users. <br>
+
+For example, to configure more restrictive access for external users, set the default **internal access** to `Public Read Only` or `Public Read/Write` and the default **external access** to `Private`. <br>
+These settings also speed up performance for reports, list views, searches, and API queries. <br>
+
+**NOTE:** The external access level for an object can’t be more permissive than the internal access level. <br>
+
+You can set external organization-wide defaults for these objects.
+
+* Account
+* Asset
+* Case
+* Campaign
+* Contact
+* Individual
+* Lead
+* Opportunity
+* Order
+* User
+* Custom Objects
+
+External organization-wide defaults aren’t available for some objects, but you can achieve the same behavior with sharing rules. <br>
+Set the default access to Private and create a sharing rule to share records with all internal users. <br>
+
+External users include:
+
+* Authenticated website users
+* Chatter external users
+* Site users
+* Customer Portal users
+* High-volume Experience Cloud site users
+* Partner Portal users
+* Service Cloud Portal users
 
 ### [Account Role Optimization (ARO)](https://help.salesforce.com/s/articleView?id=sf.networks_partners_optimize_roles.htm&type=5)
 tbd
