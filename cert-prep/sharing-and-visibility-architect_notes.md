@@ -392,7 +392,28 @@ It can be manually added to a user but does not have to be if the Autoassign fea
 The Autoassign option can be used to automatically assign feature licenses to new or existing users. <br>
 
 ### [Content Deliveries](https://help.salesforce.com/s/articleView?id=sf.content_delivery_create.htm&type=5)
-tbd
+A content delivery allows you to convert documents such as Microsoft® PowerPoint and Word files into an optimized web-based version for easy online viewing. <br>
+After you create your delivery, you can send its encrypted URL to any recipient, such as 
+* leads
+* customers
+* partners
+* colleagues
+
+You can track how often people view or download the content. <br>
+Content deliveries are available in **Salesforce Classic only**. <br>
+However, **Lightning Email generates delivery-based links as email attachments** for Lightning Experience users who have access to the Content Deliveries feature. <br>
+
+A content delivery can be created from the Content Deliveries related list on most Salesforce objects. <br>
+Salesforce CRM Content users can also create a content delivery from the content details page or the Related Content related list. <br>
+
+Delivery methods that determine how your content can be viewed. <br>
+The options that appear depend on the file format you uploaded. <br>
+
+|Option|Descroption|
+|:-----|:----------|
+|Allow Recipient to View in the Browser|Creates an online version of the file that recipients can view in their browser.|
+|Allow Recipient to Download as [file type] file|Allows the recipient of your content delivery to view the content in its original format. For example, if you uploaded a Microsoft® Word file, this field will be Allow download as .doc file. If a preview of the file doesn’t exist in Salesforce, users can download the delivered file regardless of whether downloading is allowed. File previews are made the first time they are requested in Salesforce, but not before. Viewing a file’s detail page or posting it to a feed generate file previews.|
+|Allow Recipient to Download as PDF|Allows recipients to download a .pdf version of the file. This option is only available for Microsoft® PowerPoint, Word, and Excel files.|
 
 ### [Case Teams](https://help.salesforce.com/s/articleView?id=sf.caseteam_setup.htm&type=5)
 A case team allows a group of support users to work together on solving cases in Salesforce. <br>
