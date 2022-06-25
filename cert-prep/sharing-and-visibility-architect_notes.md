@@ -516,7 +516,27 @@ Members of a share group can access any records owned by customer site users in 
 Covered in my [Data Architect Notes](https://github.com/HeikoKramer/sfdx/blob/main/cert-prep/data-architect_notes.md#experience-cloud-user-licenses).
 
 ### [Partner User Roles](https://help.salesforce.com/s/articleView?id=sf.networks_partner_roles_overview.htm&type=5)
-tbd
+When you enable the first external user on a partner account, a user role hierarchy is created for that account. <br>
+This role hierarchy rolls up to the account owner (typically, the channel manager). <br>
+The three roles in this hierarchy are Partner User, Partner Manager, or Partner Executive. <br>
+When you create contacts on the partner account and convert them to external users, assign one of these roles to them. <br>
+
+The Partner User role rolls up to the Partner Manager role, which rolls up to the Partner Executive role. <br>
+The Partner Executive role rolls up to the Channel Manager role. <br>
+Partner users can view and edit all data owned by or shared with users below them in the hierarchy, regardless of the org’s sharing model. <br>
+
+The role names include the partner account name. <br>
+For example, the partner account name is Acme. <br>
+The three roles created for the Acme account are Acme Partner User, Acme Partner Manager, and Acme Partner Executive. <br>
+If the ownership of a partner account is changed to another channel manager, the partner user role is moved to that location in the role hierarchy. <br>
+
+You can delete partner roles, in which case the roles are renamed to maintain the hierarchy. <br>
+For example, if the Manager role is deleted from a three-role hierarchy of Executive, Manager, and User, then the Executive role is renamed to Manager. <br>
+The object ID remains the same. <br>
+When you create a partner role, it is automatically placed at the top as a parent. <br>
+You can delete multiple roles in bulk for better performance. <br>
+For example, if most of your users are assigned the User role, you can delete the Executive and Manager roles. <br>
+For more information on deleting partner roles, see SOAP API Developer's Guide. <br>
 
 ### [Delegated External Admins](https://help.salesforce.com/s/articleView?id=sf.networks_DPUA.htm&type=5)
 Delegated external user administration rights can only be granted to external users with the following community user license types:
