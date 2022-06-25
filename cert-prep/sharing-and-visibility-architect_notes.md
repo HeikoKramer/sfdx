@@ -513,7 +513,7 @@ A share group can be created by adding the user as a member to the group from th
 Members of a share group can access any records owned by customer site users in the associated sharing set. <br>
 
 ### [Experience Cloud User Licenses](https://help.salesforce.com/s/articleView?id=sf.users_license_types_communities.htm&type=5)
-tbd
+Covered in my [Data Architect Notes](https://github.com/HeikoKramer/sfdx/blob/main/cert-prep/data-architect_notes.md#experience-cloud-user-licenses).
 
 ### [Partner User Roles](https://help.salesforce.com/s/articleView?id=sf.networks_partner_roles_overview.htm&type=5)
 tbd
