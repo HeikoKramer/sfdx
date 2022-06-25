@@ -563,7 +563,7 @@ Super user access applies only to
 * opportunities
 
 ### [Record-Level Access](https://resources.docs.salesforce.com/sfdc/pdf/salesforce_record_access_under_the_hood.pdf)
-tbd
+Just click on the headline above for the appropriate pdf document with great visualisations. <br>
 
 ### [3rd Party Proxy Server](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_security_considerations.htm)
 Sensitive on-premise information can be accessed using Salesforce through a third-party proxy server. <br>
