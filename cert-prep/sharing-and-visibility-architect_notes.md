@@ -932,4 +932,16 @@ public with sharing class sharingClass {
 ```
 
 ### [Lightning Security](https://developer.salesforce.com/docs/atlas.en-us.secure_coding_guide.meta/secure_coding_guide/secure_coding_lightning_security.htm)
-tbd
+**General Lightning Security Considerations** <br>
+Third-party Lightning components and apps operate in a special domain (lightning.force.com or lightning.com) that is shared with Salesforce-authored Lightning code.
+In particular, setup.app, which controls many sensitive security settings. <br>
+Visualforce applications, by contrast, are served from a different domain (force.com or visualforce.com) that isn't shared with Salesforce code. <br>
+Because Lightning code shares the same origin as Salesforce-authored code, increased restrictions are placed on third-party Lightning code. <br>
+These restrictions are enforced by Lightning Locker and a special Content Security Policy. <br>
+There is also additional scrutiny in the AppExchange security review. <br>
+
+
+When developing Lightning apps, ensure that the stricter CSP setting is enabled. <br>
+Org admins should enable this setting to protect the org's security controls from vulnerabilities in custom Lightning components. <br>
+Develop and test your code with stricter CSP enabled in order to ensure compatibility. <br>
+Note that stricter CSP is enabled by default beginning with Summer '18, but not in orgs created previously. <br>
