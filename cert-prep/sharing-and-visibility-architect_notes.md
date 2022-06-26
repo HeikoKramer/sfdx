@@ -720,7 +720,53 @@ There are several key advantages of granular locking:
 * A single-long running process, such as a role delete, blocks only a small subset of operations
 
 ### [Group Maintenance Tables](https://developer.salesforce.com/docs/atlas.en-us.salesforce_record_access_under_the_hood.meta/salesforce_record_access_under_the_hood/uth_groups.htm)
-tbd
+Sharing rows grant access to users and groups, but the data that specifies who belongs to each group resides in the Group Maintenance tables. <br>
+These tables store membership data for every Salesforce group, including system-defined groups. <br>
+System-defined groups are groups of users that Salesforce creates and manages internally to support various features and behaviors, such as queues. <br>
+This type of management lets the data that supports queues and personal or public groups coexist in the same database tables, and unifies how Salesforce manages the data. <br>
+For example, Salesforce can grant record access to a queue the same way it grants record access to a public group. <br>
+
+Salesforce also uses system-defined groups to implement hierarchies. <br>
+During recalculation, Salesforce creates two types of system-defined groups, **Role groups** and **RoleAndSubordinates groups**, for every node in the role hierarchy. <br>
+If the organization has external organization-wide defaults enabled, a third type of system-defined group, **RoleAndInternalSubordinates**, is created. <br>
+
+|Group|Consists of|Purpose|
+|:----|:----------|:------|
+|Role|Users assigned to any of the following. <br> - A specific role <br> - One of its manager roles|Used to give managers access to their subordinates’ records|
+|RoleAndSubordinates|Users assigned to any of the following. <br> - A specific role <br> - One of its manager roles <br> - One of its subordinate roles|Used when an organization defines a rule that shares a set of records with: <br> - A particular role<br> - Its subordinates|
+|RoleAndInternalSubordinates|Users assigned to any of the following. <br> - A specific role <br> - One of its manager roles <br> - One of its subordinate roles, excluding Portal roles|Used when an organization defines a rule that shares a set of records with: <br> - A particular role <br> - Its subordinates, excluding Portal roles|
+
+All three group types have:
+
+* Indirect members, who inherit record access from the group’s direct members and are assigned to manager roles
+* Direct members, who are defined according to their group type
+  * In Role groups, direct members are those members assigned to the role the group represents.
+  * In RoleAndSubordinates groups, direct members are those members assigned to the role the group represents or one of its subordinate roles
+  * In RoleAndInternalSubordinates groups, direct members are those members assigned to the role the group represents, or one of its non-portal subordinate roles.
+
+![Group Maintenance Tables](/cert-prep/images/group_maintanace.png)
+
+By scanning the Role groups, Salesforce can quickly identify the indirect members who inherit record access from users at that role. <br>
+For example, to see which users inherit record access from Bob in the role hierarchy, Salesforce simply searches for Role groups that have Bob as a direct member (the East Sales Rep Role group), and finds all the indirect members in those groups (Marc and Maria). <br>
+
+Likewise, by scanning the RoleAndSubordinates groups, Salesforce can quickly see which users receive access through role and subordinate sharing rules. <br>
+For example, if a rule shares a set of records with users in the Sales Executive role and their subordinates, Salesforce can identify those users by scanning the Sales Executive RoleAndSubordinates group. <br>
+
+<br>
+
+System-defined groups support Territory Management in a similar way. <br>
+For each territory, Salesforce creates a:
+
+* Territory group
+  * in which users who are assigned to the territory are direct members
+  * while users assigned to territories higher in the hierarchy are indirect members
+* TerritoryAndSubordinates group
+  * in which users who are assigned to that territory or territories lower in the hierarchy are direct members 
+  * while users assigned to territories higher in that branch are indirect members
+
+Users can’t modify system-defined groups through the user interface or API in the ways that they can personal and public groups. <br>
+Modifying a queue or hierarchy causes Salesforce to recalculate its associated system-defined groups accordingly. <br>
+The size and complexity of an organization’s queues and hierarchies directly affect the duration of record access calculations. <br>
 
 ## Programmatic Sharing (17%)
 Given a scenario
