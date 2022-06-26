@@ -781,7 +781,47 @@ Every page includes a random string of characters as a hidden form field. <br>
 Upon the next page load, the application checks the validity of this string of characters and does not execute the command unless the value matches the expected value. <br>
 
 ### [Sharing a Record Using Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_bulk_sharing_creating_with_apex.htm)
-tbd
+To access sharing programmatically, you must use the **share object** associated with the standard or custom object for which you want to share. <br>
+For example, **AccountShare** is the sharing object for the Account object, **ContactShare** is the sharing object for the Contact object. <br>
+In addition, all custom object sharing objects are named as follows, where MyCustomObject is the name of the custom object: <br>
+**MyCustomObject__Share** <br>
+
+<br>
+
+Objects on the detail side of a master-detail relationship **do not have** an associated sharing object. <br>
+The detail record’s access is determined by the master’s sharing object and the relationship’s sharing setting. <br>
+
+A share object includes records supporting all three types of sharing: 
+* managed sharing
+* user managed sharing
+* Apex managed sharing
+
+Sharing granted to users implicitly are not tracked with this object. <br>
+Examples for implicit sharing:
+* organization-wide defaults
+* the role hierarchy
+* permissions such as 
+  * `View All` and `Modify All` permissions for the given object
+  * `View All Data` and `Modify All Data` 
+
+Every share object has the following properties:
+* objectNameAccessLevel
+  * The level of access that the specified user or group has been granted for a share sObject. 
+  * The name of the property is AccessLevel appended to the object name. 
+  * For example, the property name for LeadShare object is LeadShareAccessLevel. Valid values are:
+    * `Edit`
+    * `Read`
+    * `All` (The `All` access level is an internal value and can’t be granted.)
+* ParentID
+  * The ID of the object. This field cannot be updated.
+* RowCause
+  * The reason why the user or group is being granted access. 
+  * The reason determines the type of sharing, which controls who can alter the sharing record. This field cannot be updated.
+* UserOrGroupId
+  * The user or group IDs to which you are granting access. A group can be:
+    * A public group or a sharing group associated with a role.
+    * A territory group.
+  * This field cannot be updated.
 
 #### [Apex Sharing Reasons](https://help.salesforce.com/s/articleView?id=sf.security_apex_sharing_reasons.htm&type=5)
 Apex sharing reasons can be used to troubleshoot programmatic sharing and to ensure that the share record is not deleted when the ownership is changed. <br>
