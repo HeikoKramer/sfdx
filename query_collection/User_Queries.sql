@@ -1,6 +1,18 @@
 -- count active users grouped by their license name
 SELECT count(id), Profile.UserLicense.name FROM User WHERE isActive = true GROUP BY Profile.UserLicense.name
 
+-- active users that never logged in grouped by their license name
+SELECT count(id), Profile.UserLicense.name FROM User 
+WHERE isActive = true 
+AND LastLoginDate = null 
+AND Profile.UserLicense.name != 'Analytics Cloud Integration User'
+AND Profile.UserLicense.name != 'B2BMA Integration User'
+AND Profile.UserLicense.name != 'Guest User License'
+AND Profile.UserLicense.name != 'Identity'
+AND Profile.UserLicense.name != 'Sales Insights Integration User'
+AND Profile.UserLicense.name != 'SalesforceIQ Integration User'
+GROUP BY Profile.UserLicense.name
+
 -- count active users with "Customer Community Plus Login" license, grouped by their profile name
 SELECT count(id), Profile.Name FROM User WHERE isActive = true AND Profile.UserLicense.name = 'Customer Community Plus Login' GROUP BY Profile.Name
 
