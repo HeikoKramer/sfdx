@@ -26,6 +26,10 @@ SELECT count(id), LoginType FROM LoginHistory WHERE LoginTime = LAST_WEEK GROUP 
 -- login countries
 SELECT count(id), LoginGeo.country FROM LoginHistory WHERE LoginTime = LAST_WEEK GROUP BY LoginGeo.country
 
+-- customer community user logins from last month
+SELECT count(id) FROM LoginHistory WHERE LoginTime = LAST_MONTH 
+AND UserId IN (SELECT id FROM User WHERE isActive = true 
+AND Profile.UserLicense.name = 'Customer Community Plus Login') 
 
 -- login URLs for 'Remote Access 2.0' LoginType
 SELECT count(id), LoginUrl FROM LoginHistory WHERE LoginTime = LAST_WEEK AND LoginType = 'Remote Access 2.0' GROUP BY LoginUrl 
