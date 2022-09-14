@@ -13,6 +13,9 @@ AND Profile.UserLicense.name != 'Sales Insights Integration User'
 AND Profile.UserLicense.name != 'SalesforceIQ Integration User'
 GROUP BY Profile.UserLicense.name
 
+-- count active users with service cloud permission
+SELECT count(id) FROM User WHERE isActive = true AND UserPermissionsSupportUser = true
+
 -- count active users with "Customer Community Plus Login" license, grouped by their profile name
 SELECT count(id), Profile.Name FROM User WHERE isActive = true AND Profile.UserLicense.name = 'Customer Community Plus Login' GROUP BY Profile.Name
 
